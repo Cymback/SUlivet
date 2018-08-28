@@ -101,6 +101,7 @@ public class MainActivity extends AppCompatActivity {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 firebaseAuthWithGoogle(account);
             } catch (ApiException e) {
+                e.printStackTrace();
                 // Google Sign In failed, update UI appropriately
                 Toast.makeText(MainActivity.this, "wrong something", Toast.LENGTH_SHORT).show();
                 // ...

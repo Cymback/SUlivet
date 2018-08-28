@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "21569827309-eu051igpekrtrvf7cmdk2kuo06k26aem.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.caspergrosslarsen.sulivet",
+            "certificate_hash": "1f9842d26337202037d8f5cd0175bea111504aba"
+          }
+        },
+        {
           "client_id": "21569827309-dp67654on0p6krndlvuc40gmdj5pc1us.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "21569827309-dp67654on0p6krndlvuc40gmdj5pc1us.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
