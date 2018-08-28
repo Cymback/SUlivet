@@ -9,17 +9,28 @@
 
     <Button
         android:id="@+id/logout"
-        android:layout_width="96dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
+        android:layout_width="66dp"
+        android:layout_height="34dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:background="@color/colorAccent"
         android:fontFamily="sans-serif"
         android:padding="5dp"
-        android:text="Log me out"
-        android:textSize="14sp"
+        android:text="LogOut"
+        android:textSize="8sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Lige en hurtig sjover.."
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="70dp" />
 </android.support.constraint.ConstraintLayout>
