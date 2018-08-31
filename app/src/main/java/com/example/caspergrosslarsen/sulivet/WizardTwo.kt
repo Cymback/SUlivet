@@ -1,11 +1,15 @@
 package com.example.caspergrosslarsen.sulivet
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.google.android.gms.common.SignInButton
+import kotlinx.android.synthetic.main.activity_wizard_two.*
 
 class WizardTwo : AppCompatActivity() {
+
 
     lateinit var button: Button
     lateinit var sudata: TextView
@@ -22,6 +26,14 @@ class WizardTwo : AppCompatActivity() {
 
         }
 
+        nokBtn.setOnClickListener { nokNext() }
+
+
+    }
+
+    private fun nokNext() {
+        val intent = Intent(this@WizardTwo, MenuActivity::class.java)
+        startActivity(intent)
 
     }
 
