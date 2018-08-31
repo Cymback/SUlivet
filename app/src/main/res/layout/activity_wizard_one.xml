@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainback"
-    tools:context=".StartOneActivity">
+    tools:context=".WizardOne">
 
 
     <com.triggertrap.seekarc.SeekArc
@@ -73,7 +73,7 @@
         android:layout_marginStart="8dp"
         android:background="@drawable/mainback"
         android:fontFamily="@font/advent_pro"
-        android:onClick="openSjoverTo"
+        android:onClick="toWizardTwo"
         android:text="Vi skal videre"
         seekarc:layout_constraintBottom_toBottomOf="parent"
         seekarc:layout_constraintEnd_toEndOf="parent"

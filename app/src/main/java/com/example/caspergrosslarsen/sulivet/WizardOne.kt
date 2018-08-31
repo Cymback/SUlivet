@@ -11,20 +11,20 @@ import com.triggertrap.seekarc.SeekArc.OnSeekArcChangeListener
 import timber.log.Timber
 
 
-class StartOneActivity : AppCompatActivity() {
+class WizardOne : AppCompatActivity() {
 
     lateinit var mSeekArc: SeekArc
     lateinit var mSeekArcProgress: TextView
 
 
     companion object {
-        val EXTRASEEKARC = "EXTRASEEKARC" // key identifier for openSjoverTo intent,
+        val EXTRASEEKARC = "EXTRASEEKARC" // key identifier for toWizardTwo intent
 
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_en_hurtig_sjover)
+        setContentView(R.layout.activity_wizard_one)
 
         mSeekArc = findViewById(R.id.seekArc)
         mSeekArcProgress = findViewById(R.id.seekArcProgress)
@@ -33,7 +33,7 @@ class StartOneActivity : AppCompatActivity() {
         mSeekArc.setOnSeekArcChangeListener(object : OnSeekArcChangeListener {
             override fun onProgressChanged(p0: SeekArc?, progress: Int, p2: Boolean) {
 
-                //
+                // TODO: MAKE SEEKARC RED, from 0-500 - 500-100 = YELLOW, 1000-1500 = GREEN
                 mSeekArcProgress.text = progress.toString()
 
             }
@@ -55,7 +55,7 @@ class StartOneActivity : AppCompatActivity() {
 
     }
 
-    fun openSjoverTo(view: View) {
+    fun toWizardTwo(view: View) {
 
 
         var myIntProgress: Int = mSeekArcProgress.text.toString().toInt()
@@ -63,7 +63,7 @@ class StartOneActivity : AppCompatActivity() {
         if (myIntProgress < 1200 && myIntProgress > 800) {
             Toast.makeText(this, "Korrekt, gennemsnittet ligger mellem 800 og 1200kr", Toast.LENGTH_LONG).show()
 
-            val intent = Intent(this@StartOneActivity, StartTwoActivity::class.java)
+            val intent = Intent(this@WizardOne, WizardTwo::class.java)
             intent.apply {
                 this.putExtra(EXTRASEEKARC, mSeekArcProgress.text)
             }
