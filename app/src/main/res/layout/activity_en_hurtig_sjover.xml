@@ -1,46 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:seekarc="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EnHurtigSjover">
+    android:background="@drawable/mainback"
+    tools:context=".StartOneActivity">
 
-    <RelativeLayout
-        android:id="@+id/seekArcContainer"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
+
+    <com.triggertrap.seekarc.SeekArc
+        android:id="@+id/seekArc"
+        android:layout_width="292dp"
+        android:layout_height="258dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:padding="30dp"
+        seekarc:layout_constraintBottom_toTopOf="@+id/tilbageBtn"
+        seekarc:layout_constraintEnd_toEndOf="parent"
+        seekarc:layout_constraintStart_toStartOf="parent"
+        seekarc:layout_constraintTop_toBottomOf="@+id/textView2"
+        seekarc:max="1500"
+        seekarc:rotation="180"
+        seekarc:startAngle="30"
+        seekarc:sweepAngle="300"
+        seekarc:touchInside="true" />
+
+    <TextView
+        android:id="@+id/seekArcProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/_0"
+        android:textSize="40sp"
+        seekarc:layout_constraintEnd_toEndOf="@+id/seekArc"
+        seekarc:layout_constraintStart_toStartOf="@+id/seekArc"
+        seekarc:layout_constraintTop_toTopOf="@+id/seekArc" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="246dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_weight="1"
-        android:background="@drawable/mainback">
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/advent_pro"
+        android:text="Hvor mange penge bruger den gennemsnitlige udeboende, SU-modtager på mad?"
+        android:textAlignment="viewStart"
+        android:textSize="28sp"
+        android:textStyle="italic"
+        seekarc:layout_constraintEnd_toEndOf="parent"
+        seekarc:layout_constraintStart_toStartOf="parent"
+        seekarc:layout_constraintTop_toTopOf="parent" />
 
-        <com.triggertrap.seekarc.SeekArc
-            android:id="@+id/seekArc"
-            android:layout_width="300dp"
-            android:layout_height="278dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginBottom="49dp"
-            android:padding="30dp"
-            seekarc:rotation="180"
+    <Button
+        android:id="@+id/tilbageBtn"
+        android:layout_width="136dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/mainback"
+        android:fontFamily="@font/advent_pro"
+        android:onClick="openSjoverTo"
+        android:text="Vi skal videre"
+        seekarc:layout_constraintBottom_toBottomOf="parent"
+        seekarc:layout_constraintEnd_toEndOf="parent"
+        seekarc:layout_constraintStart_toStartOf="parent" />
 
-            seekarc:startAngle="30"
-            seekarc:sweepAngle="300"
-            seekarc:touchInside="true" />
+    <TextView
+        android:id="@+id/dkkView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekArcProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="DKK"
+        android:textSize="40sp"
+        seekarc:layout_constraintEnd_toEndOf="@+id/seekArc"
+        seekarc:layout_constraintHorizontal_bias="0.502"
+        seekarc:layout_constraintStart_toStartOf="@+id/seekArc"
+        seekarc:layout_constraintTop_toBottomOf="@+id/seekArcProgress" />
 
-        <TextView
-            android:id="@+id/seekArcProgress"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_gravity="center"
-            android:layout_marginBottom="167dp"
-            android:text="0"
-            android:textSize="40sp" />
 
-    </RelativeLayout>
-
-</RelativeLayout>
+</android.support.constraint.ConstraintLayout>
