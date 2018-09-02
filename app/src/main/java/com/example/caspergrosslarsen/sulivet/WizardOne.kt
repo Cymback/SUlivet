@@ -57,11 +57,20 @@ class WizardOne : AppCompatActivity() {
 
     fun toWizardTwo(view: View) {
 
-
+    
         var myIntProgress: Int = mSeekArcProgress.text.toString().toInt()
 
+
+        if (myIntProgress < 200) {
+            Toast.makeText(this, "Stop dig selv - Det er ikke muligt, medmindre du lever af ris måneden ud", Toast.LENGTH_SHORT).show()
+        }
+
+        if (myIntProgress > 600) {
+            Toast.makeText(this, "Nu er vi næsten ved at være der, prøv at sætte den en smule højere", Toast.LENGTH_SHORT).show()
+        }
+
         if (myIntProgress < 1200 && myIntProgress > 800) {
-            Toast.makeText(this, "Korrekt, gennemsnittet ligger mellem 800 og 1200kr", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Korrekt, gennemsnittet ligger mellem 800 og 1200kr", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@WizardOne, WizardTwo::class.java)
             intent.apply {
@@ -69,13 +78,11 @@ class WizardOne : AppCompatActivity() {
             }
             startActivity(intent)
 
-
         } else {
-            (myIntProgress < 800)
-            Toast.makeText(this, "Det er muligt, men lidt under gennemsnittet, skal vi ikke prøve at sætte det lidt højere?", Toast.LENGTH_SHORT).show()
+            return
         }
 
-        // TODO: CREATE MORE IF STATEMENTS, below 200 (insert toast), above 1200, muligt men kræver arbejde ved siden af
+
     }
 
 
