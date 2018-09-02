@@ -2,7 +2,10 @@ package com.example.caspergrosslarsen.sulivet
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.caspergrosslarsen.sulivet.R.drawable.greenone
+import com.example.caspergrosslarsen.sulivet.R.drawable.sulivet
 import kotlinx.android.synthetic.main.activity_menu.*
+import kotlinx.android.synthetic.main.activity_menu.view.*
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuActivity : AppCompatActivity() {
@@ -13,13 +16,14 @@ class MenuActivity : AppCompatActivity() {
 
 
         // TODO:: SET ALL TILES SO THEY LOOK BEAUTIFUL
-        header1.headerOne.text = "Desperate tider kræver ultra-billige opskrifter"
+        header1.headerOne.text = "Ultra-billige opskrifter"
         header1.descriptionOne.text = "Dem finder du lige her!"
+        // header1.imageView.setBackgroundResource(sulivet)
 
         // END TILE 1
 
         header2.headerOne.text = "Skal der kæles for detaljen?"
-        header2.descriptionOne.text = "   Så' der dugfriske og en smule peberede opskrifter her"
+        header2.descriptionOne.text = "Så' der dugfriske og en smule peberede opskrifter her"
 
         // END TILE 2
 

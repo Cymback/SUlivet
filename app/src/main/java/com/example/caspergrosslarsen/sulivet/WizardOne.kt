@@ -57,7 +57,7 @@ class WizardOne : AppCompatActivity() {
 
     fun toWizardTwo(view: View) {
 
-    
+
         var myIntProgress: Int = mSeekArcProgress.text.toString().toInt()
 
 
