@@ -14,9 +14,9 @@ import kotlinx.android.synthetic.main.item_menu.view.*
 class MenuActivity : AppCompatActivity() {
 
     companion object {
-        val CHEAPRECIPES = "CHEAPRECIPES" // key identifiers used in intents
-        val EXPENSIVERECIPES = "EXPENSIVERECIPES"
-        val INSPIRATIONRECIPES = "INSPIRATIONRECIPES"
+        const val CHEAPRECIPES = "CHEAPRECIPES" // key identifiers used in intents
+        const val EXPENSIVERECIPES = "EXPENSIVERECIPES"
+        const val INSPIRATIONRECIPES = "INSPIRATIONRECIPES"
 
     }
 
@@ -57,7 +57,7 @@ class MenuActivity : AppCompatActivity() {
         })
 
 
-        // Navigation 3
+
 
         header3.headerOne.text = "Savner du inspiration?"
         header3.descriptionOne.text = "Klik på mig og få uanede mængder af inspiration"
@@ -73,13 +73,10 @@ class MenuActivity : AppCompatActivity() {
         })
 
 
-        // Navigation 4
-
 
         header4.headerOne.text = "Savner du en madplans-generator på et ugentligt plan?"
         header4.descriptionOne.text = "Prøv den her!"
 
-        // END TILE 4
 
         header5.headerOne.text = "Essentielle køkken-Acessories"
         header5.descriptionOne.text = "Lad os lige skabe en liste af ting, DU SKAL HA'"
