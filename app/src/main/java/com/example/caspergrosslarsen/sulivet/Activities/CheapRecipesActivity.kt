@@ -23,7 +23,7 @@ class CheapRecipesActivity : AppCompatActivity() {
 
         lstRecipe = ArrayList<Recipe>()
 
-        lstRecipe.add(Recipe("Flødekartofler med sovs", "Dejligt og smagfuldt", "Du skal gøre følgende: Kog pasta, skrald kartofler, bla bla.", "https://i.imgur.com/0KVST4x.gif"))
+        lstRecipe.add(Recipe(" Fuldkorns pandekager", "Dejligt og smagfuldt", "Du skal gøre følgende: Kog pasta, skrald kartofler, bla bla.", "https://i.imgur.com/0KVST4x.gif"))
         lstRecipe.add(Recipe("Flødekartofler med sovs", "Dejligt og smagfuldt", "Du skal gøre følgende: Kog pasta, skrald kartofler, bla bla.", "https://i.imgur.com/5Mc6MQo.gif"))
         // lstRecipe.add(Recipe("Flødekartofler med sovs", "Dejligt og smagfuldt", "Du skal gøre følgende: Kog pasta, skrald kartofler, bla bla.", R.drawable.test3))
         lstRecipe.add(Recipe("Flødekartofler med sovs", "Dejligt og smagfuldt", "Du skal gøre følgende: Kog pasta, skrald kartofler, bla bla.", "https://i.imgur.com/P3hkC7Q.gif"))

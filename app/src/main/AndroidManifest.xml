@@ -2,10 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.caspergrosslarsen.sulivet">
 
-    <uses-permission android:name="android.permission.INTERNET">
-
-    </uses-permission>
-
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -30,8 +27,7 @@
         <activity android:name=".Activities.CheapRecipesActivity" />
         <activity android:name=".Activities.ExpensiveRecipesActivity" />
         <activity android:name=".Activities.InspirationActivity" />
-
-
+        <activity android:name=".Activities.RecipeDetailActivity"></activity>
     </application>
 
 </manifest>
