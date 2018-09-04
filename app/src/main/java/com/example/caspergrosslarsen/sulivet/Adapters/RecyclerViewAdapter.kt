@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet
+package com.example.caspergrosslarsen.sulivet.Adapters
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
+import com.example.caspergrosslarsen.sulivet.R
 
 class RecyclerViewAdapter(private val mContext: Context, private val mData: List<Recipe>) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 

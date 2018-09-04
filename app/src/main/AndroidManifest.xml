@@ -26,10 +26,10 @@
             android:resource="@array/preloaded_fonts" />
 
         <activity android:name=".Wizard.WizardTwo" />
-        <activity android:name=".MenuActivity" />
-        <activity android:name=".CheapRecipesActivity" />
-        <activity android:name=".ExpensiveRecipesActivity" />
-        <activity android:name=".InspirationActivity" />
+        <activity android:name=".Activities.MenuActivity" />
+        <activity android:name=".Activities.CheapRecipesActivity" />
+        <activity android:name=".Activities.ExpensiveRecipesActivity" />
+        <activity android:name=".Activities.InspirationActivity" />
 
 
     </application>

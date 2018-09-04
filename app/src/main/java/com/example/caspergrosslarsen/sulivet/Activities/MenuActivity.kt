@@ -1,14 +1,11 @@
-package com.example.caspergrosslarsen.sulivet
+package com.example.caspergrosslarsen.sulivet.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
-import com.example.caspergrosslarsen.sulivet.R.drawable.greenone
-import com.example.caspergrosslarsen.sulivet.R.drawable.sulivet
+import com.example.caspergrosslarsen.sulivet.R
 import kotlinx.android.synthetic.main.activity_menu.*
-import kotlinx.android.synthetic.main.activity_menu.view.*
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuActivity : AppCompatActivity() {
@@ -35,7 +32,7 @@ class MenuActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 val intent = Intent(this@MenuActivity, CheapRecipesActivity::class.java)
                 intent.apply {
-                    this.putExtra(MenuActivity.CHEAPRECIPES, "cheap-recipes")
+                    this.putExtra(CHEAPRECIPES, "cheap-recipes")
                 }
                 startActivity(intent)
 
@@ -49,7 +46,7 @@ class MenuActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 val intent = Intent(this@MenuActivity, ExpensiveRecipesActivity::class.java)
                 intent.apply {
-                    this.putExtra(MenuActivity.EXPENSIVERECIPES, "expensive-recipes")
+                    this.putExtra(EXPENSIVERECIPES, "expensive-recipes")
                 }
                 startActivity(intent)
             }
@@ -63,7 +60,7 @@ class MenuActivity : AppCompatActivity() {
             override fun onClick(v: View?) {
                 val intent = Intent(this@MenuActivity, InspirationActivity::class.java)
                 intent.apply {
-                    this.putExtra(MenuActivity.INSPIRATIONRECIPES, "inspiration-recipes")
+                    this.putExtra(INSPIRATIONRECIPES, "inspiration-recipes")
                 }
                 startActivity(intent)
             }

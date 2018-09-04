@@ -1,7 +1,8 @@
-package com.example.caspergrosslarsen.sulivet
+package com.example.caspergrosslarsen.sulivet.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.caspergrosslarsen.sulivet.R
 
 class ExpensiveRecipesActivity : AppCompatActivity() {
 

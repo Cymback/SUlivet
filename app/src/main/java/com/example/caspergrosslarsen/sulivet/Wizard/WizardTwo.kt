@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.caspergrosslarsen.sulivet.MenuActivity
+import com.example.caspergrosslarsen.sulivet.Activities.MenuActivity
 import com.example.caspergrosslarsen.sulivet.R
 import kotlinx.android.synthetic.main.activity_wizard_two.*
 

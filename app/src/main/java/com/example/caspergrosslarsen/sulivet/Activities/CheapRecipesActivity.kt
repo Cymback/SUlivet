@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet
+package com.example.caspergrosslarsen.sulivet.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
+import com.example.caspergrosslarsen.sulivet.R
+import com.example.caspergrosslarsen.sulivet.Adapters.RecyclerViewAdapter
 import java.util.ArrayList
 
 
