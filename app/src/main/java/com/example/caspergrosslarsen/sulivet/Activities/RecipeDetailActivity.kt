@@ -13,13 +13,13 @@ class RecipeDetailActivity : AppCompatActivity() {
 
     companion object {
         val EXTRA_TITLE = "TITLE"
-        val EXTRA_SUBTITLE = "SUBTITLE"
+        val EXTRA_LIST_INGREDIENTS = "LIST_INGREDIENTS"
         val EXTRA_CONTENT = "CONTENT"
         val EXTRA_PICTURE = "PICTURE"
     }
 
     private var tvtitle: TextView? = null
-    private var subtitle: TextView? = null
+    private var listingredients: TextView? = null
     private var content: TextView? = null
     private var img: ImageView? = null
 
@@ -28,7 +28,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recipe_detail)
 
         tvtitle = findViewById<View>(R.id.title_id) as TextView?
-        subtitle = findViewById<View>(R.id.subtitle) as TextView?
+        listingredients = findViewById<View>(R.id.list_ingredients) as TextView?
         content = findViewById<View>(R.id.content) as TextView?
         img = findViewById<View>(R.id.picture) as ImageView
 
@@ -36,7 +36,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         // Recieve data
         val intent = intent
         val title = intent.extras!!.getString(EXTRA_TITLE)
-        val subtitle = intent.extras!!.getString(EXTRA_SUBTITLE)
+        val ingredients = intent.extras!!.getString(EXTRA_LIST_INGREDIENTS)
         val content = intent.extras!!.getString(EXTRA_CONTENT)
         val picture = intent.extras!!.getString(EXTRA_PICTURE)
 
@@ -44,7 +44,7 @@ class RecipeDetailActivity : AppCompatActivity() {
         // Setting values
 
         tvtitle!!.text = title
-        this.subtitle!!.text = subtitle
+        this.listingredients!!.text = ingredients
         this.content!!.text = content
 
         Glide.with(this)

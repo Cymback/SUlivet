@@ -13,8 +13,6 @@ import com.bumptech.glide.Glide
 import com.example.caspergrosslarsen.sulivet.Activities.RecipeDetailActivity
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
 import com.example.caspergrosslarsen.sulivet.R
-import com.example.caspergrosslarsen.sulivet.Wizard.WizardOne
-import com.example.caspergrosslarsen.sulivet.Wizard.WizardTwo
 
 class RecyclerViewAdapter(private val mContext: Context, private val mData: List<Recipe>) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
 
@@ -42,16 +40,15 @@ class RecyclerViewAdapter(private val mContext: Context, private val mData: List
             intent.apply {
 
                 // Transfering data to detailactivity
-                putExtra(RecipeDetailActivity.EXTRA_TITLE, mData.get(position).title)
-                putExtra(RecipeDetailActivity.EXTRA_SUBTITLE, mData.get(position).subtitle)
-                putExtra(RecipeDetailActivity.EXTRA_CONTENT, mData.get(position).content)
-                putExtra(RecipeDetailActivity.EXTRA_PICTURE, mData.get(position).picture)
+                putExtra(RecipeDetailActivity.EXTRA_TITLE, mData[position].title)
+                putExtra(RecipeDetailActivity.EXTRA_LIST_INGREDIENTS, mData[position].ingredients)
+                putExtra(RecipeDetailActivity.EXTRA_CONTENT, mData[position].content)
+                putExtra(RecipeDetailActivity.EXTRA_PICTURE, mData[position].picture)
 
 
             }
             mContext.startActivity(intent)
         })
-
 
     }
 

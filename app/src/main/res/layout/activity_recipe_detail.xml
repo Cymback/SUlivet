@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/mainback"
     tools:context=".Activities.RecipeDetailActivity">
 
 
@@ -21,8 +22,8 @@
 
             <ImageView
                 android:id="@+id/picture"
-                android:layout_width="125dp"
-                android:layout_height="170dp"
+                android:layout_width="220dp"
+                android:layout_height="150dp"
                 android:background="#2d2d2d"
                 android:scaleType="centerCrop" />
 
@@ -31,18 +32,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_weight="1"
                 android:text="Recipe title"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/subtitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="#edecec"
-                android:padding="8dp"
-                android:text="subtitle" />
 
             <TextView
                 android:id="@+id/content"
@@ -51,6 +45,24 @@
                 android:layout_marginTop="10dp"
                 android:text="Opskrift-Content"
                 android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#2d2d2d"
+                />
+
+
+            <TextView
+                android:id="@+id/list_ingredients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:padding="8dp"
+                android:gravity="center"
+
+
+                android:text="ingredients" />
 
         </LinearLayout>
 
