@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/mainback"
-    tools:context=".WizardTwo">
+    tools:context=".Wizard.WizardTwo">
 
     <TextView
         android:id="@+id/dkkView2"

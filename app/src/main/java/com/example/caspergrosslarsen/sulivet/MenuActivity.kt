@@ -56,9 +56,6 @@ class MenuActivity : AppCompatActivity() {
 
         })
 
-
-
-
         header3.headerOne.text = "Savner du inspiration?"
         header3.descriptionOne.text = "Klik på mig og få uanede mængder af inspiration"
 
