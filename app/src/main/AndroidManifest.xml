@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.caspergrosslarsen.sulivet">
 
-    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Wizard.WizardOne">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,12 +22,15 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
+        <activity android:name=".Wizard.WizardOne" />
         <activity android:name=".Wizard.WizardTwo" />
         <activity android:name=".Activities.MenuActivity" />
         <activity android:name=".Activities.CheapRecipesActivity" />
         <activity android:name=".Activities.ExpensiveRecipesActivity" />
         <activity android:name=".Activities.InspirationActivity" />
-        <activity android:name=".Activities.RecipeDetailActivity"></activity>
+        <activity android:name=".Activities.RecipeDetailActivity" />
+
     </application>
 
 </manifest>
+
