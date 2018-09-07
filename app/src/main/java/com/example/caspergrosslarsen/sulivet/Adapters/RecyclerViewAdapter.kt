@@ -58,16 +58,10 @@ class RecyclerViewAdapter(private val mContext: Context, private val mData: List
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        internal var recipe_title: TextView
-        internal var recipe_img: ImageView
-        var cardView: CardView
+        internal var recipe_title: TextView = itemView.findViewById<View>(R.id.recipe_title_id) as TextView
+        internal var recipe_img: ImageView = itemView.findViewById<View>(R.id.recipe_img_id) as ImageView
+        var cardView: CardView = itemView.findViewById<View>(R.id.item_recipe_id) as CardView
 
-        init {
-
-            recipe_title = itemView.findViewById<View>(R.id.recipe_title_id) as TextView
-            recipe_img = itemView.findViewById<View>(R.id.recipe_img_id) as ImageView
-            cardView = itemView.findViewById<View>(R.id.item_recipe_id) as CardView
-        }
     }
 }
 

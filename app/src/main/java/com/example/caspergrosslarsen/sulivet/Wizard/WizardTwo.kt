@@ -28,8 +28,6 @@ class WizardTwo : AppCompatActivity() {
         }
 
         nokBtn.setOnClickListener { nokNext() }
-
-
     }
 
     private fun nokNext() {

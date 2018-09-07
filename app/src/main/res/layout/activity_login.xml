@@ -55,7 +55,7 @@
             android:text="Tusindvis af lækre opskrifter til de helt små beløb!" />
 
         <com.shobhitpuri.custombuttons.GoogleSignInButton
-            android:id="@+id/tmpBtn"
+            android:id="@+id/signInBtn"
             android:layout_width="215dp"
             android:layout_height="41dp"
             android:layout_centerInParent="true"

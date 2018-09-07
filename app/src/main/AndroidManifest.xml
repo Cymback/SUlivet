@@ -29,8 +29,7 @@
         <activity android:name=".Activities.ExpensiveRecipesActivity" />
         <activity android:name=".Activities.InspirationActivity" />
         <activity android:name=".Activities.RecipeDetailActivity" />
-
+        <activity android:name=".Activities.SplashScreenActivity"></activity>
     </application>
 
 </manifest>
-
