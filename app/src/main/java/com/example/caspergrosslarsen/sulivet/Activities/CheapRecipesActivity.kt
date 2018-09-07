@@ -71,6 +71,28 @@ class CheapRecipesActivity : AppCompatActivity() {
 
                 "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/%C3%A6ggekage.jpeg?alt=media&token=6523d4c0-ce38-4188-b596-ffa83dcbce85"))
 
+        lstRecipe.add(Recipe("Tortilla",
+                "2 bagekartofler\n" +
+
+                        "1 løg\n" +
+                        "150g Spinat\n" +
+                        "4 æg\n" +
+                        "2 spsk yogurt eller creme fraiche\n" +
+                        " 1/2 dl mælk\n" +
+                        "sat og peber",
+
+                "Start med at skrælle kartofler og løg, skære kartoflerne i små tern og hakke løget. Varm en pande til middel-høj varme og svits det hakkede løg i en spsk olivenolie i et par minutter. Kom kartoffeltern på panden og lad det stege ved middelvarme i 15-20 minutter, til kartoflerne er møre.\n" +
+                        "\n" +
+                        "Skyl imens spinaten, kom det i en gryde med låg og damp spinaten ved lav varme, til det falder sammen. Kom det dampede spinat i en si og pres overskydende væde ud af. Kom kartofler og løg i bunden af en tærteform, fordel dampet spinat over og drys med salt og peber.\n" +
+                        "\n" +
+                        "Pisk æg, græsk yoghurt og mælk sammen i en skål og hæld det over fyldet (hvis du vil have revet ost på, kan du drysse det over nu). Bag tortillaen ved 200 grader i cirka 15-20 minutter. Når tortillaen er færdig, kan du toppe med smuldret feta eller gedeost, hvis du ikke har drysset med revet ost inden, den blev bagt i ovnen.",
+
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/tortilla.jpg?alt=media&token=a579bfa6-e56f-44e6-83f8-3ce7034d84a9"))
+
+        // TODO: Add Pasta med Tun
+
+
 
         // TODO:: Add more recipes
 
