@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet
+package com.example.caspergrosslarsen.sulivet.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Button
 
 import android.widget.Toast
-import com.example.caspergrosslarsen.sulivet.Activities.SplashScreenActivity
+import com.example.caspergrosslarsen.sulivet.R
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -79,7 +79,7 @@ class LoginActivity : AppCompatActivity() {
             Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
         }
     }
-
+}
 
 //    private fun updateUI(account: GoogleSignInAccount) {
 //        val dispTxt = findViewById<View>(R.id.dispTxt) as TextView
@@ -95,20 +95,7 @@ class LoginActivity : AppCompatActivity() {
 //            }
 //        }
 //    }
-}
 
 
-/* signInBtn.setOnClickListener
-   { toWizardOne() }
 
 
-}
-
-
-private fun toWizardOne() {
-
-
-   val intent = Intent(this@LoginActivity, WizardOne::class.java)
-   startActivity(intent)
-
-*/
