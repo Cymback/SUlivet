@@ -40,55 +40,31 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/advent_pro"
-            android:text="Klar på god mad?"
+            android:text="Mad på SU"
             android:textColor="@android:color/black"
             android:textSize="24dp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="1dp"
-            android:fontFamily="@font/advent_pro"
-            android:paddingTop="1dp"
-            android:text="Glemt password? Klik på mig!" />
-
-
-        <!--space her for saving more user information, username, adress-->
-        <!--etc-->
-
-        <EditText
-            android:id="@+id/et_email"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/colorOrange"
-            android:fontFamily="@font/advent_pro"
-            android:hint="@string/email"
-            android:maxLines="1" />
-
-        <EditText
-            android:id="@+id/et_password"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/colorOrange"
-            android:fontFamily="@font/advent_pro"
-            android:hint="@string/password"
-            android:maxLines="1" />
-
-
-        <Button
-            android:id="@+id/btn_login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:width="500dp"
-            android:height="30dp"
-            android:backgroundTint="@color/common_google_signin_btn_text_dark"
-            android:text="Login" />
+            android:fontFamily="@font/advent_pro"
+            android:paddingTop="10dp"
+            android:text="Tusindvis af lækre opskrifter til de helt små beløb!" />
+
+        <com.shobhitpuri.custombuttons.GoogleSignInButton
+            android:id="@+id/signInBtn"
+            android:layout_width="215dp"
+            android:layout_height="41dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
+            android:onClick="toWizardOne"
+            android:text="@string/google_sign_in"
+            app:isDarkTheme="false" />
 
 
     </LinearLayout>

@@ -7,4 +7,5 @@
     <string name="create_account">Opret Konto</string>
     <string name="lets_get_going">Lad os komme igang!</string>
     <string name="lets_get_going_two">Opret din konto nedenunder</string>
+    <string name="recieve_password_email">Indtast din email for at modtage dit nye password</string>
 </resources>
