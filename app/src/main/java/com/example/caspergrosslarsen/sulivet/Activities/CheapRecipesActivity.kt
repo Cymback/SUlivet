@@ -2,12 +2,17 @@ package com.example.caspergrosslarsen.sulivet.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import android.view.animation.AnimationUtils
+
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
 import com.example.caspergrosslarsen.sulivet.R
 import com.example.caspergrosslarsen.sulivet.Adapters.RecyclerViewAdapter
+import kotlinx.android.synthetic.main.activity_cheap_recipes.*
+import kotlinx.android.synthetic.main.item_recipe.*
 import java.util.ArrayList
 
 
@@ -90,8 +95,136 @@ class CheapRecipesActivity : AppCompatActivity() {
 
                 "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/tortilla.jpg?alt=media&token=a579bfa6-e56f-44e6-83f8-3ce7034d84a9"))
 
-        // TODO: Add Pasta med Tun
+        lstRecipe.add(Recipe("Kylling i Cola",
 
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+
+
+
+
+
+        lstRecipe.add(Recipe("Kylling i Cola",
+
+                "4 dl cola\n" +
+                        "4 dl ketchup\n" +
+                        "2 spsk paprika\n" +
+                        "peber\n" +
+                        "900 g kyllingebryster",
+
+                "Bland cola, ketchup og paprika sammen. Smag til med peber.\n" +
+                        "\n" +
+                        "Kom kyllingen i et ildfast fad og hæld marinaden over.\n" +
+                        "\n" +
+                        "Bag i ovnen ved 180 grader i ca. 40 minutter.\n" +
+                        "\n" + "Servér f.eks. med ris eller blomkålsris og det her lækre og flotte grøntsagsfad med smeltet ost på toppen.",
+
+                "https://firebasestorage.googleapis.com/v0/b/sulivet-9a546.appspot.com/o/kyllingicola.jpeg?alt=media&token=c9a2f4ee-0384-4286-ad64-f2bf96fcaf20"))
+
+        // TODO: Add Pasta med Tun
 
 
         // TODO:: Add more recipes

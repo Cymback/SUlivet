@@ -7,6 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
@@ -22,16 +23,32 @@ class RecyclerViewAdapter(private val mContext: Context, private val mData: List
         val view: View
         val mInflater = LayoutInflater.from(mContext)
         view = mInflater.inflate(R.layout.item_recipe, parent, false)
+
+
         return MyViewHolder(view)
+
+
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
+
 
         holder.recipe_title.text = mData[position].title
 
         Glide.with(holder.itemView.context)
                 .load(mData[position].picture)
                 .into(holder.recipe_img)
+
+
+        val animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.fade_in)
+        holder.itemView.startAnimation((animation))
+
+
+        // Example to handle whatever is in recipe_title. every item is set to dissapear 1 in sec
+//        Handler().postDelayed({
+//            holder.recipe_title.visibility = View.GONE
+//        }, 1000
+//        )
 
         // Set click listener
         holder.cardView.setOnClickListener(View.OnClickListener {
@@ -50,6 +67,7 @@ class RecyclerViewAdapter(private val mContext: Context, private val mData: List
             mContext.startActivity(intent)
         })
 
+
     }
 
     override fun getItemCount(): Int {
@@ -62,6 +80,9 @@ class RecyclerViewAdapter(private val mContext: Context, private val mData: List
         internal var recipe_img: ImageView = itemView.findViewById<View>(R.id.recipe_img_id) as ImageView
         var cardView: CardView = itemView.findViewById<View>(R.id.item_recipe_id) as CardView
 
+
     }
+
+
 }
 
