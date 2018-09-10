@@ -3,99 +3,102 @@ package com.example.caspergrosslarsen.sulivet.Activities
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v4.content.ContextCompat.startActivity
+import android.text.TextUtils
 import android.view.View
 import android.widget.Button
-
+import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.caspergrosslarsen.sulivet.R
-
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
-
+import com.example.caspergrosslarsen.sulivet.R.string.email
+import com.example.caspergrosslarsen.sulivet.R.string.password
+import com.google.firebase.auth.FirebaseAuth
+import org.w3c.dom.Text
+import timber.log.Timber
 
 class LoginActivity : AppCompatActivity() {
 
+    private val TAG = "LoginActivity"
 
-    lateinit var button: Button
-    lateinit var gso: GoogleSignInOptions
-    lateinit var mGoogleSignInClient: GoogleSignInClient
-    val RC_SIGN_IN: Int = 1
-    lateinit var signOut: Button
+    // Global
 
-    companion object {
-        val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
+    private var email: String? = null
+    private var password: String? = null
 
-    }
+
+    // UI
+
+    lateinit var tvForgotPassword: TextView
+    lateinit var etEmail: EditText
+    lateinit var etPassword: EditText
+
+    lateinit var btnLogin: Button
+    lateinit var btnCreateAccount: Button
+
+    private var mAuth: FirebaseAuth? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val signIn = findViewById<View>(R.id.signInBtn) as Button
-        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build()
-
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-        signIn.setOnClickListener { view: View? ->
-            signIn()
-        }
-    }
-
-    private fun signIn() {
-        val signInIntent: Intent = mGoogleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
+        initialise()
 
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == RC_SIGN_IN) {
+    private fun initialise() {
 
-            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
-            handleResult(task)
+        tvForgotPassword = findViewById<View>(R.id.forgot_password) as TextView
+        etEmail = findViewById<View>(R.id.et_password) as EditText
+        etPassword = findViewById<View>(R.id.et_password) as EditText
+
+        btnLogin = findViewById<View>(R.id.btn_login) as Button
+
+
+        mAuth = FirebaseAuth.getInstance()
+
+        tvForgotPassword!!
+                .setOnClickListener {
+                    startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java))
+                }
+
+        btnLogin!!.setOnClickListener { loginUser() }
+
+    }
+
+    private fun loginUser() {
+        email = etEmail?.text.toString()
+        password = etPassword?.text.toString()
+
+        if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+
+            // progress bar here
+
+            Timber.log(4, "Logging in user")
+
+            mAuth!!.signInWithEmailAndPassword(email!!, password!!)
+                    .addOnCompleteListener(this) { task ->
+                        // Progress bar
+                        if (task.isSuccessful) {
+                            Timber.log(5, "signInWithEmail:success")
+                            updateUI()
+                        } else {
+                            Timber.log(6, "signInWithEmail:failure", task.exception)
+                            Toast.makeText(this@LoginActivity, "Authenciation failed.", Toast.LENGTH_SHORT).show()
+
+                        }
+                    }
         } else {
-            Toast.makeText(this, "Problem in execution order :(", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Enter all details please", Toast.LENGTH_SHORT).show()
+
         }
     }
 
-    private fun handleResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account: GoogleSignInAccount = completedTask.getResult(ApiException::class.java)
-            // updateUI(account)
-
-
-            // TODO: IF LOGIN IS SUCCESFULL, POINT STRAIGHT TO SPLASHSCREEN THEN MENU
-
-            val myIntent = Intent(this@LoginActivity, SplashScreenActivity::class.java)
-            startActivity(myIntent)
-
-        } catch (e: ApiException) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
-        }
+    private fun updateUI() {
+        val intent = Intent(this@LoginActivity, MenuActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        startActivity(intent)
     }
 }
-
-//    private fun updateUI(account: GoogleSignInAccount) {
-//        val dispTxt = findViewById<View>(R.id.dispTxt) as TextView
-//        dispTxt.text = account.displayName
-//        signOut.visibility = View.VISIBLE
-//        signOut.setOnClickListener { view: View? ->
-//            mGoogleSignInClient.signOut().addOnCompleteListener { task: Task<Void> ->
-//                if (task.isSuccessful) {
-//                    dispTxt.text = " "
-//                    signOut.visibility = View.INVISIBLE
-//                    signOut.isClickable = false
-//                }
-//            }
-//        }
-//    }
-
-
 
 

@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">SUlivet</string>
     <string name="_0">0</string>
+    <string name="email">e-mail...</string>
+    <string name="password">password...</string>
+    <string name="send_password_reset_email">Send Password</string>
+    <string name="create_account">Opret Konto</string>
+    <string name="lets_get_going">Lad os komme igang!</string>
+    <string name="lets_get_going_two">Opret din konto nedenunder</string>
 </resources>

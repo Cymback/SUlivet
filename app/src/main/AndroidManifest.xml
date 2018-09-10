@@ -29,7 +29,10 @@
         <activity android:name=".Activities.ExpensiveRecipesActivity" />
         <activity android:name=".Activities.InspirationActivity" />
         <activity android:name=".Activities.RecipeDetailActivity" />
-        <activity android:name=".Activities.SplashScreenActivity"></activity>
+        <activity android:name=".Activities.SplashScreenActivity" />
+        <activity android:name=".Activities.CreateAccountActivity" />
+        <activity android:name=".Activities.GoogleActivity" />
+        <activity android:name=".Activities.ForgotPasswordActivity"></activity>
     </application>
 
 </manifest>
