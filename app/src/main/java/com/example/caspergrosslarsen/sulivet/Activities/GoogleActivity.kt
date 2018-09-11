@@ -25,6 +25,7 @@ class GoogleActivity : AppCompatActivity() {
     lateinit var mGoogleSignInClient: GoogleSignInClient
     val RC_SIGN_IN: Int = 1
     lateinit var signOut: Button
+    lateinit var btnToLogin: Button
 
     companion object {
         val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
@@ -36,6 +37,9 @@ class GoogleActivity : AppCompatActivity() {
         setContentView(R.layout.activity_google_login)
 
         val signIn = findViewById<View>(R.id.signInBtn) as Button
+        val btnToLogin = findViewById<View>(R.id.btn_to_login_with_email) as Button
+
+
         gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
@@ -44,6 +48,11 @@ class GoogleActivity : AppCompatActivity() {
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
         signIn.setOnClickListener {
             signIn()
+        }
+
+        btnToLogin.setOnClickListener {
+            val myIntent = Intent(this@GoogleActivity, LoginActivity::class.java)
+            startActivity(myIntent)
         }
     }
 

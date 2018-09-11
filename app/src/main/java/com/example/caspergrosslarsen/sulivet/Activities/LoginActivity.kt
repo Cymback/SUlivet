@@ -1,5 +1,6 @@
 package com.example.caspergrosslarsen.sulivet.Activities
 
+import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,10 +8,7 @@ import android.support.v4.content.ContextCompat.startActivity
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.caspergrosslarsen.sulivet.R
 import com.example.caspergrosslarsen.sulivet.R.string.email
 import com.example.caspergrosslarsen.sulivet.R.string.password
@@ -75,16 +73,19 @@ class LoginActivity : AppCompatActivity() {
 
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 
-            // progress bar here
+            Toast.makeText(this, "Attempting to login..", Toast.LENGTH_SHORT).show()
 
-            Timber.log(4, "Logging in user")
+            Timber.log(4, "Logging in!")
 
             mAuth!!.signInWithEmailAndPassword(email!!, password!!)
                     .addOnCompleteListener(this) { task ->
-                        // Progress bar
+
+
                         if (task.isSuccessful) {
                             Timber.log(5, "signInWithEmail:success")
                             updateUI()
+
+
                         } else {
                             Timber.log(6, "signInWithEmail:failure", task.exception)
                             Toast.makeText(this@LoginActivity, "Authenciation failed.", Toast.LENGTH_SHORT).show()
