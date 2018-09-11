@@ -15,7 +15,7 @@ import com.example.caspergrosslarsen.sulivet.Activities.RecipeDetailActivity
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
 import com.example.caspergrosslarsen.sulivet.R
 
-class RecyclerViewAdapter(private val mContext: Context, private val mData: List<Recipe>) : RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>() {
+class CheapAdapter(private val mContext: Context, private val mData: List<Recipe>) : RecyclerView.Adapter<CheapAdapter.MyViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {

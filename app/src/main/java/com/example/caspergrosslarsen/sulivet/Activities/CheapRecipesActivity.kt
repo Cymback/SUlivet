@@ -1,22 +1,30 @@
 package com.example.caspergrosslarsen.sulivet.Activities
 
+import android.app.Activity
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.view.animation.AnimationUtils
 
 import com.example.caspergrosslarsen.sulivet.Model.Recipe
 import com.example.caspergrosslarsen.sulivet.R
-import com.example.caspergrosslarsen.sulivet.Adapters.RecyclerViewAdapter
-import kotlinx.android.synthetic.main.activity_cheap_recipes.*
-import kotlinx.android.synthetic.main.item_recipe.*
+import com.example.caspergrosslarsen.sulivet.Adapters.CheapAdapter
 import java.util.ArrayList
 
 
 class CheapRecipesActivity : AppCompatActivity() {
+
+    companion object {
+        fun startActivity(activity: Activity?) {
+
+            if (activity == null || activity.isFinishing) return
+
+            val intent = Intent(activity, CheapRecipesActivity::class.java)
+            activity.startActivity(intent)
+        }
+    }
 
 
     lateinit var lstRecipe: MutableList<Recipe>
@@ -229,8 +237,8 @@ class CheapRecipesActivity : AppCompatActivity() {
 
         // TODO:: Add more recipes
 
-        val myrecView = findViewById<View>(R.id.recyclerview_id) as RecyclerView
-        val myAdapter = RecyclerViewAdapter(this, lstRecipe)
+        val myrecView = findViewById<View>(R.id.CheapAdapterView) as RecyclerView
+        val myAdapter = CheapAdapter(this, lstRecipe)
         myrecView.layoutManager = GridLayoutManager(this, 3)
         myrecView.adapter = myAdapter
     }

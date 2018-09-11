@@ -32,7 +32,10 @@
         <activity android:name=".Activities.SplashScreenActivity" />
         <activity android:name=".Activities.CreateAccountActivity" />
         <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.ForgotPasswordActivity"></activity>
+        <activity android:name=".Activities.ForgotPasswordActivity" />
+        <activity android:name=".Activities.EssentialActivity" />
+        <activity android:name=".Activities.FoodGeneratorActivity" />
+        <activity android:name=".Adapters.EssentialAdapter"></activity>
     </application>
 
 </manifest>

@@ -9,4 +9,15 @@
     <string name="lets_get_going_two">Opret din konto nedenunder</string>
     <string name="recieve_password_email">Indtast din email for at modtage dit nye password</string>
     <string name="log_in_with_pass">Login med email</string>
+    <string name="create_account_google">Opret konto</string>
+    <string name="menu_should_care_for">Skal der kæles for detaljen?</string>
+    <string name="menu_ultra_cheap_recipes">Ultra-billige opskrifter</string>
+    <string name="menu_you_will_find_them_here">Dem finder du lige her!</string>
+    <string name="menu_fresh_recipes">Så er der dugfriske og en smule peberede opskrifter her!</string>
+    <string name="menu_do_you_lack_inspiration">Savner du inspiration?</string>
+    <string name="menu_klik_me_get_inspiration">Klik på mig og få uanede mængder af inspiration</string>
+    <string name="menu_do_you_miss_food_generator">Savner du en madplans-generator på et ugentligt plan?</string>
+    <string name="menu_try_this">Prøv den her!</string>
+    <string name="menu_essential_kitchen_stuff">Essentielle køkken-Acessories</string>
+    <string name="menu_list_of_kitchen_things">Lad os lige skabe en liste af ting, DU SKAL HA\'</string>
 </resources>

@@ -26,6 +26,7 @@ class GoogleActivity : AppCompatActivity() {
     val RC_SIGN_IN: Int = 1
     lateinit var signOut: Button
     lateinit var btnToLogin: Button
+    lateinit var btnToCreate: Button
 
     companion object {
         val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
@@ -36,8 +37,9 @@ class GoogleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google_login)
 
-        val signIn = findViewById<View>(R.id.signInBtn) as Button
-        val btnToLogin = findViewById<View>(R.id.btn_to_login_with_email) as Button
+        val signIn = findViewById<View>(R.id.sign_in_btn) as Button
+        val btnToLogin = findViewById<View>(R.id.to_login_with_email_btn) as Button
+        val btnToCreate = findViewById<View>(R.id.create_account_btn)
 
 
         gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -52,6 +54,11 @@ class GoogleActivity : AppCompatActivity() {
 
         btnToLogin.setOnClickListener {
             val myIntent = Intent(this@GoogleActivity, LoginActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        btnToCreate.setOnClickListener {
+            val myIntent = Intent(this@GoogleActivity, CreateAccountActivity::class.java)
             startActivity(myIntent)
         }
     }
@@ -77,9 +84,8 @@ class GoogleActivity : AppCompatActivity() {
         try {
             val account: GoogleSignInAccount = completedTask.getResult(ApiException::class.java)
             // updateUI(account)
+            // handle account info here
 
-
-            // TODO: IF LOGIN IS SUCCESFULL, POINT STRAIGHT TO SPLASHSCREEN THEN MENU
 
             val myIntent = Intent(this@GoogleActivity, SplashScreenActivity::class.java)
             startActivity(myIntent)

@@ -54,8 +54,17 @@
             android:paddingTop="10dp"
             android:text="Tusindvis af lækre opskrifter til de helt små beløb!" />
 
+        <TextView
+            android:id="@+id/create_account_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/advent_pro"
+            android:layout_marginTop="-20dp"
+            android:text="@string/create_account_google"/>
+
         <com.shobhitpuri.custombuttons.GoogleSignInButton
-            android:id="@+id/signInBtn"
+            android:id="@+id/sign_in_btn"
             android:layout_width="215dp"
             android:layout_height="41dp"
             android:layout_centerInParent="true"
@@ -66,7 +75,7 @@
             app:isDarkTheme="false" />
 
         <Button
-            android:id="@+id/btn_to_login_with_email"
+            android:id="@+id/to_login_with_email_btn"
             android:layout_width="215dp"
             android:layout_height="41dp"
             android:layout_gravity="center_horizontal"

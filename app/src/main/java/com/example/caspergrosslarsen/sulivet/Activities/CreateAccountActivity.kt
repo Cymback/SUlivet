@@ -55,7 +55,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
         etEmail = findViewById<View>(R.id.et_email) as EditText
         etPassword = findViewById<View>(R.id.et_password) as EditText
-        btnCreateAccount = findViewById<View>(R.id.create_account_btn) as Button
+        btnCreateAccount = findViewById<View>(R.id.create_account_page_btn) as Button
 
         mDatabase = FirebaseDatabase.getInstance()
         mDatabaseReference = mDatabase!!.reference!!.child("Users")
