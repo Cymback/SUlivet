@@ -1,10 +1,7 @@
 package com.example.caspergrosslarsen.sulivet.Activities
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
-import android.view.View
 import com.example.caspergrosslarsen.sulivet.R
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.item_menu.view.*
@@ -33,7 +30,7 @@ class MenuActivity : AppCompatActivity() {
             CheapRecipesActivity.startActivity(this@MenuActivity)
         }
 
-        header2.headerOne.text = getString(R.string.menu_should_care_for)
+        header2.headerOne.text = getString(R.string.menu_should_care_for_detail)
         header2.descriptionOne.text = getString(R.string.menu_fresh_recipes)
 
         header2.setOnClickListener {

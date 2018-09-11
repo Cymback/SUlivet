@@ -36,7 +36,7 @@ class CheapRecipesActivity : AppCompatActivity() {
 
         lstRecipe = ArrayList<Recipe>()
 
-        lstRecipe.add(Recipe("Fuldkorns pandekager",
+        lstRecipe.add(Recipe(getString(R.string.cheap_title),
 
                 "1 dl grahamsmel\n" +
                         "1 dl mælk\n" +

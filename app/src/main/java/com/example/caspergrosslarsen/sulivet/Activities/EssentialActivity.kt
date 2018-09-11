@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ScrollView
 import com.example.caspergrosslarsen.sulivet.R
+import kotlinx.android.synthetic.main.activity_essential.*
+import kotlinx.android.synthetic.main.item_essential.view.*
 
 class EssentialActivity : AppCompatActivity() {
 
@@ -29,6 +31,20 @@ class EssentialActivity : AppCompatActivity() {
         initialise()
 
 
+        // 1
+        tile1_essential.header1_essential.text = getString(R.string.essential_spices)
+        tile1_essential.header2_essential.text = getString(R.string.essential_most_needed_spices)
+        //2
+        tile2_essential.header1_essential.text = getString(R.string.essential_nice_to_have)
+        tile2_essential.header2_essential.text = getString(R.string.essential_list_of_cool_kitchenthings)
+        //3
+        tile3_essential.header1_essential.text = getString(R.string.essential_10_student_things)
+        tile3_essential.header2_essential.text = getString(R.string.essential_list_to_student)
+        //4
+        tile4_essential.header1_essential.text = getString(R.string.essential_just_moved_out)
+        tile4_essential.header2_essential.text = getString(R.string.essential_tools_to_complete_recipes)
+
+
     }
 
     private fun initialise() {
@@ -36,4 +52,6 @@ class EssentialActivity : AppCompatActivity() {
         val myscrollView = findViewById<View>(R.id.essential_scrollview_id) as ScrollView
 
     }
+
+
 }

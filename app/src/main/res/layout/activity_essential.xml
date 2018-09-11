@@ -17,19 +17,19 @@
         android:padding="15dp">
 
         <include
-            android:id="@+id/header_one_essential"
+            android:id="@+id/tile1_essential"
             layout="@layout/item_essential" />
 
         <include
-            android:id="@+id/header_two_essential"
+            android:id="@+id/tile2_essential"
             layout="@layout/item_essential" />
 
         <include
-            android:id="@+id/header_three_essential"
+            android:id="@+id/tile3_essential"
             layout="@layout/item_essential" />
 
         <include
-            android:id="@+id/header_four_essential"
+            android:id="@+id/tile4_essential"
             layout="@layout/item_essential" />
 
 
