@@ -237,9 +237,9 @@ class CheapRecipesActivity : AppCompatActivity() {
 
         // TODO:: Add more recipes
 
-        val myrecView = findViewById<View>(R.id.CheapAdapterView) as RecyclerView
+        val cheapview = findViewById<View>(R.id.CheapAdapterView) as RecyclerView
         val myAdapter = CheapAdapter(this, lstRecipe)
-        myrecView.layoutManager = GridLayoutManager(this, 3)
-        myrecView.adapter = myAdapter
+        cheapview.layoutManager = GridLayoutManager(this, 3)
+        cheapview.adapter = myAdapter
     }
 }

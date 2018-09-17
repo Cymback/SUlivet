@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.GoogleActivity">
+        <activity android:name=".Activities.ProfileActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,7 +35,8 @@
         <activity android:name=".Activities.ForgotPasswordActivity" />
         <activity android:name=".Activities.EssentialActivity" />
         <activity android:name=".Activities.FoodGeneratorActivity" />
-        <activity android:name=".Adapters.EssentialAdapter"></activity>
+        <activity android:name=".Adapters.EssentialAdapter" />
+        <activity android:name=".Activities.GoogleActivity"></activity>
     </application>
 
 </manifest>
