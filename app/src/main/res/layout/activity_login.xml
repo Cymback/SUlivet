@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,7 +22,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="-20dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/frontlogo" />
+            android:background="@drawable/frontlogo"
+            android:contentDescription="@string/description" />
 
         <ImageView
             android:layout_width="104dp"
@@ -32,6 +32,7 @@
             android:layout_marginBottom="25dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/sulivetlogo"
+            android:contentDescription="@string/description"
             android:paddingBottom="50dp"
             android:paddingTop="50dp" />
 
@@ -40,9 +41,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/advent_pro"
-            android:text="Klar på god mad?"
+            android:text="@string/login_ready_for_food"
             android:textColor="@android:color/black"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
@@ -53,7 +54,7 @@
             android:layout_marginBottom="1dp"
             android:fontFamily="@font/advent_pro"
             android:paddingTop="1dp"
-            android:text="Glemt password? Klik på mig!" />
+            android:text="@string/login_forgot_password" />
 
 
         <!--space her for saving more user information, username, adress-->
@@ -66,7 +67,8 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorOrange"
             android:fontFamily="@font/advent_pro"
-            android:hint="@string/email"
+            android:hint="@string/login_email_field"
+            android:inputType="textEmailAddress"
             android:maxLines="1" />
 
         <EditText
@@ -76,7 +78,8 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorOrange"
             android:fontFamily="@font/advent_pro"
-            android:hint="@string/password"
+            android:hint="@string/login_password_field"
+            android:inputType="textPassword"
             android:maxLines="1" />
 
         <Button
@@ -87,7 +90,7 @@
             android:width="500dp"
             android:height="30dp"
             android:backgroundTint="@color/common_google_signin_btn_text_dark"
-            android:text="Login" />
+            android:text="@string/login_login_btn" />
 
 
     </LinearLayout>

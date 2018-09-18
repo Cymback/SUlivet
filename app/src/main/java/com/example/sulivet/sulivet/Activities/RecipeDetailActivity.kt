@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -7,15 +7,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 
 class RecipeDetailActivity : AppCompatActivity() {
 
     companion object {
-        val EXTRA_TITLE = "TITLE"
-        val EXTRA_LIST_INGREDIENTS = "LIST_INGREDIENTS"
-        val EXTRA_CONTENT = "CONTENT"
-        val EXTRA_PICTURE = "PICTURE"
+        const val EXTRA_TITLE = "TITLE"
+        const val EXTRA_LIST_INGREDIENTS = "LIST_INGREDIENTS"
+        const val EXTRA_CONTENT = "CONTENT"
+        const val EXTRA_PICTURE = "PICTURE"
     }
 
     private var tvtitle: TextView? = null

@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.graphics.Color
 import android.os.Bundle
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 
 import gr.net.maroulis.library.EasySplashScreen
 
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 
 class SplashScreenActivity : AppCompatActivity() {
 

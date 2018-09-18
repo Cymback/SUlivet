@@ -23,7 +23,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="-20dp"
             android:layout_marginTop="5dp"
-            android:background="@drawable/frontlogo" />
+            android:background="@drawable/frontlogo"
+            android:contentDescription="@string/description" />
 
         <ImageView
             android:layout_width="104dp"
@@ -32,6 +33,7 @@
             android:layout_marginBottom="25dp"
             android:layout_marginTop="50dp"
             android:background="@drawable/sulivetlogo"
+            android:contentDescription="@string/description"
             android:paddingBottom="50dp"
             android:paddingTop="50dp" />
 
@@ -40,9 +42,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/advent_pro"
-            android:text="Mad på SU"
+            android:text="@string/google_login_food_on_su"
             android:textColor="@android:color/black"
-            android:textSize="24dp"
+            android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
@@ -52,26 +54,25 @@
             android:layout_marginBottom="40dp"
             android:fontFamily="@font/advent_pro"
             android:paddingTop="10dp"
-            android:text="Tusindvis af lækre opskrifter til de helt små beløb!" />
+            android:text="@string/google_login_thousand_recipes_on_su" />
 
         <TextView
             android:id="@+id/create_account_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:fontFamily="@font/advent_pro"
             android:layout_marginTop="-20dp"
-            android:text="@string/create_account_google"/>
+            android:fontFamily="@font/advent_pro"
+            android:text="@string/create_account_google" />
 
         <com.shobhitpuri.custombuttons.GoogleSignInButton
             android:id="@+id/sign_in_btn"
             android:layout_width="215dp"
             android:layout_height="41dp"
-            android:layout_centerInParent="true"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="0dp"
             android:layout_marginTop="25dp"
-            android:text="@string/google_sign_in"
+            android:text="@string/google_login_google_sign_in_button"
             app:isDarkTheme="false" />
 
         <Button
@@ -81,8 +82,8 @@
             android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/cardview_shadow_end_color"
             android:fontFamily="@font/advent_pro"
-            android:text="@string/log_in_with_pass"
-            android:textSize="12dp"
+            android:text="@string/google_login_login_with_password"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
 

@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -7,7 +7,7 @@ import android.view.View
 import android.widget.Button
 
 import android.widget.Toast
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
@@ -21,15 +21,16 @@ class GoogleActivity : AppCompatActivity() {
 
 
     lateinit var button: Button
-    lateinit var gso: GoogleSignInOptions
-    lateinit var mGoogleSignInClient: GoogleSignInClient
-    val RC_SIGN_IN: Int = 1
+    private lateinit var gso: GoogleSignInOptions
+    private lateinit var mGoogleSignInClient: GoogleSignInClient
+    private val RC_SIGN_IN: Int = 1
+
     lateinit var signOut: Button
     lateinit var btnToLogin: Button
     lateinit var btnToCreate: Button
 
     companion object {
-        val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
+        const val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
 
     }
 

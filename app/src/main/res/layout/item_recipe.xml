@@ -8,13 +8,13 @@
     android:layout_marginTop="30dp"
     android:background="?android:attr/selectableItemBackground"
     android:clickable="true"
+    android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
+
     app:cardCornerRadius="4dp"
-
     app:cardElevation="5dp"
-    app:cardUseCompatPadding="true"
 
-    >
+    app:cardUseCompatPadding="true">
 
 
     <LinearLayout
@@ -28,6 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:background="#2d2d2d"
+            android:contentDescription="@string/description"
             android:scaleType="centerCrop" />
 
 
@@ -37,7 +38,7 @@
             android:layout_height="match_parent"
             android:fontFamily="@font/advent_pro"
             android:gravity="center"
-            android:text="Browse Recipe"
+            android:text="@string/item_recipe_browse_recipe"
             android:textColor="#2d2d2d"
             android:textSize="13sp" />
 

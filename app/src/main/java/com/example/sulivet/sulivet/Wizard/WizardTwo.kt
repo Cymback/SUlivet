@@ -1,12 +1,12 @@
-package com.example.caspergrosslarsen.sulivet.Wizard
+package com.example.sulivet.sulivet.Wizard
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import com.example.caspergrosslarsen.sulivet.Activities.MenuActivity
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.Activities.MenuActivity
+import com.example.sulivet.sulivet.R
 import kotlinx.android.synthetic.main.activity_wizard_two.*
 
 class WizardTwo : AppCompatActivity() {

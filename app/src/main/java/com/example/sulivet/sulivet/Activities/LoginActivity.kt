@@ -1,19 +1,14 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
-import android.app.ProgressDialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.support.v4.content.ContextCompat.startActivity
 import android.text.TextUtils
 import android.view.View
 import android.view.WindowManager
 import android.widget.*
-import com.example.caspergrosslarsen.sulivet.R
-import com.example.caspergrosslarsen.sulivet.R.string.email
-import com.example.caspergrosslarsen.sulivet.R.string.password
+import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
-import org.w3c.dom.Text
 import timber.log.Timber
 
 class LoginActivity : AppCompatActivity() {
@@ -28,11 +23,11 @@ class LoginActivity : AppCompatActivity() {
 
     // UI
 
-    lateinit var tvForgotPassword: TextView
-    lateinit var etEmail: EditText
-    lateinit var etPassword: EditText
+    private lateinit var tvForgotPassword: TextView
+    private lateinit var etEmail: EditText
+    private lateinit var etPassword: EditText
 
-    lateinit var btnLogin: Button
+    private lateinit var btnLogin: Button
     lateinit var btnCreateAccount: Button
 
     private var mAuth: FirebaseAuth? = null
@@ -58,18 +53,18 @@ class LoginActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        tvForgotPassword!!
+        tvForgotPassword
                 .setOnClickListener {
                     startActivity(Intent(this@LoginActivity, ForgotPasswordActivity::class.java))
                 }
 
-        btnLogin!!.setOnClickListener { loginUser() }
+        btnLogin.setOnClickListener { loginUser() }
 
     }
 
     private fun loginUser() {
-        email = etEmail?.text.toString()
-        password = etPassword?.text.toString()
+        email = etEmail.text.toString()
+        password = etPassword.text.toString()
 
         if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
 

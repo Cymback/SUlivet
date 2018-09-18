@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.caspergrosslarsen.sulivet">
+    package="com.example.sulivet.sulivet">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.ProfileActivity">
+        <activity android:name="com.example.sulivet.sulivet.Activities.GoogleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,21 +22,21 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
 
-        <activity android:name=".Wizard.WizardOne" />
-        <activity android:name=".Wizard.WizardTwo" />
-        <activity android:name=".Activities.MenuActivity" />
-        <activity android:name=".Activities.CheapRecipesActivity" />
-        <activity android:name=".Activities.ExpensiveRecipesActivity" />
-        <activity android:name=".Activities.InspirationActivity" />
-        <activity android:name=".Activities.RecipeDetailActivity" />
-        <activity android:name=".Activities.SplashScreenActivity" />
-        <activity android:name=".Activities.CreateAccountActivity" />
-        <activity android:name=".Activities.LoginActivity" />
-        <activity android:name=".Activities.ForgotPasswordActivity" />
-        <activity android:name=".Activities.EssentialActivity" />
-        <activity android:name=".Activities.FoodGeneratorActivity" />
-        <activity android:name=".Adapters.EssentialAdapter" />
-        <activity android:name=".Activities.GoogleActivity"></activity>
+        <activity android:name="com.example.sulivet.sulivet.Wizard.WizardOne" />
+        <activity android:name="com.example.sulivet.sulivet.Wizard.WizardTwo" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.MenuActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.CheapRecipesActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.ExpensiveRecipesActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.InspirationActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.RecipeDetailActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.SplashScreenActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.CreateAccountActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.LoginActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.ForgotPasswordActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.EssentialActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.FoodGeneratorActivity" />
+        <activity android:name="com.example.sulivet.sulivet.Adapters.EssentialAdapter" />
+        <activity android:name="com.example.sulivet.sulivet.Activities.ProfileActivity"></activity>
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -9,7 +9,7 @@ import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
 import timber.log.Timber
 

@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.app.Activity
 import android.content.Intent
@@ -8,9 +8,9 @@ import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 
-import com.example.caspergrosslarsen.sulivet.Model.Recipe
-import com.example.caspergrosslarsen.sulivet.R
-import com.example.caspergrosslarsen.sulivet.Adapters.CheapAdapter
+import com.example.sulivet.sulivet.Model.Recipe
+import com.example.sulivet.sulivet.R
+import com.example.sulivet.sulivet.Adapters.CheapAdapter
 import java.util.ArrayList
 
 
@@ -27,14 +27,14 @@ class CheapRecipesActivity : AppCompatActivity() {
     }
 
 
-    lateinit var lstRecipe: MutableList<Recipe>
+    private lateinit var lstRecipe: MutableList<Recipe>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cheap_recipes)
 
 
-        lstRecipe = ArrayList<Recipe>()
+        lstRecipe = ArrayList()
 
         lstRecipe.add(Recipe(getString(R.string.cheap_title),
 

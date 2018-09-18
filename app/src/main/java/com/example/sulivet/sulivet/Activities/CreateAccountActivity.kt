@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Activities
+package com.example.sulivet.sulivet.Activities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -10,7 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
@@ -58,7 +58,7 @@ class CreateAccountActivity : AppCompatActivity() {
         btnCreateAccount = findViewById<View>(R.id.create_account_page_btn) as Button
 
         mDatabase = FirebaseDatabase.getInstance()
-        mDatabaseReference = mDatabase!!.reference!!.child("Users")
+        mDatabaseReference = mDatabase!!.reference.child("Users")
         mAuth = FirebaseAuth.getInstance()
 
 

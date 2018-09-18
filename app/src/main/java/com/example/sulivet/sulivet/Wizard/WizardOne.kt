@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Wizard
+package com.example.sulivet.sulivet.Wizard
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.R
 import com.triggertrap.seekarc.SeekArc
 import com.triggertrap.seekarc.SeekArc.OnSeekArcChangeListener
 import timber.log.Timber
@@ -14,12 +14,12 @@ import timber.log.Timber
 
 class WizardOne : AppCompatActivity() {
 
-    lateinit var mSeekArc: SeekArc
+    private lateinit var mSeekArc: SeekArc
     lateinit var mSeekArcProgress: TextView
 
 
     companion object {
-        val EXTRASEEKARC = "EXTRASEEKARC" // key identifier for toWizardTwo intent
+        const val EXTRASEEKARC = "EXTRASEEKARC" // key identifier for toWizardTwo intent
 
     }
 
@@ -70,7 +70,7 @@ class WizardOne : AppCompatActivity() {
             Toast.makeText(this, "Nu er vi næsten ved at være der, prøv at sætte den en smule højere", Toast.LENGTH_SHORT).show()
         }
 
-        if (myIntProgress < 1200 && myIntProgress > 800) {
+        if (myIntProgress in 801..1199) {
             Toast.makeText(this, "Korrekt, gennemsnittet ligger mellem 800 og 1200kr", Toast.LENGTH_SHORT).show()
 
             val intent = Intent(this@WizardOne, WizardTwo::class.java)

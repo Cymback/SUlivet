@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -8,7 +7,6 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
         android:background="@drawable/mainback">
 
         <ImageView
@@ -16,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/description"
             android:scaleType="centerCrop">
 
         </ImageView>
@@ -27,7 +26,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="76dp"
             android:fontFamily="@font/advent_pro"
-            android:text="Casper Gross"
+            android:text="@string/profile_user_name"
             android:textColor="#fff"
             android:textSize="24sp"
             android:textStyle="bold">
@@ -44,6 +43,7 @@
             android:layout_centerInParent="true"
             android:layout_marginTop="-80dp"
             android:background="@drawable/profileicon"
+            android:contentDescription="@string/description"
             android:elevation="5dp"
             android:gravity="center_vertical"
             android:padding="20dp"
@@ -60,7 +60,6 @@
             <android.support.v7.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:elevation="4dp"
@@ -72,19 +71,21 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/advent_pro"
                     android:padding="5dp"
-                    android:text="Email"
-                    android:textSize="14dp" />
+                    android:text="@string/profile_user_email"
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/profile_change_email_icon"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="270dp"
+                    android:layout_marginStart="270dp"
                     android:background="@drawable/baseline_menu_black_24dp"
                     android:clickable="true"
-                    android:text="Change"
+                    android:contentDescription="@string/description"
+                    android:focusable="true"
+                    android:text="@string/profile_user_change_email"
                     android:textAlignment="center"
-                    android:textSize="10dp" />
+                    android:textSize="12sp" />
 
             </android.support.v7.widget.CardView>
 
@@ -92,7 +93,6 @@
             <android.support.v7.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:elevation="4dp"
@@ -104,26 +104,27 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/advent_pro"
                     android:padding="5dp"
-                    android:text="Telefon"
-                    android:textSize="14dp" />
+                    android:text="@string/profile_telephone"
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/profile_change_tlf"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="270dp"
+                    android:layout_marginStart="270dp"
                     android:background="@drawable/baseline_menu_black_24dp"
                     android:clickable="true"
-                    android:text="Change"
+                    android:contentDescription="@string/description"
+                    android:focusable="true"
+                    android:text="@string/profile_change_telephone"
                     android:textAlignment="center"
-                    android:textSize="10dp" />
+                    android:textSize="12sp" />
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:elevation="4dp"
@@ -135,26 +136,27 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/advent_pro"
                     android:padding="5dp"
-                    android:text="Address"
-                    android:textSize="14dp" />
+                    android:text="@string/profile_address"
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/profile_address_change_icon"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="270dp"
+                    android:layout_marginStart="270dp"
                     android:background="@drawable/baseline_menu_black_24dp"
                     android:clickable="true"
-                    android:text="Change"
+                    android:contentDescription="@string/description"
+                    android:focusable="true"
+                    android:text="@string/profile_address_change"
                     android:textAlignment="center"
-                    android:textSize="10dp" />
+                    android:textSize="12sp" />
 
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
                 android:layout_width="300dp"
                 android:layout_height="35dp"
-                android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
                 android:elevation="4dp"
@@ -166,18 +168,19 @@
                     android:layout_height="match_parent"
                     android:fontFamily="@font/advent_pro"
                     android:padding="5dp"
-                    android:text="Interests"
-                    android:textSize="14dp" />
+                    android:text="@string/profile_interests"
+                    android:textSize="14sp" />
 
                 <ImageView
                     android:id="@+id/profile_change_interests_icon"
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
-                    android:layout_marginLeft="270dp"
+                    android:layout_marginStart="270dp"
                     android:background="@drawable/baseline_menu_black_24dp"
-                    android:text="Change"
+                    android:contentDescription="@string/description"
+                    android:text="@string/profile_change_interests"
                     android:textAlignment="center"
-                    android:textSize="10dp" />
+                    android:textSize="12sp" />
 
             </android.support.v7.widget.CardView>
 

@@ -1,4 +1,4 @@
-package com.example.caspergrosslarsen.sulivet.Adapters
+package com.example.sulivet.sulivet.Adapters
 
 import android.content.Context
 import android.content.Intent
@@ -11,9 +11,9 @@ import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
-import com.example.caspergrosslarsen.sulivet.Activities.RecipeDetailActivity
-import com.example.caspergrosslarsen.sulivet.Model.Recipe
-import com.example.caspergrosslarsen.sulivet.R
+import com.example.sulivet.sulivet.Activities.RecipeDetailActivity
+import com.example.sulivet.sulivet.Model.Recipe
+import com.example.sulivet.sulivet.R
 
 class CheapAdapter(private val mContext: Context, private val mData: List<Recipe>) : RecyclerView.Adapter<CheapAdapter.MyViewHolder>() {
 
