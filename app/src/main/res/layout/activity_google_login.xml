@@ -17,6 +17,7 @@
         android:paddingRight="24dp"
         android:paddingTop="1dp">
 
+
         <ImageView
             android:layout_width="247dp"
             android:layout_height="163dp"
@@ -47,6 +48,15 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
+        <ProgressBar
+            android:id="@+id/google_progressbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:visibility="gone"
+            />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -56,35 +66,60 @@
             android:paddingTop="10dp"
             android:text="@string/google_login_thousand_recipes_on_su" />
 
-        <TextView
-            android:id="@+id/create_account_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="-20dp"
-            android:fontFamily="@font/advent_pro"
-            android:text="@string/create_account_google" />
+
 
         <com.shobhitpuri.custombuttons.GoogleSignInButton
             android:id="@+id/sign_in_btn"
             android:layout_width="215dp"
             android:layout_height="41dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="-29dp"
             android:text="@string/google_login_google_sign_in_button"
             app:isDarkTheme="false" />
 
-        <Button
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#000000" />
+
+
+        <TextView
             android:id="@+id/to_login_with_email_btn"
-            android:layout_width="215dp"
-            android:layout_height="41dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/cardview_shadow_end_color"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/advent_pro"
-            android:text="@string/google_login_login_with_password"
-            android:textSize="12sp"
-            android:textStyle="bold" />
+            android:text="@string/google_login_btn_to_email_login"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#000000" />
+
+        <TextView
+            android:id="@+id/create_account_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="5dp"
+            android:fontFamily="@font/advent_pro"
+            android:text="@string/google_login_create_account_google"
+            android:textSize="12sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="5dp"
+            android:background="#000000" />
 
 
     </LinearLayout>

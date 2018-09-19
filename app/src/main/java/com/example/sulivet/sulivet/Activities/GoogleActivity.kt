@@ -5,16 +5,21 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.ProgressBar
 
 import android.widget.Toast
+import com.example.sulivet.sulivet.Model.User
 import com.example.sulivet.sulivet.R
 
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import timber.log.Timber
 
 
 class GoogleActivity : AppCompatActivity() {
@@ -25,9 +30,12 @@ class GoogleActivity : AppCompatActivity() {
     private lateinit var mGoogleSignInClient: GoogleSignInClient
     private val RC_SIGN_IN: Int = 1
 
-    lateinit var signOut: Button
-    lateinit var btnToLogin: Button
-    lateinit var btnToCreate: Button
+    private var mDatabaseReference: DatabaseReference? = null
+    private var mDatabase: FirebaseDatabase? = null
+    private var mAuth: FirebaseAuth? = null
+
+    // progressbar
+
 
     companion object {
         const val GLGTOWIZ = "GLGTOWIZ" // key identifier for toWizardTwo intent
@@ -38,19 +46,37 @@ class GoogleActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_google_login)
 
-        val signIn = findViewById<View>(R.id.sign_in_btn) as Button
-        val btnToLogin = findViewById<View>(R.id.to_login_with_email_btn) as Button
+        val signIn = findViewById<View>(R.id.sign_in_btn)
+        val btnToLogin = findViewById<View>(R.id.to_login_with_email_btn)
         val btnToCreate = findViewById<View>(R.id.create_account_btn)
 
+        val progressBar = findViewById<ProgressBar>(R.id.google_progressbar)
 
-        gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                .requestIdToken(getString(R.string.default_web_client_id))
-                .requestEmail()
-                .build()
 
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-        signIn.setOnClickListener {
-            signIn()
+
+
+        mAuth = FirebaseAuth.getInstance()
+
+        if (mAuth?.currentUser == null) {
+
+            gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                    .requestIdToken(getString(R.string.default_web_client_id))
+                    .requestEmail()
+                    .build()
+
+            mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
+            signIn.setOnClickListener {
+                if (progressBar != null) {
+                    
+                }
+                signIn()
+            }
+
+        } else {
+
+            startActivity(Intent(this@GoogleActivity, MenuActivity::class.java))
+            finishAffinity()
+            // ^ removes activites in the backstack
         }
 
         btnToLogin.setOnClickListener {
@@ -68,50 +94,52 @@ class GoogleActivity : AppCompatActivity() {
         val signInIntent: Intent = mGoogleSignInClient.signInIntent
         startActivityForResult(signInIntent, RC_SIGN_IN)
 
+
+
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        val task: Task<GoogleSignInAccount>? = null
         if (requestCode == RC_SIGN_IN) {
 
-            val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(data)
-            handleResult(task)
+            updateUI()
+
+
+
         } else {
             Toast.makeText(this, "Problem in execution order :(", Toast.LENGTH_LONG).show()
+            Timber.log(11, task?.exception)
+
+
         }
     }
 
-    private fun handleResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account: GoogleSignInAccount = completedTask.getResult(ApiException::class.java)
-            // updateUI(account)
-            // handle account info here
+    private fun updateUI() {
 
+        mDatabase = FirebaseDatabase.getInstance()
 
-            val myIntent = Intent(this@GoogleActivity, SplashScreenActivity::class.java)
-            startActivity(myIntent)
+        mDatabaseReference = mDatabase?.reference?.child("Users")
 
-        } catch (e: ApiException) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        val mUser = mAuth!!.currentUser
+
+        val user = User()
+
+        user.apply {
+            mUser?.uid
+            mUser?.email
         }
+
+        mDatabaseReference?.setValue(user)!!.addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                startActivity(Intent(this@GoogleActivity, MenuActivity::class.java))
+            } else {
+                Timber.log(12, "Failed to set value of user in DB")
+            }
+
+        }
+
     }
 }
-
-//    private fun updateUI(account: GoogleSignInAccount) {
-//        val dispTxt = findViewById<View>(R.id.dispTxt) as TextView
-//        dispTxt.text = account.displayName
-//        signOut.visibility = View.VISIBLE
-//        signOut.setOnClickListener { view: View? ->
-//            mGoogleSignInClient.signOut().addOnCompleteListener { task: Task<Void> ->
-//                if (task.isSuccessful) {
-//                    dispTxt.text = " "
-//                    signOut.visibility = View.INVISIBLE
-//                    signOut.isClickable = false
-//                }
-//            }
-//        }
-//    }
-
-
-
 

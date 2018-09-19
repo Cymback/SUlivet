@@ -103,7 +103,7 @@ class CreateAccountActivity : AppCompatActivity() {
 
                         } else {
                             Timber.log(2, "createUserWithEmail:failure", task.exception)
-                            Toast.makeText(this@CreateAccountActivity, "Authentication failed", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@CreateAccountActivity, "Failed to create account - Please try again", Toast.LENGTH_SHORT).show()
 
                         }
 

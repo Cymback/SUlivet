@@ -9,7 +9,7 @@
     <string name="lets_get_going_two">Opret din konto nedenunder</string>
     <string name="recieve_password_email">Indtast din email for at modtage dit nye password</string>
     <string name="google_login_login_with_password">Login med email</string>
-    <string name="create_account_google">Opret konto</string>
+    <string name="google_login_create_account_google">Opret konto</string>
     <string name="menu_should_care_for_detail">Skal der kæles for detaljen?</string>
     <string name="menu_ultra_cheap_recipes">Ultra-billige opskrifter</string>
     <string name="menu_you_will_find_them_here">Dem finder du lige her!</string>
@@ -57,4 +57,5 @@
     <string name="google_login_thousand_recipes_on_su">Tusindvis af lækre opskrifter til de helt små beløb!</string>
     <string name="item_essential_header">Header1</string>
     <string name="item_essential_description">description</string>
+    <string name="google_login_btn_to_email_login">Login med email</string>
 </resources>
