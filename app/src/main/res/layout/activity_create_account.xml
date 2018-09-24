@@ -46,18 +46,21 @@
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
-            android:fontFamily="@font/advent_pro"
-            android:paddingTop="1dp"
-            android:text="@string/lets_get_going_two" />
+
 
 
         <!--space her for saving more user information, username, adress-->
         <!--etc-->
+
+        <EditText
+            android:id="@+id/et_username"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/advent_pro"
+            android:hint="Username"
+
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/et_email"
@@ -82,11 +85,26 @@
             android:id="@+id/create_account_page_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="40dp"
-            android:width="500dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:width="150dp"
             android:height="30dp"
             android:backgroundTint="@color/common_google_signin_btn_text_dark"
+            android:fontFamily="@font/advent_pro"
             android:text="@string/create_account" />
+
+        <TextView
+            android:id="@+id/create_account_link_to_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="0dp"
+            android:autoLink="all"
+            android:clickable="true"
+            android:fontFamily="@font/advent_pro"
+            android:paddingTop="1dp"
+            android:text="@string/create_account_already_member" />
 
 
     </LinearLayout>

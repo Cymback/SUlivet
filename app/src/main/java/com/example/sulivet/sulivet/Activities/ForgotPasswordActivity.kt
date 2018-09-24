@@ -39,8 +39,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun initialise() {
-        etEmail = findViewById<View>(R.id.et_email) as EditText
-        btnForgot = findViewById<View>(R.id.btn_forgot_email) as Button
+        etEmail = findViewById(R.id.activity_forgot_email_textview)
+        btnForgot = findViewById(R.id.activity_forgot_email_btn)
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -71,7 +71,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun updateUi() {
-        val intent = Intent(this@ForgotPasswordActivity, LoginActivity::class.java)
+        /// val intent = Intent(this@ForgotPasswordActivity, LoginActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }
