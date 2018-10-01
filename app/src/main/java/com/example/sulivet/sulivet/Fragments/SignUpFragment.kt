@@ -27,7 +27,7 @@ class SignUpFragment : Fragment() {
     private var etEmail: EditText? = null
     private var etPassword: EditText? = null
 
-    private var btnCreateAccount: Button? = null
+    private var btnCreateAccount: TextView? = null
 
 
     private var mDatabaseReference: DatabaseReference? = null
@@ -54,7 +54,7 @@ class SignUpFragment : Fragment() {
         etPassword = view.findViewById(R.id.frag_create_acc_password)
 
 
-        btnCreateAccount = view.findViewById(R.id.frag_signup_create_account_btn) as Button
+        btnCreateAccount = view.findViewById(R.id.frag_signup_create_account_btn)
 
 
 

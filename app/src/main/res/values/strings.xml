@@ -82,4 +82,14 @@
     <string name="frag_create_acc_password">Password</string>
     <string name="frag_create_account_create">Create account</string>
     <string name="frag_login_btn">Login</string>
+    <string name="intro_journey_starts_txt">The journey towards cheap recipes starts here!</string>
+    <string name="intro_in_a_world_txt">In a world full of possibilities there can only be one app to rule your food choices</string>
+    <string name="title_activity_nav_menu_bar">NavMenuBar</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="title_activity_menu_nav">MenuNav</string>
+
 </resources>

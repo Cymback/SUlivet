@@ -15,7 +15,7 @@ class SplashScreenActivity : AppCompatActivity() {
 
         val config = EasySplashScreen(this@SplashScreenActivity)
                 .withFullScreen()
-                .withTargetActivity(MenuActivity::class.java)
+                .withTargetActivity(IntroductionActivity::class.java)
                 .withSplashTimeOut(5000)
                 .withBackgroundColor(Color.parseColor("#ffffff"))
                 .withLogo(R.drawable.sulivet)

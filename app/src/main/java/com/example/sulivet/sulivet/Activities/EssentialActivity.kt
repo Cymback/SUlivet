@@ -45,6 +45,7 @@ class EssentialActivity : AppCompatActivity() {
         tile4_essential.header2_essential.text = getString(R.string.essential_tools_to_complete_recipes)
 
 
+
     }
 
     private fun initialise() {

@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import android.support.v4.view.ViewPager
 import android.os.Bundle
 import android.view.View
+import android.view.WindowManager
 import com.example.sulivet.sulivet.R
 
 class LoginHandler : AppCompatActivity() {
@@ -23,6 +24,8 @@ class LoginHandler : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_handler)
+
+        window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
         mSectionsPageAdapter = SectionsPageAdapter(supportFragmentManager)
 

@@ -54,7 +54,7 @@ class LoginFragment : Fragment() {
         etEmail = view.findViewById(R.id.frag_login_email_view)
         etPassword = view.findViewById(R.id.frag_login_password_view)
 
-        val btnLogin: Button? = view.findViewById(R.id.frag_login_login_btn)
+        val btnLogin: TextView? = view.findViewById(R.id.frag_login_login_btn)
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -63,7 +63,7 @@ class LoginFragment : Fragment() {
         }
 
         btnLogin!!.setOnClickListener { loginUser() }
-        tvForgotPassword!!.setOnClickListener { forgotPassword() }
+        tvForgotPassword.setOnClickListener { forgotPassword() }
 
 
         return view
@@ -103,7 +103,7 @@ class LoginFragment : Fragment() {
 
 
         mAuth!!.signInWithEmailAndPassword(email!!, password!!)
-                .addOnCompleteListener(this.activity!!, OnCompleteListener<AuthResult> { task ->
+                .addOnCompleteListener(this.activity!!) { task ->
 
                     if (task.isSuccessful) {
                         Timber.log(5, "signInWithEmail:success")
@@ -116,7 +116,7 @@ class LoginFragment : Fragment() {
 
                     }
 
-                })
+                }
 
     }
 

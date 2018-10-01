@@ -1,83 +1,128 @@
 package com.example.sulivet.sulivet.Activities
 
+import android.app.Activity
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.widget.CardView
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.widget.ImageView
+import android.widget.Toast
+import com.example.sulivet.sulivet.Fragments.LoginHandler
+import com.example.sulivet.sulivet.MenuActivities.*
 import com.example.sulivet.sulivet.R
 import com.example.sulivet.sulivet.R.menu.menu_menu
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.item_menu.view.*
 
 class MenuActivity : AppCompatActivity() {
 
-    companion object {
-        const val CHEAPRECIPES = "CHEAPRECIPES" // key identifiers used in intents
-        const val EXPENSIVERECIPES = "EXPENSIVERECIPES"
-        const val INSPIRATIONRECIPES = "INSPIRATIONRECIPES"
+    private var mAuth: FirebaseAuth? = null
 
+
+    companion object {
+
+        const val MYPROFILE = "MYPROFILE"
+        const val RECIPES = "RECIPES"
+        const val KITCHENESSENTIALS = "KITCHENESSENTIALS"
+        const val SETTINGSPAGE = "SETTINGSPAGE"
+        const val FOODPLANNER = "FOODPLANNER"
+        const val CHALLENGEMODE = "CHALLENGEMODE"
+
+
+        fun startActivity(activity: Activity?) {
+
+            if (activity == null || activity.isFinishing) return
+
+            val intent = Intent(activity, MenuActivity::class.java)
+            activity.startActivity(intent)
+        }
     }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+        val myProfileRoute = findViewById<View>(R.id.menu_card_myprofile)
+        val myRecipesRoute = findViewById<View>(R.id.menu_card_recipes)
+        val kitchenEssentials = findViewById<View>(R.id.menu_card_kitchen_essentials)
+        val settingsPage = findViewById<View>(R.id.menu_card_settings)
+        val foodPlanner = findViewById<View>(R.id.menu_card_food_planner)
+        val challengeMode = findViewById<View>(R.id.menu_card_challenge_mode)
 
-        // TODO:: SET ALL TILES SO THEY LOOK BEAUTIFUL
-        header1.headerOne.text = getString(R.string.menu_ultra_cheap_recipes)
-        header1.descriptionOne.text = getString(R.string.menu_you_will_find_them_here)
-
-        // Navigation
-
-        header1.setOnClickListener {
-            CheapRecipesActivity.startActivity(this@MenuActivity)
-        }
-
-        header2.headerOne.text = getString(R.string.menu_should_care_for_detail)
-        header2.descriptionOne.text = getString(R.string.menu_fresh_recipes)
-
-        header2.setOnClickListener {
-            ExpensiveRecipesActivity.startActivity(this@MenuActivity)
-        }
-
-        header3.headerOne.text = getString(R.string.menu_do_you_lack_inspiration)
-        header3.descriptionOne.text = getString(R.string.menu_klik_me_get_inspiration)
-
-        header3.setOnClickListener {
-            InspirationActivity.startActivity(this@MenuActivity)
-
-        }
-
-        header4.headerOne.text = getString(R.string.menu_do_you_miss_food_generator)
-        header4.descriptionOne.text = getString(R.string.menu_try_this)
-
-        header4.setOnClickListener {
-            FoodGeneratorActivity.startActivity(this@MenuActivity)
-        }
+        myProfileRoute.setOnClickListener { toProfilePage() }
+        myRecipesRoute.setOnClickListener { toRecipesPage() }
+        kitchenEssentials.setOnClickListener { toKitchenEssentials() }
+        settingsPage.setOnClickListener { toSettingsPage() }
+        foodPlanner.setOnClickListener { toFoodPlanner() }
+        challengeMode.setOnClickListener { toChallengeMode() }
 
 
-        header5.headerOne.text = getString(R.string.menu_essential_kitchen_stuff)
-        header5.descriptionOne.text = getString(R.string.menu_list_of_kitchen_things)
+    }
 
-        header5.setOnClickListener {
-            EssentialActivity.startActivity(this@MenuActivity)
+    private fun toFoodPlanner() {
+        val intent = Intent(this, FoodPlannerActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
 
+    private fun toSettingsPage() {
+        val intent = Intent(this, SettingsActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
+
+    private fun toKitchenEssentials() {
+        val intent = Intent(this, KitchenEssentialsActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
+
+    private fun toChallengeMode() {
+        val intent = Intent(this, ChallengeModeActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
+
+    private fun toRecipesPage() {
+        val intent = Intent(this, RecipesActivity::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+    }
+
+    private fun toProfilePage() {
+
+        val mAuth = FirebaseAuth.getInstance()
+
+        if (mAuth.currentUser != null) {
+            Toast.makeText(applicationContext, "You are already logged in succesfully", Toast.LENGTH_SHORT).show()
+
+        } else {
+            if (mAuth.currentUser == null) {
+                val intent = Intent(this, LoginHandler::class.java)
+                startActivity(intent)
+                overridePendingTransition(R.anim.fade_in, R.anim.slide_out_right)
+
+            }
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu_menu, menu)
-        return true
+    private fun Finish() {
+
+        super.finish()
+        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        if (item?.itemId == R.id.menu_menu_profile_view) {
 
-            startActivity(Intent(this@MenuActivity, ProfileActivity::class.java))
-        }
-        return super.onOptionsItemSelected(item)
+    override fun onBackPressed() {
+
+        Toast.makeText(applicationContext, "Back press disabled!", Toast.LENGTH_SHORT).show()
     }
+
 }
-
 

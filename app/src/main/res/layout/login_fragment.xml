@@ -51,18 +51,19 @@
             android:textStyle="bold" />
 
 
-        <Button
+        <TextView
             android:id="@+id/frag_login_login_btn"
             android:layout_width="100dp"
             android:layout_height="30dp"
             android:layout_gravity="center"
-            android:layout_marginBottom="15dp"
             android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_edittext"
+            android:layout_marginBottom="15dp"
             android:fontFamily="@font/advent_pro"
+            android:gravity="center"
             android:text="@string/frag_login_btn"
-            android:textColor="@color/blackText"
-            android:textStyle="bold" />
+            android:textColor="@color/SolidWhite"
+            android:textSize="16sp"
+            android:textStyle="normal" />
 
         <View
             android:layout_width="match_parent"
@@ -74,21 +75,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:layout_marginTop="15dp"
             android:layout_marginBottom="15dp"
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
             android:textAlignment="center">
 
             <TextView
                 android:id="@+id/frag_login_forgot_password_text"
-                android:layout_width="wrap_content"
+                android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginRight="0dp"
                 android:fontFamily="@font/advent_pro"
-                android:text="@string/frag_login_forgot_email_txt"
-                android:textColor="@color/ColorTextWhite"
-                android:textSize="20sp" />
+                android:text="Already registered?"
+                android:textAlignment="center"
+                android:textStyle="italic" />
 
 
         </LinearLayout>

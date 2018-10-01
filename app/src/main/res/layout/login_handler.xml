@@ -8,6 +8,7 @@
     android:background="@drawable/bba"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
+    android:windowSoftInputMode="stateHidden"
     tools:context="com.example.sulivet.sulivet.Fragments.LoginHandler">
 
 
