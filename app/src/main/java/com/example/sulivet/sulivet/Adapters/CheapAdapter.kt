@@ -33,25 +33,21 @@ class CheapAdapter(private val mContext: Context, private val mData: List<Recipe
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
 
-        holder.recipe_title.text = mData[position].title
+        holder.recipetitle.text = mData[position].title
 
         Glide.with(holder.itemView.context)
                 .load(mData[position].picture)
-                .into(holder.recipe_img)
+                .into(holder.recipeimg)
 
 
         val animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.fade_in)
         holder.itemView.startAnimation((animation))
 
 
-        // Example to handle whatever is in recipe_title. every item is set to dissapear 1 in sec
-//        Handler().postDelayed({
-//            holder.recipe_title.visibility = View.GONE
-//        }, 1000
-//        )
+
 
         // Set click listener
-        holder.cardView.setOnClickListener(View.OnClickListener {
+        holder.cardView.setOnClickListener {
 
             val intent = Intent(mContext, RecipeDetailActivity::class.java)
             intent.apply {
@@ -65,7 +61,7 @@ class CheapAdapter(private val mContext: Context, private val mData: List<Recipe
 
             }
             mContext.startActivity(intent)
-        })
+        }
 
 
     }
@@ -76,8 +72,8 @@ class CheapAdapter(private val mContext: Context, private val mData: List<Recipe
 
     class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        internal var recipe_title: TextView = itemView.findViewById<View>(R.id.recipe_title_id) as TextView
-        internal var recipe_img: ImageView = itemView.findViewById<View>(R.id.recipe_img_id) as ImageView
+        internal var recipetitle: TextView = itemView.findViewById<View>(R.id.recipe_title_id) as TextView
+        internal var recipeimg: ImageView = itemView.findViewById<View>(R.id.recipe_img_id) as ImageView
         var cardView: CardView = itemView.findViewById<View>(R.id.item_recipe_id) as CardView
 
 
