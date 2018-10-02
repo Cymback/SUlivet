@@ -1,4 +1,4 @@
-package com.example.sulivet.sulivet.Activities
+package com.example.sulivet.sulivet.MenuActivities
 
 import android.app.Activity
 import android.content.Intent

@@ -4,14 +4,14 @@
     android:id="@+id/essential_scrollview_id"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bba"
     android:fillViewport="true"
     android:orientation="vertical"
-    tools:context=".Activities.MenuActivity">
+    >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/mainback"
         android:orientation="vertical"
         android:padding="15dp">
 

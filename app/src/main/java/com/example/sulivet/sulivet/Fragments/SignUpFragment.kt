@@ -106,7 +106,7 @@ class SignUpFragment : Fragment() {
 
             mAuth!!
                     .createUserWithEmailAndPassword(email!!, password!!)
-                    .addOnCompleteListener(this.activity!!, OnCompleteListener<AuthResult> { task ->
+                    .addOnCompleteListener(this.activity!!) { task ->
 
 
                         if (task.isSuccessful) {
@@ -154,7 +154,7 @@ class SignUpFragment : Fragment() {
 
                         }
 
-                    })
+                    }
         }
 
 

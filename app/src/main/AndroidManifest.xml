@@ -31,7 +31,7 @@
         <activity android:name=".Activities.SplashScreenActivity" />
         <activity android:name=".Activities.ForgotPasswordActivity" />
         <activity android:name=".Activities.MenuActivity" />
-        <activity android:name=".Activities.EssentialActivity" />
+        <activity android:name=".MenuActivities.EssentialActivity" />
         <activity android:name=".Activities.FoodGeneratorActivity" />
         <activity android:name=".Adapters.EssentialAdapter" />
         <activity android:name=".MenuActivities.ProfileActivity" />

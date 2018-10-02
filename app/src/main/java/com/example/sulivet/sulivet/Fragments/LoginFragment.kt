@@ -1,16 +1,16 @@
 package com.example.sulivet.sulivet.Fragments
 
+import android.content.Context
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
 import com.example.sulivet.sulivet.Activities.ForgotPasswordActivity
 import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.R
@@ -25,6 +25,7 @@ class LoginFragment : Fragment() {
 
     private var email: String? = null
     private var password: String? = null
+    private var progressBar: ProgressBar? = null
 
 
     // UI
@@ -50,6 +51,7 @@ class LoginFragment : Fragment() {
 
         tvForgotPassword = view.findViewById(R.id.frag_login_forgot_password_text)
 
+        progressBar = view.findViewById(R.id.frag_login_progressbar)
 
         etEmail = view.findViewById(R.id.frag_login_email_view)
         etPassword = view.findViewById(R.id.frag_login_password_view)
@@ -63,6 +65,7 @@ class LoginFragment : Fragment() {
         }
 
         btnLogin!!.setOnClickListener { loginUser() }
+
         tvForgotPassword.setOnClickListener { forgotPassword() }
 
 
@@ -79,27 +82,40 @@ class LoginFragment : Fragment() {
 
 
     private fun loginUser() {
+
+        progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this!!.context!!, R.color.redcolor), PorterDuff.Mode.SRC_IN)
+        progressBar!!.visibility = View.VISIBLE
+
         email = etEmail.text.toString()
         password = etPassword.text.toString()
+
 
         if (email!!.isEmpty()) {
             etEmail.error = "Email is required"
             etEmail.requestFocus()
+            progressBar!!.visibility = View.GONE
+
             return
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             etEmail.error = "Please enter a valid email"
             etEmail.requestFocus()
+            progressBar!!.visibility = View.GONE
+
             return
         }
 
         if (password!!.isEmpty()) {
             etPassword.error = "Password is required"
             etPassword.requestFocus()
+            progressBar!!.visibility = View.GONE
+
             return
 
         }
+
+
 
 
         mAuth!!.signInWithEmailAndPassword(email!!, password!!)
@@ -109,10 +125,13 @@ class LoginFragment : Fragment() {
                         Timber.log(5, "signInWithEmail:success")
                         updateUI()
 
+                        progressBar!!.visibility = View.GONE
+
 
                     } else {
                         Timber.log(6, "signInWithEmail:failure", task.exception)
                         Toast.makeText(activity, "Authentication failed.", Toast.LENGTH_SHORT).show()
+                        progressBar!!.visibility = View.GONE
 
                     }
 
