@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    tools:background="@drawable/bba">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/watermaloooone" />
+
+
+        <ProgressBar
+            android:id="@+id/frag_login_progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal" />
+
+
+        <EditText
+            android:id="@+id/frag_login_email_view"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_edittext"
+            android:fontFamily="@font/advent_pro"
+            android:hint="@string/login_email_hint"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:textColor="@color/blackText"
+            android:textColorHint="@android:color/darker_gray"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/frag_login_password_view"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_edittext"
+            android:fontFamily="@font/advent_pro"
+            android:hint="@string/login_password_hint"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textColor="@color/blackText"
+            android:textColorHint="@android:color/darker_gray"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/frag_login_login_btn"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:fontFamily="@font/advent_pro"
+            android:gravity="center"
+            android:text="@string/frag_login_btn"
+            android:textColor="@color/SolidWhite"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="-25dp"
+            android:background="@color/greysigninsignup" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:textAlignment="center">
+
+            <TextView
+                android:id="@+id/frag_login_forgot_password_text"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/advent_pro"
+                android:text="Forgot password?"
+                android:textAlignment="center"
+                android:textStyle="italic" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</ScrollView>

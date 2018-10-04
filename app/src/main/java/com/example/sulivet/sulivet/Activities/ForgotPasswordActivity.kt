@@ -4,10 +4,9 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.View
 import android.view.WindowManager
-import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
@@ -20,7 +19,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
     // UI
 
     private var etEmail: EditText? = null
-    private var btnForgot: Button? = null
+    private var btnForgot: TextView? = null
 
     // Firebase
 
@@ -39,8 +38,8 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun initialise() {
-        etEmail = findViewById<View>(R.id.et_email) as EditText
-        btnForgot = findViewById<View>(R.id.btn_forgot_email) as Button
+        etEmail = findViewById(R.id.activity_forgot_email_input)
+        btnForgot = findViewById(R.id.activity_forgot_email_txt)
 
         mAuth = FirebaseAuth.getInstance()
 
@@ -71,7 +70,7 @@ class ForgotPasswordActivity : AppCompatActivity() {
     }
 
     private fun updateUi() {
-        val intent = Intent(this@ForgotPasswordActivity, LoginActivity::class.java)
+        /// val intent = Intent(this@ForgotPasswordActivity, LoginActivity::class.java)
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
         startActivity(intent)
     }

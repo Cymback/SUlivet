@@ -1,4 +1,4 @@
-package com.example.sulivet.sulivet.Activities
+package com.example.sulivet.sulivet.MenuActivities
 
 import android.app.Activity
 import android.content.Intent
@@ -14,14 +14,14 @@ import com.example.sulivet.sulivet.Adapters.CheapAdapter
 import java.util.ArrayList
 
 
-class CheapRecipesActivity : AppCompatActivity() {
+class RecipesActivity : AppCompatActivity() {
 
     companion object {
         fun startActivity(activity: Activity?) {
 
             if (activity == null || activity.isFinishing) return
 
-            val intent = Intent(activity, CheapRecipesActivity::class.java)
+            val intent = Intent(activity, RecipesActivity::class.java)
             activity.startActivity(intent)
         }
     }

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/mainback"
+    android:background="@drawable/bba"
     tools:context=".Activities.RecipeDetailActivity">
 
 
@@ -33,6 +33,7 @@
                 android:layout_height="0dp"
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
+                android:fontFamily="@font/advent_pro"
                 android:text="@string/detail_recipe_title"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -43,13 +44,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:fontFamily="@font/advent_pro"
                 android:text="@string/detail_recipe_content"
                 android:textSize="18sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#2d2d2d" />
+                android:layout_margin="15dp"
+                android:background="@color/SolidWhite"
+                android:textColor="@color/SolidWhite" />
 
 
             <TextView
@@ -57,6 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
+                android:fontFamily="@font/advent_pro"
                 android:gravity="center"
                 android:padding="8dp"
                 android:text="@string/detail_recipe_ingredients" />
