@@ -6,18 +6,19 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.ScrollView
+import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.R
 import kotlinx.android.synthetic.main.activity_essential.*
 import kotlinx.android.synthetic.main.item_essential.view.*
 
-class EssentialActivity : AppCompatActivity() {
+class KitchenEssentialActivity : AppCompatActivity() {
 
     companion object {
         fun startActivity(activity: Activity?) {
 
             if (activity == null || activity.isFinishing) return
 
-            val intent = Intent(activity, EssentialActivity::class.java)
+            val intent = Intent(activity, KitchenEssentialActivity::class.java)
             activity.startActivity(intent)
 
         }
@@ -45,7 +46,6 @@ class EssentialActivity : AppCompatActivity() {
         tile4_essential.item_essential_description.text = getString(R.string.essential_tools_to_complete_recipes)
 
 
-
     }
 
     private fun initialise() {
@@ -55,4 +55,8 @@ class EssentialActivity : AppCompatActivity() {
     }
 
 
+    override fun onBackPressed() {
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+    }
 }
