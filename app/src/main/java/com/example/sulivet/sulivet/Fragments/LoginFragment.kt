@@ -83,7 +83,7 @@ class LoginFragment : Fragment() {
 
     private fun loginUser() {
 
-        progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this!!.context!!, R.color.redcolor), PorterDuff.Mode.SRC_IN)
+        progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this.context!!, R.color.redcolor), PorterDuff.Mode.SRC_IN)
         progressBar!!.visibility = View.VISIBLE
 
         email = etEmail.text.toString()

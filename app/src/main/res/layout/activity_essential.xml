@@ -1,36 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/essential_scrollview_id"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bba"
-    android:fillViewport="true"
-    android:orientation="vertical">
+    android:background="@drawable/bba">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/EssentialAdapterView"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="15dp">
-
-        <include
-            android:id="@+id/tile1_essential"
-            layout="@layout/item_essential" />
-
-        <include
-            android:id="@+id/tile2_essential"
-            layout="@layout/item_essential" />
-
-        <include
-            android:id="@+id/tile3_essential"
-            layout="@layout/item_essential" />
-
-        <include
-            android:id="@+id/tile4_essential"
-            layout="@layout/item_essential" />
+        android:weightSum="1">
 
 
-    </LinearLayout>
+    </android.support.v7.widget.RecyclerView>
 
-</ScrollView>
+
+</LinearLayout>

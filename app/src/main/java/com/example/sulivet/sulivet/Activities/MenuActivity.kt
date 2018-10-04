@@ -49,6 +49,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -61,11 +62,11 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
 
+
         nav_view.setNavigationItemSelectedListener(this)
 
         displayScreen(-1)
 
-        userNavShow()
 
         val myProfileRoute = findViewById<View>(R.id.menu_card_myprofile)
         val myRecipesRoute = findViewById<View>(R.id.menu_card_recipes)
@@ -82,19 +83,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         challengeMode.setOnClickListener { toChallengeMode() }
 
 
-    }
-
-    private fun userNavShow() {
-        if (FirebaseAuth.getInstance().currentUser != null) {
-
-
-
-            drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED)
-        } else {
-
-            drawer_layout.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_OPEN)
-
-        }
     }
 
 

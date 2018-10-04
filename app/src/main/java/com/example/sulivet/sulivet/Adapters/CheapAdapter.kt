@@ -40,11 +40,6 @@ class CheapAdapter(private val mContext: Context, private val mData: List<Recipe
                 .into(holder.recipeimg)
 
 
-        val animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.fade_in)
-        holder.itemView.startAnimation((animation))
-
-
-
 
         // Set click listener
         holder.cardView.setOnClickListener {

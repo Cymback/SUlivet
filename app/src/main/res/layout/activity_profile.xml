@@ -79,7 +79,7 @@
                     android:layout_width="30dp"
                     android:layout_height="match_parent"
                     android:layout_marginStart="270dp"
-                    android:background="@drawable/baseline_menu_black_24dp"
+                    android:background="@drawable/navburgermenu"
                     android:clickable="true"
                     android:contentDescription="@string/description"
                     android:focusable="true"
