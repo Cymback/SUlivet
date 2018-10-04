@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
+import com.example.sulivet.sulivet.Activities.MenuActivity
 
 import com.example.sulivet.sulivet.Model.Recipe
 import com.example.sulivet.sulivet.R
@@ -242,4 +243,13 @@ class RecipesActivity : AppCompatActivity() {
         cheapview.layoutManager = GridLayoutManager(this, 3)
         cheapview.adapter = myAdapter
     }
+
+    override fun onBackPressed() {
+        val intent = Intent(this, MenuActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP) // the FLAG_ACTIVITY_CLEAR_TOP flag clears the CreateAccountActivity from stack so that if user press back from MenuActivity, he should not be taken back to CreateAccountActivity.
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+    }
+
 }
+
