@@ -118,6 +118,8 @@ class GoogleActivity : AppCompatActivity() {
 
     private fun updateUI() {
 
+
+
         mDatabase = FirebaseDatabase.getInstance()
 
         mDatabaseReference = mDatabase?.reference?.child("Users")
