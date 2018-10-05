@@ -18,6 +18,7 @@ class IntroductionActivity : AppCompatActivity() {
         setContentView(R.layout.activity_introduction)
 
 
+
         val imageView = findViewById<View>(R.id.intro_btn_letsgo)
 
         imageView.setOnClickListener { btnToMenu() }

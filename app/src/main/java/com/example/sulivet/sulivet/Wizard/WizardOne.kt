@@ -27,7 +27,7 @@ class WizardOne : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_wizard_one)
 
-        mSeekArc = findViewById(R.id.seekArc)
+        mSeekArc = findViewById(R.id.fishy_header)
         mSeekArcProgress = findViewById(R.id.seekArcProgress)
 
 

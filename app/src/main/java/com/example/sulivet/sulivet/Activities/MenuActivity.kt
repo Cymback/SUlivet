@@ -6,7 +6,9 @@ import android.app.Dialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.support.design.widget.NavigationView
+import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
 import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
@@ -49,7 +51,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
@@ -65,8 +66,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        displayScreen(-1)
-
 
         val myProfileRoute = findViewById<View>(R.id.menu_card_myprofile)
         val myRecipesRoute = findViewById<View>(R.id.menu_card_recipes)
@@ -77,7 +76,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         myProfileRoute.setOnClickListener { toProfilePage() }
         myRecipesRoute.setOnClickListener { toRecipesPage() }
-        kitchenEssentials.setOnClickListener { toKitchenEssentials() }
+        kitchenEssentials.setOnClickListener { KitchenEssentialActivity.startActivity(this) }
         settingsPage.setOnClickListener { toSettingsPage() }
         foodPlanner.setOnClickListener { toFoodPlanner() }
         challengeMode.setOnClickListener { toChallengeMode() }
@@ -99,12 +98,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private fun toSettingsPage() {
         val intent = Intent(this, SettingsActivity::class.java)
-        startActivity(intent)
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-    }
-
-    private fun toKitchenEssentials() {
-        val intent = Intent(this, KitchenEssentialActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
@@ -163,37 +156,49 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        menuInflater.inflate(R.menu.main, menu)
-        return true
-    }
+//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+//        // Inflate the menu; this adds items to the action bar if it is present.
+//        menuInflater.inflate(R.menu.main, menu)
+//        return true
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        // Handle action bar item clicks here. The action bar will
+//        // automatically handle clicks on the Home/Up button, so long
+//        // as you specify a parent activity in AndroidManifest.xml.
+//        when (item.itemId) {
+//            R.id.action_settings -> return true
+//            else -> return super.onOptionsItemSelected(item)
+//        }
+//    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
+    private fun displayScreen(id: Int) {
 
-    fun displayScreen(id: Int) {
+        var fragmentTag = ""
+        var fragment: Fragment? = null
 
-        val fragment = when (id) {
+        when (id) {
+
             R.id.nav_home -> {
-                HomeFragment()
+//                HomeFragment()
+
+            }
+
+            R.id.nav_myprofile -> {
+                fragment = MyProfileFragment.newInstance()
+                fragmentTag = MyProfileFragment.TAG
 
             }
 
             R.id.nav_my_food -> {
-                MyFoodFragment()
+                fragment = MyFoodFragment.newInstance()
+                fragmentTag = MyFoodFragment.TAG
 
             }
 
             R.id.nav_settings -> {
-                SettingsFragment()
+                fragment = SettingsFragment.newInstance()
+                fragmentTag = SettingsFragment.TAG
 
             }
 
@@ -213,16 +218,25 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 LogoutFragment()
 
             }
-
-            else -> {
-                HomeFragment()
-
-            }
         }
 
-        supportFragmentManager.beginTransaction().replace(R.id.frag_nav_content_main_relative_layout, fragment).commit()
+        if (fragment != null) {
+
+            supportFragmentManager.beginTransaction().replace(R.id.sldajfksdajmsdf, fragment, fragmentTag).commit()
+        }
 
     }
+
+    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+        // Handle navigation view item clicks here.
+
+        displayScreen(item.itemId)
+
+
+        drawer_layout.closeDrawer(GravityCompat.START)
+        return true
+    }
+
 
     private fun plsSignUpBox() {
 
@@ -275,14 +289,5 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        // Handle navigation view item clicks here.
-
-        displayScreen(item.itemId)
-
-
-        drawer_layout.closeDrawer(GravityCompat.START)
-        return true
-    }
 }
 

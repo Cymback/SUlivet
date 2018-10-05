@@ -22,6 +22,8 @@ class KitchenEssentialActivity : AppCompatActivity() {
             val intent = Intent(activity, KitchenEssentialActivity::class.java)
             activity.startActivity(intent)
 
+            activity.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
         }
 
     }
@@ -36,7 +38,7 @@ class KitchenEssentialActivity : AppCompatActivity() {
 
         lstEssential = ArrayList()
 
-        lstEssential.add(Essential( "10 U-undværlige ting til studenten", R.drawable.fisk))
+        lstEssential.add(Essential("10 U-undværlige ting til studenten", R.drawable.fisk))
         lstEssential.add(Essential("Hjælp til det huslige?", R.drawable.fisk))
 
 

@@ -8,6 +8,6 @@ import android.view.ViewGroup
 
 class HomeFragment: Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.frag_nav_home, null)
+        return inflater.inflate(R.layout.frag_nav_home, container, false)
     }
 }

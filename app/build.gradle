@@ -50,6 +50,9 @@ dependencies {
     implementation 'com.joooonho:selectableroundedimageview:1.0.1'
     implementation 'com.github.apl-devs:appintro:v4.2.3'
 
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'com.ramotion.paperonboarding:paper-onboarding:1.1.1'
+
 
 }
 

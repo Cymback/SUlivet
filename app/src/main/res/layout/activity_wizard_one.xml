@@ -9,7 +9,7 @@
 
 
     <com.triggertrap.seekarc.SeekArc
-        android:id="@+id/seekArc"
+        android:id="@+id/fishy_header"
         android:layout_width="292dp"
         android:layout_height="258dp"
         android:layout_alignParentBottom="true"
@@ -42,9 +42,9 @@
         android:text="@string/_0"
         android:textColor="#000000"
         android:textSize="40sp"
-        seekarc:layout_constraintEnd_toEndOf="@+id/seekArc"
-        seekarc:layout_constraintStart_toStartOf="@+id/seekArc"
-        seekarc:layout_constraintTop_toTopOf="@+id/seekArc" />
+        seekarc:layout_constraintEnd_toEndOf="@+id/fishy_header"
+        seekarc:layout_constraintStart_toStartOf="@+id/fishy_header"
+        seekarc:layout_constraintTop_toTopOf="@+id/fishy_header" />
 
     <TextView
         android:id="@+id/textView2"
@@ -95,9 +95,9 @@
         android:text="@string/wizard_one_dkk"
         android:textColor="#000000"
         android:textSize="40sp"
-        seekarc:layout_constraintEnd_toEndOf="@+id/seekArc"
+        seekarc:layout_constraintEnd_toEndOf="@+id/fishy_header"
         seekarc:layout_constraintHorizontal_bias="0.502"
-        seekarc:layout_constraintStart_toStartOf="@+id/seekArc"
+        seekarc:layout_constraintStart_toStartOf="@+id/fishy_header"
         seekarc:layout_constraintTop_toBottomOf="@+id/seekArcProgress" />
 
 

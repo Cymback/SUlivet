@@ -1,4 +1,4 @@
-package com.example.sulivet.sulivet
+package com.example.sulivet.sulivet.Activities
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-class MyFoodFragment: Fragment() {
+import com.example.sulivet.sulivet.R
 
-    companion object {
-        const val TAG = "FOODFRAGMENT"
-        fun newInstance() = MyFoodFragment() // singleton
-    }
+class BlankFragment : Fragment() {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.frag_nav_myfood, container, false)
+        return inflater.inflate(R.layout.fragment_blank, container, false)
     }
+
 }

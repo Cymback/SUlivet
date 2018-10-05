@@ -10,7 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activities.IntroductionActivity">
+        <activity android:name=".Activities.FragmentsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,7 +25,6 @@
         <activity android:name=".Wizard.WizardOne" />
         <activity android:name=".Wizard.WizardTwo" />
         <activity android:name=".MenuActivities.RecipesActivity" />
-
         <activity android:name=".Activities.RecipeDetailActivity" />
         <activity android:name=".Activities.SplashScreenActivity" />
         <activity android:name=".Activities.ForgotPasswordActivity" />

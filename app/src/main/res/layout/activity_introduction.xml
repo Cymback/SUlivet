@@ -4,12 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bba"
+    android:background="@drawable/bba2"
     tools:context=".Wizard.WizardOne">
 
 
     <ImageView
-        android:id="@+id/seekArc"
+        android:id="@+id/fishy_header"
         android:layout_width="141dp"
         android:layout_height="139dp"
         android:layout_alignParentBottom="true"
@@ -26,55 +26,24 @@
         seekarc:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="SU - "
-        android:textAlignment="center"
-        android:textColor="@color/SolidWhite"
-        android:textSize="25sp"
-        seekarc:layout_constraintBottom_toTopOf="@+id/textView4"
-        seekarc:layout_constraintEnd_toStartOf="@+id/textView3"
-        seekarc:layout_constraintHorizontal_bias="0.0"
-        seekarc:layout_constraintStart_toStartOf="parent"
-        seekarc:layout_constraintTop_toBottomOf="@+id/seekArc"
-        seekarc:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="65dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="120dp"
-        android:text="LIVET"
-        android:textColor="@color/redcolor"
-        android:textSize="25sp"
-        seekarc:layout_constraintEnd_toEndOf="parent"
-        seekarc:layout_constraintTop_toBottomOf="@+id/seekArc" />
-
-    <TextView
         android:id="@+id/textView4"
-        android:layout_width="190dp"
-        android:layout_height="60dp"
+        android:layout_width="308dp"
+        android:layout_height="149dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:layout_weight="0.4"
-        android:fontFamily="@font/advent_pro"
+        android:fontFamily="@font/montserrat"
         android:gravity="center_horizontal"
         android:maxLines="4"
         android:text="@string/intro_in_a_world_txt"
-        android:textColor="@color/SolidWhite"
-        android:textSize="16sp"
-        seekarc:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/redcolor"
+        android:textSize="25sp"
+        android:textStyle="italic"
         seekarc:layout_constraintEnd_toEndOf="parent"
+        seekarc:layout_constraintHorizontal_bias="0.502"
         seekarc:layout_constraintStart_toStartOf="parent"
-        seekarc:layout_constraintTop_toBottomOf="@+id/textView3"
-        seekarc:layout_constraintVertical_bias="0.0" />
+        seekarc:layout_constraintTop_toBottomOf="@+id/fishy_header" />
 
     <TextView
         android:id="@+id/textView5"
@@ -84,9 +53,11 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:fontFamily="@font/advent_pro"
+        android:fontFamily="@font/montserrat"
+        android:gravity="center_horizontal"
         android:text="@string/intro_journey_starts_txt"
-        android:textSize="16sp"
+        android:textColor="@color/redcolor"
+        android:textSize="25sp"
         android:textStyle="bold"
         seekarc:layout_constraintBottom_toBottomOf="parent"
         seekarc:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +75,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:src="@drawable/line10"
+        android:src="@drawable/star"
         seekarc:layout_constraintBottom_toBottomOf="parent"
         seekarc:layout_constraintEnd_toEndOf="parent"
         seekarc:layout_constraintStart_toStartOf="parent"
@@ -119,14 +90,12 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:onClick=""
         android:src="@drawable/btnintro"
         seekarc:layout_constraintBottom_toBottomOf="parent"
         seekarc:layout_constraintEnd_toEndOf="parent"
-        seekarc:layout_constraintHorizontal_bias="0.501"
         seekarc:layout_constraintStart_toStartOf="parent"
         seekarc:layout_constraintTop_toBottomOf="@+id/imageView2"
-        seekarc:layout_constraintVertical_bias="0.259" />
+        seekarc:layout_constraintVertical_bias="0.761" />
 
 
 </android.support.constraint.ConstraintLayout>

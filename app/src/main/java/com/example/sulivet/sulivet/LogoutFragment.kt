@@ -30,7 +30,7 @@ class LogoutFragment : DialogFragment() {
 
         didUserSignOut()
 
-        return inflater.inflate(R.layout.frag_nav_logout, null)
+        return inflater.inflate(R.layout.frag_nav_logout, container, false)
 
 
     }

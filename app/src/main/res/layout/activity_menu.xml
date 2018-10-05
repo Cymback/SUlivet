@@ -8,31 +8,18 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="end">
 
-    <include
-        layout="@layout/app_bar_main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
-
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@drawable/bba">
+        android:layout_height="match_parent">
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:orientation="vertical"
-            android:weightSum="6">
-            
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/navburgermenu"
-                android:backgroundTint="@color/redcolor"
-                />
+            android:background="@drawable/bba2"
+            android:orientation="vertical">
+
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -102,12 +89,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/advent_pro"
+                            android:fontFamily="@font/montserrat"
                             android:text="Login"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp"
-                            android:textStyle="normal" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
 
                     </LinearLayout>
@@ -149,11 +136,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/advent_pro"
-                            android:text="Recipes"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/menu_recipes"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -184,7 +172,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
+                        android:layout_margin="5dp"
                         android:orientation="vertical">
 
                         <ImageView
@@ -197,17 +185,18 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
-                            android:fontFamily="@font/advent_pro"
+                            android:fontFamily="@font/montserrat"
                             android:gravity="center"
                             android:maxLines="1"
                             android:scrollHorizontally="true"
                             android:shadowColor="#000000"
                             android:shadowDx="1"
                             android:shadowDy="1"
-                            android:text="Kitchen essentials"
+                            android:text="@string/menu_kitchen_essentials"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -247,11 +236,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/advent_pro"
-                            android:text="FoodPlanner"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/menu_food_planner"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -294,11 +284,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/advent_pro"
-                            android:text="Settings"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/menu_settings"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -338,11 +329,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/advent_pro"
-                            android:text="Challenge mode"
+                            android:fontFamily="@font/montserrat"
+                            android:text="@string/menu_challenge_mode"
                             android:textAlignment="center"
-                            android:textColor="@color/menutext"
-                            android:textSize="15sp" />
+                            android:textColor="@color/redcolor"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
 
                     </LinearLayout>
 
@@ -352,7 +344,16 @@
 
         </LinearLayout>
 
-    </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/sldajfksdajmsdf"
+            android:layout_width="match_parent"
+            android:layout_height="563dp">
+
+        </FrameLayout>
+
+    </FrameLayout>
+
 
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
@@ -364,5 +365,6 @@
         app:headerLayout="@layout/nav_header_main"
         app:itemTextColor="@color/SolidWhite"
         app:menu="@menu/activity_main_drawer" />
+
 
 </android.support.v4.widget.DrawerLayout>
