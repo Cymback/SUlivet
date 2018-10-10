@@ -7,7 +7,6 @@ import android.widget.TextView
 import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
-import kotlinx.android.synthetic.main.activity_profile.*
 import timber.log.Timber
 
 class ProfileActivity : AppCompatActivity() {
@@ -22,7 +21,7 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile)
+       //  setContentView(R.layout.activity_profile)
 
 
         initialise()
@@ -53,16 +52,16 @@ class ProfileActivity : AppCompatActivity() {
             private fun updateUI() {
 
 
-                profile__email_view.text = getString(R.string.profile_user_email_view) + user!!.email
-                profile_username_view.text = getString(R.string.profile_show_username) + user!!.displayName
+                // profile__email_view.text = getString(R.string.profile_user_email_view) + user!!.email
+               //  profile_username_view.text = getString(R.string.profile_show_username) + user!!.displayName
 
             }
 
         })
 
 
-        name = findViewById<View>(R.id.profile_username_view) as TextView
-        email = findViewById<View>(R.id.profile__email_view) as TextView
+        // name = findViewById<View>(R.id.profile_username_view) as TextView
+        // email = findViewById<View>(R.id.profile__email_view) as TextView
 
 
     }

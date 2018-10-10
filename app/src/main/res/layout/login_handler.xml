@@ -1,40 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bba2"
+    android:background="@drawable/bba"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
-    android:windowSoftInputMode="stateHidden"
-    tools:context="com.example.sulivet.sulivet.Fragments.LoginHandler">
+    android:windowSoftInputMode="stateHidden">
 
 
     <android.support.design.widget.TabLayout
         android:id="@+id/tabs"
         style="@style/transpartantboi"
-        android:background="@drawable/toolbar_bg"
+        app:tabIndicatorColor="@color/greysigninsignup"
+        app:tabTextColor="@color/greysigninsignup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabIndicatorColor="@color/greysigninsignup"
-        app:tabTextColor="@color/greysigninsignup">
+        android:background="@drawable/toolbar_bg">
 
         <android.support.design.widget.TabItem
             android:id="@+id/tabItem"
             android:layout_width="wrap_content"
-            android:background="@drawable/toolbar_bg"
             android:layout_height="wrap_content"
-            android:text="@string/tab_text_1" />
+            android:background="@drawable/toolbar_bg"
+            android:text="@string/loginhandler_logintab" />
 
 
         <android.support.design.widget.TabItem
             android:id="@+id/tabItem2"
             android:layout_width="wrap_content"
-            android:background="@drawable/toolbar_bg"
             android:layout_height="wrap_content"
-            android:text="@string/tab_text_2" />
+            android:background="@drawable/toolbar_bg"
+            android:text="@string/loginhandler_signuptab" />
 
 
     </android.support.design.widget.TabLayout>
@@ -42,8 +41,8 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        android:layout_height="match_parent" />
 
 </LinearLayout>

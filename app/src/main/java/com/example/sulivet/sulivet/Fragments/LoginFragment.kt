@@ -49,7 +49,7 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.login_fragment, container, false)
 
-        tvForgotPassword = view.findViewById(R.id.frag_login_forgot_password_text)
+        // tvForgotPassword = view.findViewById(R.id.frag_login_forgot_password_text)
 
         progressBar = view.findViewById(R.id.frag_login_progressbar)
 
@@ -66,7 +66,7 @@ class LoginFragment : Fragment() {
 
         btnLogin!!.setOnClickListener { loginUser() }
 
-        tvForgotPassword.setOnClickListener { forgotPassword() }
+        // tvForgotPassword.setOnClickListener { forgotPassword() }
 
 
         return view

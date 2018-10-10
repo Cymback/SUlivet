@@ -1,106 +1,105 @@
 <resources>
     <string name="app_name">SUlivet</string>
     <string name="_0">0</string>
-    <string name="login_email_field">e-mail…</string>
-    <string name="login_password_field">password…</string>
-    <string name="send_password_reset_email">Send Password</string>
-    <string name="create_account">Opret Konto</string>
-    <string name="lets_get_going">Lad os komme igang!</string>
-    <string name="create_account_already_member">Allerede opretttet? Log ind her</string>
-    <string name="recieve_password_email">Indtast din email for at modtage dit nye password</string>
-    <string name="google_login_login_with_password">Login med email</string>
-    <string name="google_login_create_account_google">Opret konto</string>
-    <string name="menu_should_care_for_detail">Skal der kæles for detaljen?</string>
-    <string name="menu_ultra_cheap_recipes">Ultra-billige opskrifter</string>
-    <string name="menu_you_will_find_them_here">Dem finder du lige her!</string>
-    <string name="menu_fresh_recipes">Så er der dugfriske og en smule peberede opskrifter her!</string>
-    <string name="menu_do_you_lack_inspiration">Savner du inspiration?</string>
-    <string name="menu_klik_me_get_inspiration">Klik på mig og få uanede mængder af inspiration</string>
-    <string name="menu_do_you_miss_food_generator">Savner du en madplans-generator på et ugentligt plan?</string>
-    <string name="menu_try_this">Prøv den her!</string>
-    <string name="menu_essential_kitchen_stuff">Essentielle køkken-Acessories</string>
-    <string name="menu_list_of_kitchen_things">Lad os lige skabe en liste af ting, DU SKAL HA\'</string>
-    <string name="cheap_title">Fuldkorns pandekager</string>
-    <string name="essential_spices">Krydderier</string>
-    <string name="essential_most_needed_spices">Få et overblik over de mest nødvendige krydderier</string>
-    <string name="essential_nice_to_have">Nice-to-have</string>
-    <string name="essential_list_of_cool_kitchenthings">En liste af ting, som er rent lir og ikke er nødvendigt i de fleste køkkener</string>
-    <string name="essential_10_student_things">10 Uundværlige ting til studenten</string>
-    <string name="essential_list_to_student">Vi har samlet en lille liste til den studerende</string>
-    <string name="essential_just_moved_out">Lige flyttet hjemmefra?</string>
-    <string name="essential_tools_to_complete_recipes">Basale redskaber som sikrer at de fleste opskrifter kan fuldføres</string>
-    <string name="description">image attribute content description</string>
-    <string name="item_menu_header">Header1</string>
-    <string name="item_menu_description">description</string>
-    <string name="item_recipe_browse_recipe">Browse Recipe</string>
-    <string name="detail_recipe_title">Recipe title</string>
-    <string name="detail_recipe_content">Opskrift-Content</string>
-    <string name="detail_recipe_ingredients">ingredients</string>
-    <string name="wizard_two_dkk">DKK</string>
-    <string name="wizard_two_response_to_user_guess">Korrekt, Den gennemsnitlige SU-modtager har en mad-budget, et sted mellem 800 og 1200kr om måneden</string>
-    <string name="wizard_two_data">data</string>
-    <string name="profile_user_name">Casper Gross</string>
-    <string name="profile_user_email">Email</string>
-    <string name="profile_user_change_email">Change</string>
-    <string name="profile_telephone">Telefon</string>
-    <string name="profile_change_telephone">Change</string>
-    <string name="profile_address">Address</string>
-    <string name="profile_address_change">Change</string>
-    <string name="profile_interests">Interests</string>
-    <string name="profile_change_interests">Change</string>
-    <string name="login_ready_for_food">Klar på god mad?</string>
-    <string name="login_forgot_password">Glemt password? Klik på mig!</string>
-    <string name="login_login_btn">Login</string>
+
+
+    <!-- RecipeDetail Strings -->
+
+    <string name="recipe_detail_image">Recipe Image</string>
+    <string name="recipe_detail_content">Recipe Content</string>
+    <string name="recipe_detail_ingredients">Recipe Ingredients</string>
+
+    <!-- ForgotPassword Strings -->
+
+    <string name="activity_forgot_pass_edittext">Type your email</string>
+    <string name="activity_forgot_pass_btn">Send my new password</string>
+
+    <!-- ItemRecipe Strings -->
+
+    <string name="item_recipe_img_content">Picture</string>
+    <string name="item_recipe_title">title</string>
+
+    <!--ItemMenu Strings -->
+
+    <string name="item_menu_header">item menu header</string>
+    <string name="item_menu_description">item menu description</string>
+    <string name="item_menu_content_description">content discrption</string>
+
+    <!--ItemEssential Strings -->
+
+    <string name="item_essential_header">Header</string>
+    <string name="item_essential_content">Content Description</string>
+
+
+    <!-- Wizard Strings -->
+
     <string name="wizard_one_estimated_user_spend_on_food">Hvor mange penge bruger den gennemsnitlige udeboende, SU-modtager på mad?</string>
     <string name="wizard_one_dkk">DKK</string>
-    <string name="google_login_food_on_su">Mad på SU</string>
-    <string name="google_login_thousand_recipes_on_su">Tusindvis af lækre opskrifter til de helt små beløb!</string>
-    <string name="item_essential_header">Header1</string>
-    <string name="item_essential_description">description</string>
-    <string name="google_login_btn_to_email_login">Login med email</string>
-    <string name="profile_user_email_view"></string>
-    <string name="profile_show_username"></string>
-    <string name="title_activity_login_test">Activity_login_test</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="tab_text_3">Tab 3</string>
-    <string name="action_settings">Settings</string>
-    <string name="section_format">Hello World from section: %1$d</string>
-    <string name="title_activity_login_handler">LoginHandler</string>
-    <string name="login_headline">Su livet</string>
-    <string name="login_email_hint">Email</string>
-    <string name="login_password_hint">Password</string>
-    <string name="activity_forgot_password_btn">Send Password</string>
-    <string name="login_forgot_email">Forgot email</string>
-    <string name="login_or">OR</string>
-    <string name="login_create_account">Create account</string>
-    <string name="frag_login_forgot_email_txt">Forgot password?</string>
-    <string name="frag_login_or_txt">OR</string>
-    <string name="frag_login_create_account_txt">Create account</string>
-    <string name="frag_create_acc_username">Desired username</string>
-    <string name="frag_create_acc_email">Email</string>
-    <string name="frag_create_acc_password">Password</string>
-    <string name="frag_create_account_create">Create account</string>
-    <string name="frag_login_btn">Login</string>
-    <string name="intro_journey_starts_txt">The journey towards cheap recipes starts here!</string>
-    <string name="intro_in_a_world_txt">In a world full of possibilities there can only be one app to rule your food choices</string>
-    <string name="title_activity_nav_menu_bar">NavMenuBar</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="title_activity_menu_nav">MenuNav</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="wizard_dkk">DKK</string>
+    <string name="wizard_response_userguess">Reponse to user guess</string>
+    <string name="wizard_data_from_user">DKK DATA FROM USER</string>
 
 
     <!-- Menu Strings -->
 
     <string name="menu_challenge_mode">Challenge mode</string>
-    <string name="menu_settings">Settings</string>
+    <string name="menu_foodfinder">FoodFinder</string>
     <string name="menu_food_planner">FoodPlanner</string>
     <string name="menu_kitchen_essentials">Essentials</string>
     <string name="menu_recipes">Recipes</string>
+
+
+    <!-- FRAGMENTS Strings -->
+
+    <!-- LoginFrag Strings -->
+
+    <string name="frag_login_email_view">Email</string>
+    <string name="frag_login_password_view">Password</string>
+    <string name="frag_login_button">Login</string>
+    <string name="frag_login_continue_with_social">Continue with social media</string>
+    <string name="frag_login_header">Cheapfoodz</string>
+
+
+    <!-- SignUpFrag Strings -->
+
+    <string name="frag_signup_username_view">Desired Username</string>
+    <string name="frag_signup_email">Email</string>
+    <string name="frag_signup_password">Password</string>
+    <string name="frag_signup_create_account_btn">Create Account</string>
+
+
+    <!-- Loginhandler Strings -->
+
+    <string name="loginhandler_logintab">Login</string>
+    <string name="loginhandler_signuptab">Sign up</string>
+
+
+    <!-- MyProfile Strings -->
+
+    <string name="frag_myprofile_username">Jonathan De Watt</string>
+    <string name="action_settings">action settings</string>
+    <string name="cheap_title" />
+    <string name="navigation_drawer_open" />
+    <string name="navigation_drawer_close" />
+    <string name="activity_forgot_password_btn">Forgot password</string>
+    <string name="activity_forgot_password_email_hint">Type your email here</string>
+    <string name="detail_recipe_description">picture description</string>
+    <string name="recipe_detail_recipe_title">title</string>
+    <string name="recipe_detail_content_c">content</string>
+    <string name="recipe_detail_ingrediens">Ingredients</string>
+    <string name="wizard_reponse">reponse to user</string>
+    <string name="wizard_data_from">data from user</string>
+    <string name="item_menu_image_content">picture item menu</string>
+    <string name="item_recipe_picture_description">picture description item recipe</string>
+    <string name="item_recipe_title_text">recipe title item recipe</string>
+    <string name="item_essential_picture_description">picture description</string>
+
+
+    <!-- LogoutFragment Strings -->
+
+    <!-- MyFoodFragment Strings -->
+
+    <!-- SettingsFragment Strings -->
 
 
 </resources>

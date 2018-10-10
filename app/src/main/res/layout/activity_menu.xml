@@ -5,6 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fiskicon"
     android:fitsSystemWindows="true"
     tools:openDrawer="end">
 
@@ -17,7 +18,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bba2"
+            android:background="@drawable/bba"
             android:orientation="vertical">
 
 
@@ -28,17 +29,35 @@
                 android:layout_marginTop="20dp"
                 android:layout_weight="2">
 
-                <ImageView
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/montserrat"
+                    android:maxLines="1"
+                    android:text="@string/frag_login_header"
+                    android:textSize="45sp"
+                    android:textStyle="normal" />
 
-                    android:layout_width="213dp"
-                    android:layout_height="159dp"
-                    android:layout_marginStart="44dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="40dp"
-                    android:layout_marginBottom="9dp"
-                    android:background="@drawable/watermaloooone" />
 
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-90dp"
+                android:src="@drawable/fisk" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="You are not logged in" />
 
             <GridLayout
                 android:id="@+id/mainGrid"
@@ -76,14 +95,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="12dp"
+                        android:layout_margin="5dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/profile" />
+                            android:src="@mipmap/loginiconwhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -92,7 +111,7 @@
                             android:fontFamily="@font/montserrat"
                             android:text="Login"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -124,14 +143,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
+                        android:layout_margin="5dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/fisk" />
+                            android:src="@mipmap/fiskiconwhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -139,7 +158,7 @@
                             android:fontFamily="@font/montserrat"
                             android:text="@string/menu_recipes"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -179,7 +198,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/star" />
+                            android:src="@mipmap/stariconwhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -194,7 +213,7 @@
                             android:shadowDy="1"
                             android:text="@string/menu_kitchen_essentials"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -231,7 +250,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal|center_vertical"
-                            android:src="@drawable/school" />
+                            android:src="@mipmap/foodplannericonwhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -239,7 +258,7 @@
                             android:fontFamily="@font/montserrat"
                             android:text="@string/menu_food_planner"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -272,22 +291,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="12dp"
+                        android:layout_margin="5dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/settingsicon" />
+                            android:src="@mipmap/fiskiconwhite" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:fontFamily="@font/montserrat"
-                            android:text="@string/menu_settings"
+                            android:text="@string/menu_foodfinder"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="14sp"
                             android:textStyle="bold" />
 
@@ -317,14 +336,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="16dp"
+                        android:layout_margin="5dp"
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/vpn" />
+                            android:src="@mipmap/challengemodeicon" />
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -332,7 +351,7 @@
                             android:fontFamily="@font/montserrat"
                             android:text="@string/menu_challenge_mode"
                             android:textAlignment="center"
-                            android:textColor="@color/redcolor"
+                            android:textColor="@color/greysigninsignup"
                             android:textSize="13sp"
                             android:textStyle="bold" />
 

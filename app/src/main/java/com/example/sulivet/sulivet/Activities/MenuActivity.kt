@@ -6,21 +6,17 @@ import android.app.Dialog
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
 import android.support.v4.view.GravityCompat
-import android.support.v4.widget.DrawerLayout
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
 import com.example.sulivet.sulivet.*
 import com.example.sulivet.sulivet.Fragments.LoginHandler
 import com.example.sulivet.sulivet.MenuActivities.*
-import com.example.sulivet.sulivet.R.id.drawer_layout
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -77,7 +73,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         myProfileRoute.setOnClickListener { toProfilePage() }
         myRecipesRoute.setOnClickListener { toRecipesPage() }
         kitchenEssentials.setOnClickListener { KitchenEssentialActivity.startActivity(this) }
-        settingsPage.setOnClickListener { toSettingsPage() }
+        settingsPage.setOnClickListener { toFindFoodActivity() }
         foodPlanner.setOnClickListener { toFoodPlanner() }
         challengeMode.setOnClickListener { toChallengeMode() }
 
@@ -96,8 +92,8 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
 
-    private fun toSettingsPage() {
-        val intent = Intent(this, SettingsActivity::class.java)
+    private fun toFindFoodActivity() {
+        val intent = Intent(this, FoodFinderActivity::class.java)
         startActivity(intent)
         overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
     }
@@ -152,7 +148,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
         } else {
-            super.onBackPressed()
+            return
         }
     }
 
@@ -180,8 +176,7 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         when (id) {
 
             R.id.nav_home -> {
-//                HomeFragment()
-
+                MenuActivity
             }
 
             R.id.nav_myprofile -> {

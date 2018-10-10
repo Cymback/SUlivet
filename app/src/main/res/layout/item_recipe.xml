@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="160dp"
             android:background="#2d2d2d"
-            android:contentDescription="@string/description"
+            android:contentDescription="@string/item_recipe_picture_description"
             android:scaleType="centerCrop" />
 
 
@@ -39,7 +39,7 @@
             android:background="@color/SolidWhite"
             android:fontFamily="@font/advent_pro"
             android:gravity="center"
-            android:text="@string/item_recipe_browse_recipe"
+            android:text="@string/item_recipe_title_text"
             android:textColor="#2d2d2d"
             android:textSize="13sp" />
 

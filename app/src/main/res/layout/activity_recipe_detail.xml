@@ -24,7 +24,7 @@
                 android:layout_width="220dp"
                 android:layout_height="150dp"
                 android:background="#2d2d2d"
-                android:contentDescription="@string/description"
+                android:contentDescription="@string/detail_recipe_description"
                 android:scaleType="centerCrop" />
 
             <TextView
@@ -34,7 +34,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_weight="1"
                 android:fontFamily="@font/advent_pro"
-                android:text="@string/detail_recipe_title"
+                android:text="@string/recipe_detail_recipe_title"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -45,7 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:fontFamily="@font/advent_pro"
-                android:text="@string/detail_recipe_content"
+                android:text="@string/recipe_detail_content_c"
                 android:textSize="18sp" />
 
             <TextView
@@ -64,7 +64,7 @@
                 android:fontFamily="@font/advent_pro"
                 android:gravity="center"
                 android:padding="8dp"
-                android:text="@string/detail_recipe_ingredients" />
+                android:text="@string/recipe_detail_ingrediens" />
 
         </LinearLayout>
 
