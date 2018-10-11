@@ -3,6 +3,12 @@
     <string name="_0">0</string>
 
 
+    <!-- Facebook Strings -->
+
+    <string name="facebook_app_id">2043659265654462</string>
+    <string name="fb_login_protocol_scheme">fb2043659265654462</string>
+
+
     <!-- RecipeDetail Strings -->
 
     <string name="recipe_detail_image">Recipe Image</string>
@@ -56,7 +62,7 @@
     <string name="frag_login_email_view">Email</string>
     <string name="frag_login_password_view">Password</string>
     <string name="frag_login_button">Login</string>
-    <string name="frag_login_continue_with_social">Continue with social media</string>
+    <string name="frag_login_continue_with_social">Continue with Google</string>
     <string name="frag_login_header">Cheapfoodz</string>
 
 

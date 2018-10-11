@@ -17,6 +17,11 @@ import android.widget.Toast
 import com.example.sulivet.sulivet.*
 import com.example.sulivet.sulivet.Fragments.LoginHandler
 import com.example.sulivet.sulivet.MenuActivities.*
+import com.example.sulivet.sulivet.R.id.drawer_layout
+import com.facebook.AccessToken
+import com.facebook.GraphRequest
+import com.facebook.HttpMethod
+import com.facebook.login.LoginManager
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_menu.*
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -197,20 +202,15 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             }
 
+
             R.id.nav_logout -> {
 
-                if (FirebaseAuth.getInstance().currentUser != null) {
+                fbUserLogout()
+                userLogout()
 
-                    areUSureBox()
 
-                } else {
 
-                    if (FirebaseAuth.getInstance().currentUser == null)
 
-                        plsSignUpBox()
-                }
-
-                LogoutFragment()
 
             }
         }
@@ -219,6 +219,25 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             supportFragmentManager.beginTransaction().replace(R.id.sldajfksdajmsdf, fragment, fragmentTag).commit()
         }
+
+    }
+
+    private fun fbUserLogout() {
+        val accessToken = AccessToken.getCurrentAccessToken()
+
+        if (accessToken != null) {
+
+            GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, GraphRequest.Callback {
+                AccessToken.setCurrentAccessToken(null)
+                LoginManager.getInstance().logOut()
+
+                finishIt()
+            }).executeAsync()
+            Toast.makeText(this, "Succesfully Logged Out", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    private fun userLogout() {
 
     }
 

@@ -6,10 +6,13 @@ import android.support.v7.app.AppCompatActivity
 
 import android.support.v4.view.ViewPager
 import android.os.Bundle
+import android.view.Menu
 import android.view.View
 import android.view.WindowManager
+import com.example.sulivet.sulivet.Activities.FoodFinderActivity
 import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.R
+import com.facebook.AccessToken
 
 class LoginHandler : AppCompatActivity() {
 
@@ -27,6 +30,8 @@ class LoginHandler : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_handler)
 
+        isUserLoggedIn()
+
         window.setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN)
 
         mSectionsPageAdapter = SectionsPageAdapter(supportFragmentManager)
@@ -36,6 +41,23 @@ class LoginHandler : AppCompatActivity() {
 
         val tabLayout = findViewById<View>(R.id.tabs) as TabLayout
         tabLayout.setupWithViewPager(mViewPager)
+
+
+    }
+
+    private fun isUserLoggedIn() {
+        val accessToken = AccessToken.getCurrentAccessToken()
+
+        if (accessToken != null) {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        } else {
+            val intent = Intent(this, LoginHandler::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
+        }
 
 
     }

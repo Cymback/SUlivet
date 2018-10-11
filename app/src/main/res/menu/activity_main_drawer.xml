@@ -26,7 +26,7 @@
 
     <item
         android:id="@+id/nav_logout"
-        android:icon="@drawable/navburgermenu"
+        android:icon="@drawable/star"
         android:title="Logout" />
 
 
