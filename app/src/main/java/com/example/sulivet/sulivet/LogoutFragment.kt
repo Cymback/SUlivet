@@ -5,15 +5,18 @@ import android.app.AlertDialog.Builder
 import android.app.Dialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.os.Bundle
 import android.support.v4.app.DialogFragment
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.text.Layout
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.Fragments.LoginHandler
@@ -32,6 +35,7 @@ class LogoutFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
+
         fblogout()
 
 
@@ -43,6 +47,7 @@ class LogoutFragment : Fragment() {
     private fun fblogout() {
 
         if (AccessToken.getCurrentAccessToken() != null) {
+
             GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, GraphRequest.Callback {
                 AccessToken.setCurrentAccessToken(null)
                 LoginManager.getInstance().logOut()

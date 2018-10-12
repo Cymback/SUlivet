@@ -11,6 +11,7 @@ import com.example.sulivet.sulivet.Fragments.LoginHandler
 import com.example.sulivet.sulivet.MenuActivities.SettingsActivity
 
 import com.example.sulivet.sulivet.R
+import com.facebook.AccessToken
 import com.facebook.FacebookSdk
 import com.facebook.appevents.AppEventsLogger
 import com.ramotion.paperonboarding.PaperOnboardingFragment
@@ -43,7 +44,6 @@ class SlidesActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_activity)
 
-
         fragmentManager = supportFragmentManager
 
         val onBoardingFragment = PaperOnboardingFragment.newInstance(dataForOnboarding)
@@ -54,9 +54,25 @@ class SlidesActivity : AppCompatActivity() {
 
         onBoardingFragment.setOnRightOutListener {
 
+            isUserLoggedIn()
+
+        }
+    }
+
+    private fun isUserLoggedIn() {
+        val accessToken = AccessToken.getCurrentAccessToken()
+
+        if (accessToken != null) {
+            val intent = Intent(this, MenuActivity::class.java)
+            startActivity(intent)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+        } else {
+
             val intent = Intent(this, LoginHandler::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.fade_in, R.anim.fadeout)
+            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+
+
         }
     }
 }

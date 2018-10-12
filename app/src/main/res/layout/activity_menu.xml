@@ -51,13 +51,6 @@
                 android:layout_marginTop="-90dp"
                 android:src="@drawable/fisk" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="20dp"
-                android:fontFamily="@font/montserrat"
-                android:text="You are not logged in" />
 
             <GridLayout
                 android:id="@+id/mainGrid"
@@ -362,6 +355,17 @@
             </GridLayout>
 
         </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/menu_logout_drawer_id"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:maxWidth="10dip"
+            android:maxHeight="35dip"
+            android:minWidth="10dip"
+            android:minHeight="35dip"
+            android:visibility="gone" />
 
 
         <FrameLayout

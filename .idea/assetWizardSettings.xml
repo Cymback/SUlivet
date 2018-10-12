@@ -20,8 +20,8 @@
                                     <map>
                                       <entry key="assetType" value="IMAGE" />
                                       <entry key="iconShape" value="NONE" />
-                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/fronticon/hdpi/Group.png" />
-                                      <entry key="outputName" value="fronticon" />
+                                      <entry key="imageAsset" value="$USER_HOME$/Desktop/bbablue/hdpi/bbablue.png" />
+                                      <entry key="outputName" value="bbablue" />
                                     </map>
                                   </option>
                                 </PersistentState>

@@ -96,6 +96,10 @@ class LoginFragment : Fragment() {
         // Facebook
 
         fblogin.setOnClickListener {
+
+            progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this.context!!, R.color.greysigninsignup), PorterDuff.Mode.SRC_IN)
+            progressBar!!.visibility = View.VISIBLE
+
             callbackManager = CallbackManager.Factory.create()
             LoginManager.getInstance().logInWithReadPermissions(this, Arrays.asList("public_profile", "email"))
             LoginManager.getInstance().registerCallback(callbackManager,
@@ -108,11 +112,13 @@ class LoginFragment : Fragment() {
                         }
 
                         override fun onCancel() {
+                            progressBar!!.visibility = View.GONE
                             Timber.d("Facebook onCancel.")
 
                         }
 
                         override fun onError(error: FacebookException) {
+                            progressBar!!.visibility = View.GONE
                             Timber.d("MainActivity" + "Facebook onError.")
 
                         }

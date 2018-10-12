@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
 
+    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bba"
@@ -13,37 +14,52 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-
-        <TextView
+        <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:layout_marginTop="30dp"
-            android:fontFamily="@font/montserrat"
-            android:maxLines="1"
-            android:text="@string/frag_login_header"
-            android:textSize="45sp"
-            android:textStyle="normal" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fisk" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:adjustViewBounds="true"
+                android:background="@drawable/fisk" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/fisk" />
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="15dp"
-            android:layout_marginTop="50dp"
-            android:background="@drawable/fisk"
-            android:fontFamily="@font/montserrat"
-            android:maxLines="1"
-            android:textSize="30sp"
-            android:textStyle="normal" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="15dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/advent_pro"
+                android:maxLines="1"
+                android:text="@string/frag_login_header"
+                android:textColor="@color/SolidWhite"
+                android:textSize="70sp"
+                android:textStyle="normal" />
+
+
+        </FrameLayout>
 
 
         <ProgressBar
             android:id="@+id/frag_login_progressbar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
             android:layout_gravity="center_horizontal"
             android:visibility="gone" />
 
@@ -92,33 +108,59 @@
             android:gravity="center"
             android:text="@string/frag_login_button"
             android:textColor="@color/SolidWhite"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="normal" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_margin="15dp"
-            android:layout_marginTop="-25dp"
-            android:background="@color/greysigninsignup" />
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
             android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_horizontal"
+                android:text="OR"
+                android:textSize="20dp"
+                android:textStyle="bold" />
 
         </LinearLayout>
 
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/facebook_login"
-            android:layout_width="250dp"
+        <FrameLayout
+            android:id="@+id/facebook_framelayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginTop="30dp">
 
+
+            <com.facebook.login.widget.LoginButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/facebook_login"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="5dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/button_shape"
+                android:text="Sign up with Facebook"
+                android:textAllCaps="false"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+
+        </FrameLayout>
 
     </LinearLayout>
+
+
 </LinearLayout>
+
+

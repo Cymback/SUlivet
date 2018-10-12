@@ -4,15 +4,18 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.app.Dialog
 import android.content.Intent
+import android.graphics.PorterDuff
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.design.widget.NavigationView
 import android.support.v4.app.Fragment
+import android.support.v4.content.ContextCompat
 import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.ProgressBar
 import android.widget.Toast
 import com.example.sulivet.sulivet.*
 import com.example.sulivet.sulivet.Fragments.LoginHandler
@@ -30,6 +33,8 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     private var mAuth: FirebaseAuth? = null
     private lateinit var toggle: ActionBarDrawerToggle
+
+    private var progressBar: ProgressBar? = null
 
 
     companion object {
@@ -55,6 +60,10 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        progressBar = findViewById(R.id.menu_logout_drawer_id)
+
+
 
         setSupportActionBar(toolbar)
 
@@ -205,11 +214,9 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
             R.id.nav_logout -> {
 
+
                 fbUserLogout()
                 userLogout()
-
-
-
 
 
             }
@@ -227,14 +234,26 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         if (accessToken != null) {
 
+            progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this, R.color.greysigninsignup), PorterDuff.Mode.SRC_IN)
+            progressBar!!.visibility = View.VISIBLE
+
             GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, GraphRequest.Callback {
                 AccessToken.setCurrentAccessToken(null)
                 LoginManager.getInstance().logOut()
 
+                progressBar!!.visibility = View.GONE
+
                 finishIt()
             }).executeAsync()
-            Toast.makeText(this, "Succesfully Logged Out", Toast.LENGTH_SHORT).show()
+
+            toFront()
         }
+    }
+
+    private fun toFront() {
+        val intent = Intent(this, LoginHandler::class.java)
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_in_left, R.anim.fadeout)
     }
 
     private fun userLogout() {

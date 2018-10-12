@@ -9,31 +9,46 @@
     android:orientation="vertical">
 
 
-    <TextView
+    <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:layout_marginTop="30dp"
-        android:fontFamily="@font/montserrat"
-        android:maxLines="1"
-        android:text="Cheapfoodz"
-        android:textSize="45sp"
-        android:textStyle="normal" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="15dp"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/fisk"
-        android:fontFamily="@font/montserrat"
-        android:maxLines="1"
-        android:text="Vejentilnemmad"
-        android:textSize="30sp"
-        android:textStyle="normal" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/fisk" />
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:adjustViewBounds="true"
+            android:background="@drawable/fisk" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/fisk" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/advent_pro"
+            android:maxLines="1"
+            android:text="@string/frag_login_header"
+            android:textColor="@color/SolidWhite"
+            android:textSize="70sp"
+            android:textStyle="normal" />
+
+
+    </FrameLayout>
     <EditText
         android:id="@+id/frag_create_acc_desired_username"
         android:layout_width="250dp"
