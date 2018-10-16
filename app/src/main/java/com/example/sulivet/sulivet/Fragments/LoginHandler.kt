@@ -6,10 +6,8 @@ import android.support.v7.app.AppCompatActivity
 
 import android.support.v4.view.ViewPager
 import android.os.Bundle
-import android.view.Menu
 import android.view.View
 import android.view.WindowManager
-import com.example.sulivet.sulivet.Activities.FoodFinderActivity
 import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.R
 import com.facebook.AccessToken

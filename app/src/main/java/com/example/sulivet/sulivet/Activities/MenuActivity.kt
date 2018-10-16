@@ -80,16 +80,12 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val myProfileRoute = findViewById<View>(R.id.menu_card_myprofile)
         val myRecipesRoute = findViewById<View>(R.id.menu_card_recipes)
         val kitchenEssentials = findViewById<View>(R.id.menu_card_kitchen_essentials)
-        val settingsPage = findViewById<View>(R.id.menu_card_settings)
         val foodPlanner = findViewById<View>(R.id.menu_card_food_planner)
-        val challengeMode = findViewById<View>(R.id.menu_card_challenge_mode)
 
         myProfileRoute.setOnClickListener { toProfilePage() }
         myRecipesRoute.setOnClickListener { toRecipesPage() }
         kitchenEssentials.setOnClickListener { KitchenEssentialActivity.startActivity(this) }
-        settingsPage.setOnClickListener { toFindFoodActivity() }
         foodPlanner.setOnClickListener { toFoodPlanner() }
-        challengeMode.setOnClickListener { toChallengeMode() }
 
 
     }
@@ -104,28 +100,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 //        val intent = Intent(this, FoodPlannerActivity::class.java)
 //        startActivity(intent)
 //        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-    }
-
-    private fun toFindFoodActivity() {
-        val intent = Intent(this, FoodFinderActivity::class.java)
-        startActivity(intent)
-        overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-    }
-
-    private fun toChallengeMode() {
-
-        val mAuth = FirebaseAuth.getInstance()
-
-        if (mAuth.currentUser == null) {
-
-            // Grey out challenge mode and tell its not available
-
-        } else {
-
-            val intent = Intent(this, ChallengeModeActivity::class.java)
-            startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
-        }
     }
 
     private fun toRecipesPage() {
@@ -151,12 +125,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         }
     }
 
-    private fun finishIt() {
-
-        super.finish()
-        overridePendingTransition(R.anim.slide_in_left, R.anim.fadeout)
-    }
-
 
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
@@ -165,22 +133,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             return
         }
     }
-
-//    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-//        // Inflate the menu; this adds items to the action bar if it is present.
-//        menuInflater.inflate(R.menu.main, menu)
-//        return true
-//    }
-//
-//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        // Handle action bar item clicks here. The action bar will
-//        // automatically handle clicks on the Home/Up button, so long
-//        // as you specify a parent activity in AndroidManifest.xml.
-//        when (item.itemId) {
-//            R.id.action_settings -> return true
-//            else -> return super.onOptionsItemSelected(item)
-//        }
-//    }
 
     private fun displayScreen(id: Int) {
 
@@ -230,9 +182,12 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     private fun fbUserLogout() {
+
+
         val accessToken = AccessToken.getCurrentAccessToken()
 
         if (accessToken != null) {
+
 
             progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this, R.color.greysigninsignup), PorterDuff.Mode.SRC_IN)
             progressBar!!.visibility = View.VISIBLE
@@ -240,13 +195,12 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             GraphRequest(AccessToken.getCurrentAccessToken(), "/me/permissions/", null, HttpMethod.DELETE, GraphRequest.Callback {
                 AccessToken.setCurrentAccessToken(null)
                 LoginManager.getInstance().logOut()
+                toFront()
 
                 progressBar!!.visibility = View.GONE
 
-                finishIt()
+                finish()
             }).executeAsync()
-
-            toFront()
         }
     }
 
@@ -268,58 +222,6 @@ class MenuActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
-    }
-
-
-    private fun plsSignUpBox() {
-
-        var builder: AlertDialog.Builder = AlertDialog.Builder(this, R.style.AppTheme)
-        var inflater: LayoutInflater = layoutInflater
-        var view: View = inflater.inflate(R.layout.dialog_pls_sign_up_box, null)
-
-        builder.setView(view)
-        builder.setNegativeButton("No"
-        ) { dialog, which ->
-
-            Toast.makeText(this, "sorry i asked", Toast.LENGTH_SHORT).show()
-            dialog.dismiss()
-
-        }
-
-        builder.setPositiveButton("Yes"
-        ) { dialog, which ->
-            dialog.dismiss()
-            val intent = Intent(this, LoginHandler::class.java)
-            startActivity(intent)
-        }
-
-        var dialog: Dialog = builder.create()
-        dialog.show()
-
-    }
-
-    private fun areUSureBox() {
-        var builder: AlertDialog.Builder = AlertDialog.Builder(this, R.style.AppTheme)
-        var inflater: LayoutInflater = layoutInflater
-        var view: View = inflater.inflate(R.layout.dialog_are_you_sure_box, null)
-
-        builder.setView(view)
-        builder.setNegativeButton("No"
-        ) { dialog, which ->
-            dialog.dismiss()
-
-        }
-
-        builder.setPositiveButton("Yes"
-        ) { dialog, which ->
-            dialog.dismiss()
-            val intent = Intent(this, MenuActivity::class.java)
-            startActivity(intent)
-        }
-
-        var dialog: Dialog = builder.create()
-        dialog.show()
-
     }
 
 }

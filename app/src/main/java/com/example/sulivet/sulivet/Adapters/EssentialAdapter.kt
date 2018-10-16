@@ -17,13 +17,12 @@ import com.example.sulivet.sulivet.R
 class EssentialAdapter(private val mContext: Context, private val mData: List<Essential>) : RecyclerView.Adapter<EssentialAdapter.MyViewHolder>() {
 
 
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
         val view: View
         val mInflater = LayoutInflater.from(mContext)
         view = mInflater.inflate(R.layout.item_essential, parent, false)
+
 
 
 
@@ -34,11 +33,11 @@ class EssentialAdapter(private val mContext: Context, private val mData: List<Es
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         holder.essential_title.text = mData[position].title
+        // holder.essential_description.text = mData[position].description
 
         Glide.with(holder.itemView.context)
                 .load(mData[position].image)
                 .into(holder.essential_image)
-
 
 
         val animation = AnimationUtils.loadAnimation(holder.itemView.context, R.anim.fade_in)
@@ -55,6 +54,7 @@ class EssentialAdapter(private val mContext: Context, private val mData: List<Es
 
         internal var essential_title: TextView = itemView.findViewById(R.id.essential_title_id)
         internal var essential_image: ImageView = itemView.findViewById(R.id.essential_img_id)
+        // internal var essential_description: TextView = itemView.findViewById(R.id.essential_description_id)
         var cardView: CardView = itemView.findViewById(R.id.item_essential_id)
 
     }

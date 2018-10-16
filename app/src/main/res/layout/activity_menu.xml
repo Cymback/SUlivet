@@ -15,6 +15,16 @@
         android:layout_height="match_parent">
 
 
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/navigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:itemIconTint="@color/SolidWhite"
+            app:itemTextColor="@color/SolidWhite"
+            app:menu="@menu/bottom_navigation" />
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -22,41 +32,42 @@
             android:orientation="vertical">
 
 
-            <LinearLayout
+            <FrameLayout
                 android:layout_width="wrap_content"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="20dp"
-                android:layout_weight="2">
+                android:layout_marginTop="20dp">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/fisk" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_margin="5dp"
-                    android:layout_marginTop="15dp"
-                    android:fontFamily="@font/montserrat"
+                    android:layout_gravity="center"
+                    android:layout_margin="15dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/advent_pro"
                     android:maxLines="1"
                     android:text="@string/frag_login_header"
-                    android:textSize="45sp"
+                    android:textColor="@color/SolidWhite"
+                    android:textSize="70sp"
                     android:textStyle="normal" />
 
 
-            </LinearLayout>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="-90dp"
-                android:src="@drawable/fisk" />
+            </FrameLayout>
 
 
             <GridLayout
                 android:id="@+id/mainGrid"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="4"
+                android:layout_weight="10"
                 android:alignmentMode="alignMargins"
                 android:columnCount="2"
                 android:columnOrderPreserved="false"
@@ -73,9 +84,6 @@
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -101,12 +109,12 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:fontFamily="@font/montserrat"
-                            android:text="Login"
+                            android:fontFamily="@font/advent_pro"
+                            android:text="Shopping List"
                             android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/SolidWhite"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
 
 
                     </LinearLayout>
@@ -121,9 +129,6 @@
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -148,12 +153,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
+                            android:fontFamily="@font/advent_pro"
                             android:text="@string/menu_recipes"
                             android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/SolidWhite"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -169,9 +174,7 @@
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="40dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -197,7 +200,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:ellipsize="end"
-                            android:fontFamily="@font/montserrat"
+                            android:fontFamily="@font/advent_pro"
                             android:gravity="center"
                             android:maxLines="1"
                             android:scrollHorizontally="true"
@@ -206,9 +209,9 @@
                             android:shadowDy="1"
                             android:text="@string/menu_kitchen_essentials"
                             android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/SolidWhite"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -221,9 +224,7 @@
                     android:layout_height="0dp"
                     android:layout_rowWeight="1"
                     android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginBottom="40dp"
                     android:clickable="true"
                     android:focusable="true"
                     android:foreground="?attr/selectableItemBackground"
@@ -239,6 +240,10 @@
                         android:layout_margin="12dp"
                         android:orientation="vertical">
 
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
                         <ImageView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -248,105 +253,12 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
+                            android:fontFamily="@font/advent_pro"
                             android:text="@string/menu_food_planner"
                             android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-
-                <!-- Row 2 -->
-
-                <!-- Column 1 -->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_card_settings"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:stateListAnimator="@anim/animation_card"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="5dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@mipmap/fiskiconwhite" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
-                            android:text="@string/menu_foodfinder"
-                            android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
-
-                </android.support.v7.widget.CardView>
-
-                <!-- Column 2 -->
-                <android.support.v7.widget.CardView
-                    android:id="@+id/menu_card_challenge_mode"
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginRight="16dp"
-                    android:layout_marginBottom="16dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:foreground="?attr/selectableItemBackground"
-                    android:stateListAnimator="@anim/animation_card"
-                    app:cardBackgroundColor="@android:color/transparent"
-                    app:cardCornerRadius="8dp"
-                    app:cardElevation="8dp">
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal|center_vertical"
-                        android:layout_margin="5dp"
-                        android:orientation="vertical">
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@mipmap/challengemodeicon" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat"
-                            android:text="@string/menu_challenge_mode"
-                            android:textAlignment="center"
-                            android:textColor="@color/greysigninsignup"
-                            android:textSize="13sp"
-                            android:textStyle="bold" />
+                            android:textColor="@color/SolidWhite"
+                            android:textSize="20sp"
+                            android:textStyle="normal" />
 
                     </LinearLayout>
 
@@ -391,3 +303,6 @@
 
 
 </android.support.v4.widget.DrawerLayout>
+
+
+

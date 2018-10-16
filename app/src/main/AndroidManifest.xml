@@ -51,8 +51,7 @@
         <activity android:name=".MenuActivities.SettingsActivity" />
         <activity android:name=".MenuActivities.ChallengeModeActivity" />
         <activity android:name=".MenuActivities.EssentialDetailActivity" />
-        <activity android:name=".Activities.FoodFinderActivity" />
-        <activity android:name=".Activities.FBhandler"></activity>
+        <activity android:name=".Activities.FoodPlannerActivity"></activity>
     </application>
 
 </manifest>

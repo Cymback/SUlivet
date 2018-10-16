@@ -28,9 +28,9 @@ class SlidesActivity : AppCompatActivity() {
 
     private val dataForOnboarding: ArrayList<PaperOnboardingPage>
         get() {
-            val scr1 = PaperOnboardingPage("Cheap Food", "Browse, search, eat, repeat",
+            val scr1 = PaperOnboardingPage("CheapFoodz", "Browse, Search, Eat, Repeat",
                     Color.parseColor("#D0021B"), R.drawable.school, R.drawable.fisk)
-            val scr2 = PaperOnboardingPage("Tons of features!", "cheap recipes, shopping assistant, challenge mode, and much more!",
+            val scr2 = PaperOnboardingPage("Tons of features!", "Cheap recipes, shopping assistant, challenge mode, and much more!",
                     Color.parseColor("#D0021B"), R.drawable.fiskicon, R.drawable.fisk)
 
 
@@ -65,12 +65,12 @@ class SlidesActivity : AppCompatActivity() {
         if (accessToken != null) {
             val intent = Intent(this, MenuActivity::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_in)
         } else {
 
             val intent = Intent(this, LoginHandler::class.java)
             startActivity(intent)
-            overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
+            overridePendingTransition(R.anim.fade_in, R.anim.fade_in)
 
 
         }
