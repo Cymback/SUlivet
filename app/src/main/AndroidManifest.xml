@@ -3,14 +3,24 @@
     package="com.example.sulivet.sulivet">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+
 
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Activities.SlidesActivity">
+        android:theme="@style/AppTheme.Launcher">
+        <activity android:name=".Activities.OnBoardingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -21,6 +31,9 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity
             android:name="com.facebook.FacebookActivity"
@@ -43,15 +56,35 @@
         <activity android:name=".MenuActivities.RecipesActivity" />
         <activity android:name=".Activities.RecipeDetailActivity" />
         <activity android:name=".Activities.ForgotPasswordActivity" />
-        <activity android:name=".Activities.MenuActivity" />
         <activity android:name=".MenuActivities.KitchenEssentialActivity" />
         <activity android:name=".MenuActivities.ProfileActivity" />
-        <activity android:name=".Fragments.LoginHandler" />
-        <activity android:name=".MenuActivities.FoodPlannerActivity" />
-        <activity android:name=".MenuActivities.SettingsActivity" />
-        <activity android:name=".MenuActivities.ChallengeModeActivity" />
         <activity android:name=".MenuActivities.EssentialDetailActivity" />
-        <activity android:name=".Activities.FoodPlannerActivity"></activity>
+        <activity android:name=".Activities.EspressoActivity" />
+        <activity android:name=".Activities.LatteActivity" />
+        <activity android:name=".Activities.CappuccinoActivity" />
+        <activity android:name=".Activities.MochaActivity" />
+        <activity android:name=".Activities.SelectDrinkActivity" />
+        <activity android:name=".Activities.CustomizeDrinksActivity" />
+        <activity android:name=".Activities.NutriCappuinoActivity" />
+        <activity android:name=".Activities.PopuCappuActivity" />
+        <activity android:name=".bottomnavigation.ui.TakeMeAwayActivity" />
+        <activity android:name=".Fragments.LoginHandler" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".bottomnavigation.ui.MapFragment"
+            android:label="test" />
+        <activity android:name=".Fragments.SignUpFragment" />
     </application>
 
 </manifest>

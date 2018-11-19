@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
-
-    xmlns:fancy="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bba"
+    android:background="@drawable/custbb"
     android:fillViewport="true"
     android:orientation="vertical">
 
@@ -15,42 +12,28 @@
         android:orientation="vertical">
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/fisk" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:adjustViewBounds="true"
-                android:background="@drawable/fisk" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:background="@drawable/fisk" />
-
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="15dp"
-                android:layout_marginTop="30dp"
-                android:fontFamily="@font/advent_pro"
-                android:maxLines="1"
-                android:text="@string/frag_login_header"
-                android:textColor="@color/SolidWhite"
-                android:textSize="70sp"
-                android:textStyle="normal" />
+                android:layout_margin="10dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/open_sans_light"
+                android:text="CoffeeTEK"
+                android:textColor="@color/brown_buttons"
+                android:textSize="65sp" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                android:src="@mipmap/espressoicon" />
 
 
         </FrameLayout>
@@ -65,102 +48,96 @@
 
 
         <EditText
-            android:id="@+id/frag_login_email_view"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/rounded_edittext"
-            android:fontFamily="@font/advent_pro"
-            android:hint="@string/frag_login_email_view"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="@color/blackText"
-            android:textColorHint="@android:color/darker_gray"
-            android:textStyle="bold" />
-
-        <EditText
-            android:id="@+id/frag_login_password_view"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/rounded_edittext"
-            android:fontFamily="@font/advent_pro"
-            android:hint="@string/frag_login_password_view"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            android:textColor="@color/blackText"
-            android:textColorHint="@android:color/darker_gray"
-            android:textStyle="bold" />
-
-
-        <Button
-            android:id="@+id/frag_login_login_btn"
+            android:id="@+id/email_edittext_login"
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/card_edge"
-            android:backgroundTint="@color/redcolor"
-            android:fontFamily="@font/montserrat"
-            android:gravity="center"
-            android:text="@string/frag_login_button"
-            android:textColor="@color/SolidWhite"
-            android:textSize="14sp"
-            android:textStyle="normal" />
+            android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/usernameicon"
+            android:fontFamily="@font/open_sans_light"
+            android:hint="@string/frag_login_email_view"
+            android:inputType="textEmailAddress"
+            android:padding="5dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@color/blackText"
+            android:textSize="22sp" />
 
 
-        <LinearLayout
-            android:layout_width="50dp"
-            android:layout_height="25dp"
-            android:layout_gravity="center_horizontal">
+        <EditText
+            android:id="@+id/password_edittext_login"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/lockicon"
+            android:fontFamily="@font/open_sans_light"
+            android:hint="@string/frag_login_password_view"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            android:textColor="@android:color/background_dark"
+            android:textColorHint="@color/blackText"
+            android:textSize="22sp" />
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:fontFamily="@font/montserrat"
-                android:gravity="center_horizontal"
-                android:text="OR"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-        </LinearLayout>
+        <TextView
+            android:id="@+id/frag_login_forgot_pass_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/open_sans_light"
+            android:text="Forgot password?"
+            android:textColor="@color/brown_buttons"
+            android:textSize="20dp" />
 
 
         <FrameLayout
             android:id="@+id/facebook_framelayout"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
+            android:layout_gravity="bottom|center_horizontal"
             android:layout_marginTop="30dp">
+
+            <Button
+                android:id="@+id/login_button_login"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/card_edge"
+                android:backgroundTint="@color/brown_buttons"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="center"
+                android:text="@string/frag_login_button"
+                android:textColor="@color/SolidWhite"
+                android:textSize="14sp" />
 
 
             <com.facebook.login.widget.LoginButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="250dp"
+                android:layout_height="match_parent"
                 android:visibility="gone" />
 
             <Button
                 android:id="@+id/facebook_login"
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="5dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
-                android:text="Sign up with Facebook"
+                android:fontFamily="@font/open_sans_light"
+                android:text="Continue with Facebook"
                 android:textAllCaps="false"
-                android:textColor="#ffffff"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
 
 
         </FrameLayout>
+
 
     </LinearLayout>
 
 
 </LinearLayout>
-
 

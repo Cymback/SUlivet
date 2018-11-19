@@ -3,6 +3,30 @@
     <string name="_0">0</string>
 
 
+    <!-- CoffeeMenuActivities Strings -->
+
+    <string name="activity_cappuccino_content">Espresso (ess-PRESS-oh) is a full-flavored, concentrated form of coffee that is served in “shots.” It is made by forcing pressurized, hot water through very finely ground coffee beans. This process is called “pulling a shot.”</string>
+    <string name="activity_cappuccino_order_btn">Popular Variants</string>
+    <string name="activity_cappuccino_nutri_btn">Nutrition facts</string>
+    <string name="activity_espresso_content">Espresso (ess-PRESS-oh) is a full-flavored, concentrated form of coffee that is served in “shots.” It is made by forcing pressurized, hot water through very finely ground coffee beans. This process is called “pulling a shot.”</string>
+    <string name="activity_espresso_order_btn">Popular Variants</string>
+    <string name="activity_espresso_nutri_btn">Nutrition facts</string>
+    <string name="activity_latte_content">Espresso (ess-PRESS-oh) is a full-flavored, concentrated form of coffee that is served in “shots.” It is made by forcing pressurized, hot water through very finely ground coffee beans. This process is called “pulling a shot.”</string>
+    <string name="activity_mocha_content">Espresso (ess-PRESS-oh) is a full-flavored, concentrated form of coffee that is served in “shots.” It is made by forcing pressurized, hot water through very finely ground coffee beans. This process is called “pulling a shot.”</string>
+    <string name="activity_mocha_order_btn">Popular Variants</string>
+    <string name="activity_mocha_nutri_btn">Nutrition facts</string>
+
+
+    <!-- Menu Strings -->
+
+    <string name="activity_menu_title">Coffeeboy</string>
+    <string name="activity_menu_cappuccino">Cappuccino</string>
+    <string name="activity_menu_espresso">Espresso</string>
+    <string name="activity_menu_latte">Latte</string>
+    <string name="activity_menu_mocha">Mocha</string>
+    <string name="activity_menu_order_btn">Order your coffee now</string>
+
+
     <!-- Facebook Strings -->
 
     <string name="facebook_app_id">2043659265654462</string>
@@ -61,9 +85,9 @@
 
     <string name="frag_login_email_view">Email</string>
     <string name="frag_login_password_view">Password</string>
-    <string name="frag_login_button">Login</string>
+    <string name="frag_login_button">Log in with your account</string>
     <string name="frag_login_continue_with_social">Continue with Google</string>
-    <string name="frag_login_header">Cheapfoodz</string>
+    <string name="frag_login_header">Start brewing</string>
 
 
     <!-- SignUpFrag Strings -->
@@ -99,7 +123,21 @@
     <string name="item_recipe_picture_description">picture description item recipe</string>
     <string name="item_recipe_title_text">recipe title item recipe</string>
     <string name="item_essential_picture_description">picture description</string>
+    <string name="activity_customize_number_of_drinks_txt">1</string>
+    <string name="customize_size_txt">Size</string>
+    <string name="activity_customize_currency">Euro</string>
+    <string name="activity_customize_price">3.35</string>
+    <string name="activity_customize_total">Total:</string>
+    <string name="activity_customize_additions">Additions</string>
 
+    <!-- BottomDrawer Strings -->
+
+
+    <string name="title_home">Home</string>
+    <string name="title_map">Map</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_profile">Profile</string>
+    <string name="title_activity_map_fragment">Map</string>
 
     <!-- LogoutFragment Strings -->
 

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rsz_mochactivity"
+    tools:context=".Activities.RecipeDetailActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="start"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_width="220dp"
+            android:layout_height="150dp"
+            android:layout_gravity="left"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
+            android:background="#2d2d2d"
+            android:scaleType="centerCrop"
+            android:src="@drawable/espressoactivity" />
+
+        <TextView
+
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_margin="20dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/oswald"
+            android:text="@string/activity_espresso_content"
+            android:textColor="@color/brown_buttons"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/card_edge"
+            android:backgroundTint="@color/brown_buttons"
+            android:fontFamily="@font/oswald_light"
+            android:text="@string/activity_espresso_order_btn"
+            android:textSize="20sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/card_edge"
+            android:backgroundTint="@color/brown_buttons"
+            android:fontFamily="@font/oswald_light"
+            android:text="@string/activity_espresso_nutri_btn"
+            android:textSize="20sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

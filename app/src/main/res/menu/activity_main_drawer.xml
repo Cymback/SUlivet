@@ -10,7 +10,7 @@
 
     <item
         android:id="@+id/nav_myprofile"
-        android:icon="@drawable/profileicon"
+        android:icon="@drawable/star"
         android:title="My Profile" />
 
     <item

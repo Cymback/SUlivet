@@ -20,13 +20,13 @@ class CheapAdapter(private val mContext: Context, private val mData: List<Recipe
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
+
         val view: View
         val mInflater = LayoutInflater.from(mContext)
         view = mInflater.inflate(R.layout.item_recipe, parent, false)
 
 
         return MyViewHolder(view)
-
 
     }
 

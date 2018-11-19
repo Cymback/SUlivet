@@ -2,13 +2,12 @@ package com.example.sulivet.sulivet.MenuActivities
 
 import android.app.Activity
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.Adapters.EssentialAdapter
 import com.example.sulivet.sulivet.Model.Essential
 import com.example.sulivet.sulivet.R
@@ -60,7 +59,7 @@ class KitchenEssentialActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        val intent = Intent(this, MenuActivity::class.java)
-        startActivity(intent)
+//        val intent = Intent(this, MenuActivity::class.java)
+//        startActivity(intent)
     }
 }

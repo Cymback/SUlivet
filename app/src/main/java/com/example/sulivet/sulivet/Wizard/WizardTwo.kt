@@ -1,11 +1,9 @@
 package com.example.sulivet.sulivet.Wizard
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.widget.Button
 import android.widget.TextView
-import com.example.sulivet.sulivet.Activities.MenuActivity
 import com.example.sulivet.sulivet.R
 import kotlinx.android.synthetic.main.activity_wizard_two.*
 
@@ -31,8 +29,8 @@ class WizardTwo : AppCompatActivity() {
     }
 
     private fun nokNext() {
-        val intent = Intent(this@WizardTwo, MenuActivity::class.java)
-        startActivity(intent)
+//        val intent = Intent(this@WizardTwo, MenuActivity::class.java)
+//        startActivity(intent)
 
     }
 

@@ -1,33 +1,23 @@
 package com.example.sulivet.sulivet.Fragments
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.PorterDuff
 import android.os.Bundle
-import android.support.annotation.NonNull
 import android.support.v4.app.Fragment
 import android.support.v4.content.ContextCompat
 import android.util.Log
-import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.sulivet.sulivet.Activities.ForgotPasswordActivity
-import com.example.sulivet.sulivet.Activities.MenuActivity
-import com.example.sulivet.sulivet.MenuActivities.ChallengeModeActivity
 import com.example.sulivet.sulivet.R
-import com.facebook.AccessToken
+import com.example.sulivet.sulivet.bottomnavigation.ui.TakeMeAwayActivity
 import com.facebook.CallbackManager
 import com.facebook.FacebookCallback
 import com.facebook.FacebookException
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.facebook.login.widget.LoginButton
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.ConnectionResult
-import com.google.android.gms.tasks.OnCompleteListener
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.login_fragment.*
 import timber.log.Timber
@@ -35,32 +25,17 @@ import java.util.*
 
 class LoginFragment : Fragment() {
 
-    // Global
+    // Global variables
 
-    private var email: String? = null
-    private var password: String? = null
     private var progressBar: ProgressBar? = null
-    private val EMAIL = "email"
-
-
-    // UI
-
-    private lateinit var tvForgotPassword: TextView
-    private lateinit var tvCreateAccount: TextView
-
-
-    private lateinit var etEmail: EditText
-    private lateinit var etPassword: EditText
-
-    private lateinit var btnLogin: Button
-
 
     // Facebook
     private lateinit var loginButton: LoginButton
     private var callbackManager: CallbackManager? = null
 
+    //Buttons
+    private var btnLogin: Button? = null
 
-    private var mAuth: FirebaseAuth? = null
 
     companion object {
         private val TAG = "LoginFragment"
@@ -70,32 +45,19 @@ class LoginFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.login_fragment, container, false)
 
-        FbisLoggedIn()
-
-
-        // tvForgotPassword.setOnClickListener { forgotPassword() }
-
         progressBar = view.findViewById(R.id.frag_login_progressbar)
-
-        etEmail = view.findViewById(R.id.frag_login_email_view)
-        etPassword = view.findViewById(R.id.frag_login_password_view)
-
-        val btnLogin: TextView? = view.findViewById(R.id.frag_login_login_btn)
+        btnLogin = view.findViewById(R.id.login_button_login)
         val fblogin: Button = view.findViewById(R.id.facebook_login)
 
 
-        mAuth = FirebaseAuth.getInstance()
-
-        btnLogin?.setOnClickListener {
-            startActivity(Intent(activity, ForgotPasswordActivity::class.java))
+        btnLogin!!.setOnClickListener {
+            performLogin()
         }
 
-        btnLogin!!.setOnClickListener { loginUser() }
 
-
-        // Facebook
-
+        // Facebook login
         fblogin.setOnClickListener {
+
 
             progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this.context!!, R.color.greysigninsignup), PorterDuff.Mode.SRC_IN)
             progressBar!!.visibility = View.VISIBLE
@@ -108,7 +70,7 @@ class LoginFragment : Fragment() {
                             Timber.d("Facebook token: " + loginResult.accessToken.token)
 
                             Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(context, MenuActivity::class.java))
+                            startActivity(Intent(context, TakeMeAwayActivity::class.java))
                         }
 
                         override fun onCancel() {
@@ -128,80 +90,24 @@ class LoginFragment : Fragment() {
 
     }
 
-    fun FbisLoggedIn() {
+    private fun performLogin() {
+        val email = email_edittext_login.text.toString()
+        val password = password_edittext_login.text.toString()
 
-
-    }
-
-    private fun forgotPassword() {
-        val intent = Intent(activity, ForgotPasswordActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intent)
-    }
-
-
-    private fun loginUser() {
-
-        progressBar!!.indeterminateDrawable.setColorFilter(ContextCompat.getColor(this.context!!, R.color.redcolor), PorterDuff.Mode.SRC_IN)
-        progressBar!!.visibility = View.VISIBLE
-
-        email = etEmail.text.toString()
-        password = etPassword.text.toString()
-
-
-        if (email!!.isEmpty()) {
-            etEmail.error = "Email is required"
-            etEmail.requestFocus()
-            progressBar!!.visibility = View.GONE
-
+        if (email.isEmpty() || password.isEmpty()) {
+            Toast.makeText(activity, "Please fill out email/pw.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            etEmail.error = "Please enter a valid email"
-            etEmail.requestFocus()
-            progressBar!!.visibility = View.GONE
+        FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
+                .addOnCompleteListener {
+                    if (!it.isSuccessful) return@addOnCompleteListener
 
-            return
-        }
-
-        if (password!!.isEmpty()) {
-            etPassword.error = "Password is required"
-            etPassword.requestFocus()
-            progressBar!!.visibility = View.GONE
-
-            return
-
-        }
-
-
-
-
-        mAuth!!.signInWithEmailAndPassword(email!!, password!!)
-                .addOnCompleteListener(this.activity!!) { task ->
-
-                    if (task.isSuccessful) {
-                        Timber.log(5, "signInWithEmail:success")
-                        updateUI()
-
-                        progressBar!!.visibility = View.GONE
-
-
-                    } else {
-                        Timber.log(6, "signInWithEmail:failure", task.exception)
-                        Toast.makeText(activity, "Authentication failed.", Toast.LENGTH_SHORT).show()
-                        progressBar!!.visibility = View.GONE
-
-                    }
-
+                    Log.d("Login", "Successfully logged in: ${it.result!!.user.uid}")
                 }
-
-    }
-
-    private fun updateUI() {
-        val intent = Intent(activity, MenuActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-        startActivity(intent)
+                .addOnFailureListener {
+                    Toast.makeText(activity, "Failed to log in: ${it.message}", Toast.LENGTH_SHORT).show()
+                }
     }
 
 
@@ -211,6 +117,8 @@ class LoginFragment : Fragment() {
         callbackManager?.onActivityResult(requestCode, resultCode, data)
     }
 }
+
+
 
 
 

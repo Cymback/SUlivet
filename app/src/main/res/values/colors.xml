@@ -9,11 +9,13 @@
     <color name="ColorButtons">#131232</color>
     <color name="ColorTxt">#D8D8D8</color>
     <color name="ColorTextWhite">#FFFFFF</color>
-    <color name="SolidWhite">#f8f8ff</color>
+    <color name="SolidWhite">#F2F2F2</color>
     <color name="greysigninsignup">#ADADAD</color>
     <color name="blackText">#000000</color>
     <color name="menutext">#C4C4C4</color>
     <color name="redcolor">#FF5C5C</color>
+    <color name="brown_main">#a06a34</color>
+    <color name="brown_buttons">#522D2D</color>
 
 
     <!-- Screens background color-->

@@ -1,10 +1,8 @@
 package com.example.sulivet.sulivet.MenuActivities
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
+import android.support.v7.app.AppCompatActivity
 import android.widget.TextView
-import com.example.sulivet.sulivet.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 import timber.log.Timber
@@ -21,10 +19,10 @@ class ProfileActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-       //  setContentView(R.layout.activity_profile)
+        // setContentView(R.layout.activity_profile)
 
 
-        initialise()
+        //  initialse()
 
 
     }

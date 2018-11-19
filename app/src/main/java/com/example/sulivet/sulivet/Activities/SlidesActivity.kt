@@ -3,22 +3,15 @@ package com.example.sulivet.sulivet.Activities
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
-import android.support.v4.app.FragmentTransaction
 import android.support.v7.app.AppCompatActivity
 import com.example.sulivet.sulivet.Fragments.LoginHandler
-import com.example.sulivet.sulivet.MenuActivities.SettingsActivity
-
 import com.example.sulivet.sulivet.R
+import com.example.sulivet.sulivet.bottomnavigation.ui.TakeMeAwayActivity
 import com.facebook.AccessToken
-import com.facebook.FacebookSdk
-import com.facebook.appevents.AppEventsLogger
 import com.ramotion.paperonboarding.PaperOnboardingFragment
 import com.ramotion.paperonboarding.PaperOnboardingPage
-import com.ramotion.paperonboarding.listeners.PaperOnboardingOnRightOutListener
-
-import java.util.ArrayList
+import java.util.*
 
 class SlidesActivity : AppCompatActivity() {
 
@@ -28,10 +21,10 @@ class SlidesActivity : AppCompatActivity() {
 
     private val dataForOnboarding: ArrayList<PaperOnboardingPage>
         get() {
-            val scr1 = PaperOnboardingPage("CheapFoodz", "Browse, Search, Eat, Repeat",
-                    Color.parseColor("#D0021B"), R.drawable.school, R.drawable.fisk)
-            val scr2 = PaperOnboardingPage("Tons of features!", "Cheap recipes, shopping assistant, challenge mode, and much more!",
-                    Color.parseColor("#D0021B"), R.drawable.fiskicon, R.drawable.fisk)
+            val scr1 = PaperOnboardingPage("Estimate your workout needs", "Every sort of coffee has different calories",
+                    Color.parseColor("#522D2D"), R.drawable.burncalories, R.mipmap.cappuccinoicon)
+            val scr2 = PaperOnboardingPage("Find your favorite coffee place!", "53w5",
+                    Color.parseColor("#522D2D"), R.drawable.googlemaps, R.mipmap.cappuccinoicon)
 
 
             val elements = ArrayList<PaperOnboardingPage>()
@@ -63,7 +56,7 @@ class SlidesActivity : AppCompatActivity() {
         val accessToken = AccessToken.getCurrentAccessToken()
 
         if (accessToken != null) {
-            val intent = Intent(this, MenuActivity::class.java)
+            val intent = Intent(this, TakeMeAwayActivity::class.java)
             startActivity(intent)
             overridePendingTransition(R.anim.fade_in, R.anim.fade_in)
         } else {

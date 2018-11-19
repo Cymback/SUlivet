@@ -5,7 +5,7 @@
     android:id="@+id/main_content"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bba"
+    android:background="@drawable/custbb"
     android:fitsSystemWindows="true"
     android:orientation="vertical"
     android:windowSoftInputMode="stateHidden">
@@ -17,8 +17,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/toolbar_bg"
-        app:tabIndicatorColor="@color/greysigninsignup"
-        app:tabTextColor="@color/greysigninsignup">
+        app:tabIndicatorColor="@color/brown_buttons"
+        app:tabTextColor="@color/brown_buttons">
 
         <android.support.design.widget.TabItem
             android:id="@+id/tabItem"
