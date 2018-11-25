@@ -1,4 +1,4 @@
-package com.example.sulivet.sulivet.Activities
+package com.example.sulivet.sulivet.CoffeeActivities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity

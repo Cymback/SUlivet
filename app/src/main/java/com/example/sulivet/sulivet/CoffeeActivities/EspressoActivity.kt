@@ -1,4 +1,4 @@
-package com.example.sulivet.sulivet.Activities
+package com.example.sulivet.sulivet.CoffeeActivities
 
 import android.app.Activity
 import android.content.Intent
@@ -28,9 +28,9 @@ class EspressoActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-//        val intent = Intent(this, MenuActivity::class.java)
-//        startActivity(intent)
-//        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
+
+        startActivity(intent)
+        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
 
     }
 }

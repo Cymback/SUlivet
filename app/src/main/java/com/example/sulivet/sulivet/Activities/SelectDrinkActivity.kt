@@ -44,8 +44,10 @@ class SelectDrinkActivity : AppCompatActivity(), CoffeeAdapter.ItemClickListener
         lstCoffeeNames.add(CoffeeNames(R.mipmap.espressoicon, "Espresso"))
         lstCoffeeNames.add(CoffeeNames(R.mipmap.cappuccinoicon, "Cappuccino"))
         lstCoffeeNames.add(CoffeeNames(R.mipmap.macciatoicon, "Macciato"))
+        lstCoffeeNames.add(CoffeeNames(R.mipmap.macciatoicon, "Mochaccino"))
         lstCoffeeNames.add(CoffeeNames(R.mipmap.mochaicon, "Mocha"))
         lstCoffeeNames.add(CoffeeNames(R.mipmap.latteicon, "Latte"))
+        lstCoffeeNames.add(CoffeeNames(R.mipmap.espressoicon, "Irish Coffee"))
 
 
         // set up the RecyclerView
@@ -63,13 +65,6 @@ class SelectDrinkActivity : AppCompatActivity(), CoffeeAdapter.ItemClickListener
         recyclerView.adapter = adapter
 
 
-    }
-
-    override fun onBackPressed() {
-
-//        val intent = Intent(this, MenuActivity::class.java)
-//        startActivity(intent)
-//        overridePendingTransition(R.anim.slide_in_right, R.anim.fadeout)
     }
 
     override fun onItemClick(view: View, position: Int) {

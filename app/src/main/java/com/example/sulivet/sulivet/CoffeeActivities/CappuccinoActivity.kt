@@ -1,9 +1,11 @@
-package com.example.sulivet.sulivet.Activities
+package com.example.sulivet.sulivet.CoffeeActivities
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.sulivet.sulivet.Activities.NutriCappuinoActivity
+import com.example.sulivet.sulivet.Activities.PopuCappuActivity
 import com.example.sulivet.sulivet.R
 
 class CappuccinoActivity : AppCompatActivity() {

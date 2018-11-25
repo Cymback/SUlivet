@@ -12,8 +12,6 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the 'MyLocation' functionality. 
     -->
-
-
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
@@ -59,10 +57,10 @@
         <activity android:name=".MenuActivities.KitchenEssentialActivity" />
         <activity android:name=".MenuActivities.ProfileActivity" />
         <activity android:name=".MenuActivities.EssentialDetailActivity" />
-        <activity android:name=".Activities.EspressoActivity" />
-        <activity android:name=".Activities.LatteActivity" />
-        <activity android:name=".Activities.CappuccinoActivity" />
-        <activity android:name=".Activities.MochaActivity" />
+        <activity android:name=".CoffeeActivities.EspressoActivity" />
+        <activity android:name=".CoffeeActivities.LatteActivity" />
+        <activity android:name=".CoffeeActivities.CappuccinoActivity" />
+        <activity android:name=".CoffeeActivities.MochaActivity" />
         <activity android:name=".Activities.SelectDrinkActivity" />
         <activity android:name=".Activities.CustomizeDrinksActivity" />
         <activity android:name=".Activities.NutriCappuinoActivity" />
@@ -85,6 +83,7 @@
             android:name=".bottomnavigation.ui.MapFragment"
             android:label="test" />
         <activity android:name=".Fragments.SignUpFragment" />
+        <activity android:name=".CoffeeActivities.CoffeeOverview"></activity>
     </application>
 
 </manifest>
