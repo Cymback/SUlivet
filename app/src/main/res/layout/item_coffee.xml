@@ -16,10 +16,10 @@
         android:id="@+id/item_coffee_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/annie_use_your_telescope"
+        android:fontFamily="@font/open_sans_light"
         android:layout_gravity="center_vertical"
         android:layout_margin="20dp"
         android:textColor="@color/brown_buttons"
-        android:textSize="35sp" />
+        android:textSize="30sp" />
 
 </LinearLayout>

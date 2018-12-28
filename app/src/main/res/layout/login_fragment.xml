@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/custbb"
+    android:background="@drawable/custob"
     android:fillViewport="true"
     android:orientation="vertical">
 
@@ -50,35 +50,33 @@
         <EditText
             android:id="@+id/email_edittext_login"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/brown_buttons"
-            android:drawableEnd="@mipmap/usernameicon"
-            android:fontFamily="@font/open_sans_light"
-            android:hint="@string/frag_login_email_view"
-            android:inputType="textEmailAddress"
-            android:padding="5dp"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@color/blackText"
-            android:textSize="22sp" />
+            android:background="@drawable/card_edge"
+            android:backgroundTint="@color/SolidWhite"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:paddingLeft="16dp"
+            android:textColor="@color/brown_buttons"
+            android:textColorHint="@color/brown_buttons" />
 
 
         <EditText
             android:id="@+id/password_edittext_login"
             android:layout_width="250dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:backgroundTint="@color/brown_buttons"
-            android:drawableEnd="@mipmap/lockicon"
-            android:fontFamily="@font/open_sans_light"
-            android:hint="@string/frag_login_password_view"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            android:textColor="@android:color/background_dark"
-            android:textColorHint="@color/blackText"
-            android:textSize="22sp" />
+            android:background="@drawable/card_edge"
+            android:backgroundTint="@color/SolidWhite"
+            android:ems="10"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:paddingLeft="16dp"
+            android:textColor="@color/brown_buttons"
+            android:textColorHint="@color/brown_buttons" />
 
         <TextView
             android:id="@+id/frag_login_forgot_pass_text"
@@ -89,7 +87,8 @@
             android:fontFamily="@font/open_sans_light"
             android:text="Forgot password?"
             android:textColor="@color/brown_buttons"
-            android:textSize="20dp" />
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
 
         <FrameLayout
@@ -102,16 +101,16 @@
             <Button
                 android:id="@+id/login_button_login"
                 android:layout_width="250dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/card_edge"
+                android:background="@drawable/button_shape"
                 android:backgroundTint="@color/brown_buttons"
-                android:fontFamily="@font/open_sans_light"
                 android:gravity="center"
+                android:textStyle="bold"
                 android:text="@string/frag_login_button"
-                android:textColor="@color/SolidWhite"
-                android:textSize="14sp" />
+                android:textColor="@android:color/white"
+                android:textSize="12sp" />
 
 
             <com.facebook.login.widget.LoginButton
@@ -127,10 +126,11 @@
                 android:layout_margin="5dp"
                 android:layout_marginTop="5dp"
                 android:background="@drawable/button_shape"
-                android:fontFamily="@font/open_sans_light"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
                 android:text="Continue with Facebook"
                 android:textAllCaps="false"
-                android:textSize="16sp" />
+                android:textSize="14sp" />
 
 
         </FrameLayout>

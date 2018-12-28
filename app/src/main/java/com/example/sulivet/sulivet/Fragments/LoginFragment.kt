@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import com.example.sulivet.sulivet.Activities.ForgotPasswordActivity
+import com.example.sulivet.sulivet.Activities.SelectDrinkActivity
 import com.example.sulivet.sulivet.R
 import com.example.sulivet.sulivet.bottomnavigation.ui.TakeMeAwayActivity
 import com.facebook.CallbackManager
@@ -28,6 +30,7 @@ class LoginFragment : Fragment() {
     // Global variables
 
     private var progressBar: ProgressBar? = null
+    private var forgotpass: TextView? = null
 
     // Facebook
     private lateinit var loginButton: LoginButton
@@ -47,11 +50,18 @@ class LoginFragment : Fragment() {
 
         progressBar = view.findViewById(R.id.frag_login_progressbar)
         btnLogin = view.findViewById(R.id.login_button_login)
+        forgotpass = view.findViewById(R.id.frag_login_forgot_pass_text)
         val fblogin: Button = view.findViewById(R.id.facebook_login)
 
 
         btnLogin!!.setOnClickListener {
             performLogin()
+        }
+
+        forgotpass!!.setOnClickListener {
+            val intent = Intent(activity, ForgotPasswordActivity::class.java)
+            startActivity(intent)
+            activity!!.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
 
@@ -102,7 +112,7 @@ class LoginFragment : Fragment() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener
-
+                    startActivity(Intent(context, TakeMeAwayActivity::class.java))
                     Log.d("Login", "Successfully logged in: ${it.result!!.user.uid}")
                 }
                 .addOnFailureListener {
