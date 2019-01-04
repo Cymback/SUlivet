@@ -1,11 +1,10 @@
 package com.example.sulivet.sulivet.bottomnavigation.ui
 
-import android.Manifest
+
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.support.v4.app.ActivityCompat
 import android.support.v4.app.Fragment
-import android.support.v4.content.ContextCompat
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -37,18 +36,9 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
         val view = inflater.inflate(R.layout.fragment_glg_map_layout, container, false)
         mMapView = view.findViewById(R.id.mapView)
 
-        checkPermissions()
 
-
-        // HANDLE:
-
-//                1: handle the configuration changes in the middle of permission request process .
-//                2: handle the case if the user rejected the permission request first time , and second time .
-//                3: show the dialog explaining the reason why you need the permission or the benefit for user if he grand the permission to you
-
-        val permissions = arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION)
-        ActivityCompat.requestPermissions(activity!!, permissions, 0)
-
+//        val permissions = arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION)
+//        ActivityCompat.requestPermissions(activity!!, permissions, 0)
 
 
         mMapView!!.onCreate(savedInstanceState)
@@ -95,11 +85,19 @@ class MapFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
     }
 
     override fun onMapReady(p0: GoogleMap?) {
+        setUpMap()
+
 
     }
-}
 
-private fun checkPermissions() {
+    private fun setUpMap() {
 
+        if (ActivityCompat.checkSelfPermission(context!!,
+                        android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(activity!!,
+                    arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), LOCATION_PERMISSION_REQUEST_CODE)
 
+        }
+
+    }
 }

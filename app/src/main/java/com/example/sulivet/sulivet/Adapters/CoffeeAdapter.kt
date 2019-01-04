@@ -13,7 +13,6 @@ import com.example.sulivet.sulivet.Activities.CustomizeDrinksActivity
 import com.example.sulivet.sulivet.Model.CoffeeNames
 
 import com.example.sulivet.sulivet.R
-import java.io.PipedOutputStream
 
 class CoffeeAdapter// data is passed into the constructor
 (activity: Activity, private val mData: List<CoffeeNames>) : RecyclerView.Adapter<CoffeeAdapter.CoffeeViewHolder>() {

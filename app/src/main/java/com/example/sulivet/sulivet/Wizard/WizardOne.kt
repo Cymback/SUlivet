@@ -59,7 +59,7 @@ class WizardOne : AppCompatActivity() {
     fun toWizardTwo(view: View) {
 
 
-        var myIntProgress: Int = mSeekArcProgress.text.toString().toInt()
+        val myIntProgress: Int = mSeekArcProgress.text.toString().toInt()
 
 
         if (myIntProgress < 200) {

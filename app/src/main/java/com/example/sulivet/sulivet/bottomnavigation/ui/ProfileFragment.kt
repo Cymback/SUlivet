@@ -56,15 +56,15 @@ class ProfileFragment : Fragment() {
 
         //Handle onclick whats going to happen to photo
         imageViewPhoto!!.setOnClickListener {
-            if (!isOpen) {
+            isOpen = if (!isOpen) {
                 TransitionManager.beginDelayedTransition(constraintLayout)
                 layout2!!.applyTo(constraintLayout)
-                isOpen = !isOpen
+                !isOpen
             } else {
 
                 TransitionManager.beginDelayedTransition(constraintLayout)
                 layout1!!.applyTo(constraintLayout)
-                isOpen = !isOpen
+                !isOpen
 
             }
 

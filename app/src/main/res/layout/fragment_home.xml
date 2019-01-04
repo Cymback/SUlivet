@@ -30,8 +30,8 @@
 
         <TextView
             android:id="@+id/home_frag_coffe_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:background="@drawable/custob"
@@ -44,27 +44,11 @@
 
         </TextView>
 
-        <TextView
-            android:id="@+id/home_frag_Cinema_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:background="@drawable/custob"
-            android:drawableTop="@mipmap/espressoicon"
-            android:fontFamily="@font/open_sans_light"
-            android:gravity="center_horizontal"
-            android:text="Cinema"
-            android:textColor="@color/brown_buttons"
-            android:textSize="24sp">
-
-        </TextView>
-
 
         <TextView
             android:id="@+id/home_frag_order_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_gravity="center_horizontal"
             android:layout_margin="10dp"
             android:background="@drawable/custob"
@@ -78,76 +62,6 @@
         </TextView>
 
     </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center_horizontal">
-
-
-        <TextView
-            android:id="@+id/home_frag_inbox_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="5dp"
-            android:background="@drawable/custob"
-            android:drawableTop="@mipmap/espressoicon"
-            android:fontFamily="@font/open_sans_light"
-            android:gravity="center_horizontal"
-            android:text="Inbox"
-            android:textColor="@color/brown_buttons"
-            android:textSize="24sp">
-
-        </TextView>
-
-        <TextView
-            android:id="@+id/home_frag_service_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:background="@drawable/custob"
-            android:drawableTop="@mipmap/espressoicon"
-            android:fontFamily="@font/open_sans_light"
-            android:gravity="center_horizontal"
-            android:text="Service"
-            android:textColor="@color/brown_buttons"
-            android:textSize="24sp">
-
-        </TextView>
-
-
-        <TextView
-            android:id="@+id/home_frag_Map_txt"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="10dp"
-            android:background="@drawable/custob"
-            android:drawableTop="@mipmap/espressoicon"
-            android:fontFamily="@font/open_sans_light"
-            android:gravity="center_horizontal"
-            android:text="Map"
-            android:textColor="@color/brown_buttons"
-            android:textSize="24sp">
-
-        </TextView>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:gravity="center_horizontal">
-
-
-    </LinearLayout>
-
 
 </LinearLayout>
 

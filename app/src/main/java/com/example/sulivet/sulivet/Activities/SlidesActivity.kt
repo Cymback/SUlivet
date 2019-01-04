@@ -24,7 +24,7 @@ class SlidesActivity : AppCompatActivity() {
             val scr1 = PaperOnboardingPage("Estimate your workout needs", "Every sort of coffee has different calories",
                     Color.parseColor("#522D2D"), R.drawable.burncalories, R.mipmap.cappuccinoicon)
             val scr2 = PaperOnboardingPage("Find your favorite coffee place!", "53w5",
-                    Color.parseColor("#522D2D"), R.drawable.googlemaps, R.mipmap.cappuccinoicon)
+                    Color.parseColor("#522D2D"), R.drawable.burncalories, R.mipmap.cappuccinoicon)
 
 
             val elements = ArrayList<PaperOnboardingPage>()

@@ -1,6 +1,5 @@
 package com.example.sulivet.sulivet.Model
 
-import android.os.Parcelable
 import java.io.Serializable
 
 // parcelizable google

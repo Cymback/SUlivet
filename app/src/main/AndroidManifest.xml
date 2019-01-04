@@ -83,7 +83,9 @@
             android:name=".bottomnavigation.ui.MapFragment"
             android:label="test" />
         <activity android:name=".Fragments.SignUpFragment" />
-        <activity android:name=".CoffeeActivities.CoffeeOverview"></activity>
+        <activity android:name=".CoffeeActivities.CoffeeOverview" />
+        <activity android:name=".CoffeeActivities.AmericanoActivity" />
+        <activity android:name=".CoffeeActivities.IrishActivity"></activity>
     </application>
 
 </manifest>

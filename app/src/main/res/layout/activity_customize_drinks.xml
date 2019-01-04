@@ -1,22 +1,47 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/custbb"
     android:orientation="vertical"
     android:padding="10dp">
 
+
+    <LinearLayout
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        tools:context="com.example.eijaz.lottietutorial.MainActivity">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="a_cup_of_coffee.json"
+            app:lottie_loop="true" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/av_from_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/activity_customize_header_img"
             android:layout_width="100dp"
-            android:layout_height="121dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="1dp"
             android:layout_marginEnd="8dp"
             android:src="@mipmap/macciatoicon" />
 
@@ -39,10 +64,11 @@
             android:layout_gravity="start"
             android:layout_marginStart="9dp"
             android:layout_marginTop="8dp"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="Macciato"
             android:textColor="@color/brown_buttons"
-            android:textSize="24dp" />
+            android:textSize="24sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/activity_customize_number_of_drinks"
@@ -52,10 +78,10 @@
             android:layout_marginTop="2dp"
             android:layout_marginEnd="12dp"
             android:layout_toStartOf="@+id/activity_customize_minus"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="@string/activity_customize_number_of_drinks_txt"
             android:textColor="@color/brown_buttons"
-            android:textSize="30dp" />
+            android:textSize="30sp" />
 
 
         <ImageView
@@ -97,13 +123,10 @@
             android:id="@+id/activity_customize_size"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
             android:layout_marginStart="13dp"
-            android:layout_marginLeft="10dp"
             android:layout_marginTop="13dp"
             android:layout_marginEnd="31dp"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="@string/customize_size_txt"
             android:textColor="@color/brown_buttons"
             android:textSize="24sp" />
@@ -162,15 +185,15 @@
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="9dp"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="Sugar"
             android:textColor="@color/brown_buttons"
             android:textSize="24sp" />
 
         <ImageView
             android:id="@+id/activity_customize_sugar_none"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_alignParentTop="true"
             android:layout_marginStart="21dp"
             android:layout_marginTop="0dp"
@@ -185,7 +208,7 @@
             android:layout_height="30dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="13dp"
-            android:layout_marginEnd="23dp"
+            android:layout_marginEnd="14dp"
             android:layout_toStartOf="@+id/activity_customize_sugar_two"
             android:src="@mipmap/sugar2" />
 
@@ -221,40 +244,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
-        <TextView
-            android:id="@+id/activity_customize_additions"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"
-            android:layout_marginEnd="31dp"
-            android:fontFamily="@font/annie_use_your_telescope"
-            android:text="@string/activity_customize_additions"
-            android:textColor="@color/brown_buttons"
-            android:textSize="24sp" />
-
-        <ImageView
-            android:id="@+id/activity_customize_additions_milk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@mipmap/addit1" />
-
-        <ImageView
-            android:id="@+id/activity_customize_additions_no_milk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="30dp"
-            android:src="@mipmap/addit2" />
-
     </LinearLayout>
-
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_margin="5dp"
-        android:background="@color/brown_buttons" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -268,7 +258,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="@string/activity_customize_total"
             android:textColor="@color/brown_buttons"
             android:textSize="25sp"
@@ -280,7 +270,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="@string/activity_customize_price"
             android:textColor="@color/brown_buttons"
             android:textSize="25sp"
@@ -292,7 +282,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
             android:layout_weight="1"
-            android:fontFamily="@font/annie_use_your_telescope"
+            android:fontFamily="@font/open_sans_light"
             android:text="@string/activity_customize_currency"
             android:textColor="@color/brown_buttons"
             android:textSize="25sp"
@@ -308,9 +298,9 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/card_edge"
         android:backgroundTint="@color/brown_buttons"
-        android:fontFamily="@font/annie_use_your_telescope"
+        android:fontFamily="@font/open_sans_light"
         android:text="@string/activity_menu_order_btn"
-        android:textSize="25sp" />
+        android:textSize="22sp" />
 
 
 </LinearLayout>

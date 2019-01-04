@@ -37,7 +37,7 @@
             android:layout_gravity="center_horizontal"
             android:text="Get the best coffee in town!"
             android:textColor="@color/brown_main"
-            android:textSize="20dp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

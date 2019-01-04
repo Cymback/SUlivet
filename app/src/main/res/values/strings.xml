@@ -66,17 +66,13 @@
     <string name="wizard_one_estimated_user_spend_on_food">Hvor mange penge bruger den gennemsnitlige udeboende, SU-modtager på mad?</string>
     <string name="wizard_one_dkk">DKK</string>
     <string name="wizard_dkk">DKK</string>
-    <string name="wizard_response_userguess">Reponse to user guess</string>
+    <string name="wizard_response_userguess">Response to user guess</string>
     <string name="wizard_data_from_user">DKK DATA FROM USER</string>
 
 
     <!-- Menu Strings -->
 
-    <string name="menu_challenge_mode">Challenge mode</string>
-    <string name="menu_foodfinder">FoodFinder</string>
-    <string name="menu_food_planner">FoodPlanner</string>
-    <string name="menu_kitchen_essentials">Essentials</string>
-    <string name="menu_recipes">Recipes</string>
+    <string name="menu_kitchen_essentials">Cafe Laté</string>
 
 
     <!-- FRAGMENTS Strings -->
@@ -117,7 +113,7 @@
     <string name="recipe_detail_recipe_title">title</string>
     <string name="recipe_detail_content_c">content</string>
     <string name="recipe_detail_ingrediens">Ingredients</string>
-    <string name="wizard_reponse">reponse to user</string>
+    <string name="wizard_reponse">response to user</string>
     <string name="wizard_data_from">data from user</string>
     <string name="item_menu_image_content">picture item menu</string>
     <string name="item_recipe_picture_description">picture description item recipe</string>
@@ -138,6 +134,9 @@
     <string name="title_coffee">Coffee</string>
     <string name="title_profile">Profile</string>
     <string name="title_activity_map_fragment">Map</string>
+    <string name="frag_login_password_hint">Password</string>
+    <string name="frag_login_username_hint">Username</string>
+    <string name="frag_login_email_hint">Email</string>
 
     <!-- LogoutFragment Strings -->
 

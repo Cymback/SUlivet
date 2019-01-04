@@ -1,15 +1,340 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorOrange"
-    android:orientation="vertical">
+    android:background="@drawable/custob"
+    android:fitsSystemWindows="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="CoffeeFragment"
-        android:textColor="@color/SolidWhite" />
 
-</RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:drawableBottom="@mipmap/flask1"
+                android:fontFamily="@font/open_sans_light"
+                android:gravity="center_vertical"
+                android:text="Browse the most popular coffee!"
+                android:textColor="@color/brown_buttons"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/mainGrid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false"
+            android:padding="14dp"
+            android:rowCount="3">
+
+            <!-- Row 1 -->
+
+            <!-- Column 1 -->
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_espresso"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/espressoicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Espresso"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!-- Column 2 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_mocha"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/mochaicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Mocha"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!-- Row 2 -->
+
+            <!-- Column 1 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_cafelate"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/latteicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:fontFamily="@font/open_sans_light"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:scrollHorizontally="true"
+                        android:shadowColor="#000000"
+                        android:shadowDx="1"
+                        android:shadowDy="1"
+                        android:text="@string/menu_kitchen_essentials"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Column 2 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_cappuccino"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal|center_vertical"
+                        android:src="@mipmap/cappuccinoicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Cappuccino"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <!-- Row 2 -->
+
+            <!-- Column 1 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_irish_coffee"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/espressoicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Irish Coffee"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <!-- Column 2 -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/navi_bot_americano"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:stateListAnimator="@anim/animation_card"
+                app:cardBackgroundColor="@android:color/transparent"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal|center_vertical"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@mipmap/cappuccinoicon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_light"
+                        android:text="Americano"
+                        android:textAlignment="center"
+                        android:textColor="@color/brown_buttons"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

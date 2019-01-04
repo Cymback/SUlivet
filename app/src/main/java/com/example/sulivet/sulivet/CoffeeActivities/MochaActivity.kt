@@ -10,9 +10,4 @@ class MochaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mocha)
     }
-
-    override fun onBackPressed() {
-
-
-    }
 }

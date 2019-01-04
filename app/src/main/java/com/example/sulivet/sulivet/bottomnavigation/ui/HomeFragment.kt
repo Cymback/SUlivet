@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         textToCoffeeActivities!!.setOnClickListener { it ->
             val intent = Intent(activity, CoffeeOverview::class.java)
             startActivity(intent)
-            activity!!.overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
+            // activity!!.overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
 
             textToOrderCoffee!!.setOnClickListener {
                 val intent = Intent(activity, SelectDrinkActivity::class.java)

@@ -13,7 +13,6 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.Toast
 import com.example.sulivet.sulivet.R
-import com.example.sulivet.sulivet.bottomnavigation.ui.TakeMeAwayActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
@@ -26,7 +25,7 @@ class SignUpFragment : Fragment() {
     private var btnPhotoSelect: Button? = null
 
     companion object {
-        private val TAG = "Sign up"
+        private const val TAG = "Sign up"
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -51,7 +50,7 @@ class SignUpFragment : Fragment() {
         return view
     }
 
-    var selectedPhotoUri: Uri? = null
+    private var selectedPhotoUri: Uri? = null
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -107,7 +106,7 @@ class SignUpFragment : Fragment() {
         val ref = FirebaseStorage.getInstance().getReference("/images/$filename")
 
         ref.putFile(selectedPhotoUri!!)
-                .addOnSuccessListener {
+                .addOnSuccessListener { it ->
                     Log.d(TAG, "Successfully uploaded image: ${it.metadata?.path}")
 
                     ref.downloadUrl.addOnSuccessListener {

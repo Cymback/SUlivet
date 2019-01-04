@@ -22,7 +22,7 @@ class LoginHandler : AppCompatActivity() {
 
     companion object {
 
-        private val TAG = "LoginHandler"
+        private const val TAG = "LoginHandler"
     }
 
     private var mSectionsPageAdapter: SectionsPageAdapter? = null

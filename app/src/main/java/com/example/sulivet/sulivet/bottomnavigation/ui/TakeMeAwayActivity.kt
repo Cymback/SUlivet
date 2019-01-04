@@ -50,6 +50,10 @@ class TakeMeAwayActivity : AppCompatActivity(), BottomNavigationView.OnNavigatio
         initFragment(savedInstanceState)
     }
 
+    override fun onBackPressed() {
+
+    }
+
     override fun onSaveInstanceState(outState: Bundle?) {
         // Store the current navigation position.
         outState?.putInt(KEY_POSITION, navPosition.id)

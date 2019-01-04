@@ -11,7 +11,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import com.example.sulivet.sulivet.Activities.ForgotPasswordActivity
-import com.example.sulivet.sulivet.Activities.SelectDrinkActivity
 import com.example.sulivet.sulivet.R
 import com.example.sulivet.sulivet.bottomnavigation.ui.TakeMeAwayActivity
 import com.facebook.CallbackManager
@@ -41,7 +40,7 @@ class LoginFragment : Fragment() {
 
 
     companion object {
-        private val TAG = "LoginFragment"
+        private const val TAG = "LoginFragment"
     }
 
 
@@ -61,7 +60,6 @@ class LoginFragment : Fragment() {
         forgotpass!!.setOnClickListener {
             val intent = Intent(activity, ForgotPasswordActivity::class.java)
             startActivity(intent)
-            activity!!.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
         }
 
 
@@ -77,7 +75,7 @@ class LoginFragment : Fragment() {
             LoginManager.getInstance().registerCallback(callbackManager,
                     object : FacebookCallback<LoginResult> {
                         override fun onSuccess(loginResult: LoginResult) {
-                            Timber.d("Facebook token: " + loginResult.accessToken.token)
+                            Timber.d("Facebook token: %s", loginResult.accessToken.token)
 
                             Toast.makeText(context, "Welcome ", Toast.LENGTH_SHORT).show()
                             startActivity(Intent(context, TakeMeAwayActivity::class.java))
@@ -91,7 +89,7 @@ class LoginFragment : Fragment() {
 
                         override fun onError(error: FacebookException) {
                             progressBar!!.visibility = View.GONE
-                            Timber.d("MainActivity" + "Facebook onError.")
+                            Timber.d("MainActivityFacebook onError.")
 
                         }
                     })

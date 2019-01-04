@@ -26,11 +26,4 @@ class EspressoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_espresso)
     }
-
-    override fun onBackPressed() {
-
-        startActivity(intent)
-        overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
-
-    }
 }
