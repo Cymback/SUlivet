@@ -21,16 +21,9 @@
         android:id="@+id/photo"
         android:layout_width="112dp"
         android:layout_height="112dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/cover"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.086"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cover"
-        app:layout_constraintVertical_bias="0.45"
-        app:srcCompat="@drawable/photo" />
+        app:srcCompat="@drawable/photo"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="40dp" />
 
     <TextView
         android:id="@+id/textView"
@@ -101,7 +94,7 @@
         android:drawableStart="@mipmap/espressoicon"
         android:drawablePadding="10dp"
         android:padding="16dp"
-        android:text="Email:"
+        android:text="Email:  "
         android:textColor="@color/brown_main"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -110,26 +103,6 @@
         app:layout_constraintTop_toBottomOf="@+id/photo"
         app:layout_constraintVertical_bias="0.011" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="5dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:drawableStart="@mipmap/espressoicon"
-        android:drawablePadding="10dp"
-        android:padding="16dp"
-        android:text="Username:"
-        android:textColor="@color/brown_main"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_email_txt"
-        app:layout_constraintVertical_bias="0.011" />
 
     <TextView
         android:id="@+id/txt_bio_3"
@@ -149,6 +122,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_profile_email_txt"
         app:layout_constraintVertical_bias="0.0" />
 </android.support.constraint.ConstraintLayout>

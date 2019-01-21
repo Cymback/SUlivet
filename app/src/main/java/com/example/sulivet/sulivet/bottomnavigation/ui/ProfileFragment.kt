@@ -76,7 +76,7 @@ class ProfileFragment : Fragment() {
     private fun setDataToView() {
         val user = FirebaseAuth.getInstance().currentUser
 
-        emailtxt!!.text = "User Email" + user!!.email
+        emailtxt!!.text = "User Email " + user!!.email
     }
 
 

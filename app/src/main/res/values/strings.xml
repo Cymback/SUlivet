@@ -137,6 +137,14 @@
     <string name="frag_login_password_hint">Password</string>
     <string name="frag_login_username_hint">Username</string>
     <string name="frag_login_email_hint">Email</string>
+    <string name="nutrition_facts">Nutrition Facts</string>
+    <string name="popular_variants">Popular Variants</string>
+    <string name="activity_latte_text">A Caffe Latte kan be made just as fast as an Americano since it’s made from 1/3 espresso, approx. 2/3 hot milk and top it of with a layer of foamed milk.</string>
+    <string name="activity_latte_text_text">Irish coffee is a cocktail of sweetened coffee, Irish whiskey, and whipped cream that is not only acceptable but also expected as a morning treat on holidays.</string>
+    <string name="activity_irish_text">Irish coffee is a cocktail of sweetened coffee, Irish whiskey, and whipped cream that is not only acceptable but also expected as a morning treat on holidays.</string>
+    <string name="activity_cappu_text">Cappuccino is an espresso-based drink, of Italian origin, with 1/3 espresso, 1/3 steamed milk, and 1/3 wet foamed milk. The difference between a latte and a cappuccino is the milk content.</string>
+    <string name="activity_americano_text">A double shot of espresso and hot water. Called a black coffee or an Americano.</string>
+    <string name="activity_mocha_text">Some places will add hot chocolate to the drink, others will add a chocolate syrup. A mocha latte is the common preparation. Not to be confused with Mocha beans</string>
 
     <!-- LogoutFragment Strings -->
 

@@ -51,12 +51,8 @@
         </activity>
         <activity android:name=".Wizard.WizardOne" />
         <activity android:name=".Wizard.WizardTwo" />
-        <activity android:name=".MenuActivities.RecipesActivity" />
         <activity android:name=".Activities.RecipeDetailActivity" />
         <activity android:name=".Activities.ForgotPasswordActivity" />
-        <activity android:name=".MenuActivities.KitchenEssentialActivity" />
-        <activity android:name=".MenuActivities.ProfileActivity" />
-        <activity android:name=".MenuActivities.EssentialDetailActivity" />
         <activity android:name=".CoffeeActivities.EspressoActivity" />
         <activity android:name=".CoffeeActivities.LatteActivity" />
         <activity android:name=".CoffeeActivities.CappuccinoActivity" />
@@ -64,7 +60,6 @@
         <activity android:name=".Activities.SelectDrinkActivity" />
         <activity android:name=".Activities.CustomizeDrinksActivity" />
         <activity android:name=".Activities.NutriCappuinoActivity" />
-        <activity android:name=".Activities.PopuCappuActivity" />
         <activity android:name=".bottomnavigation.ui.TakeMeAwayActivity" />
         <activity android:name=".Fragments.LoginHandler" />
         <!--

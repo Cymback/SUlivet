@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sulivet.sulivet.CoffeeActivities.AmericanoActivity">
+    android:background="@drawable/custob"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/cappuccinoicon" />
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
+            android:fontFamily="@font/open_sans_light"
+            android:gravity="center_horizontal"
+            android:text="@string/activity_americano_text"
+            android:textColor="@color/brown_buttons"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/americano_popular_variants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/espressoicon"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:gravity="center"
+            android:text="@string/popular_variants"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+        <Button
+            android:id="@+id/americano_nutrition_facts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/espressoicon"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:gravity="center"
+            android:text="@string/nutrition_facts"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

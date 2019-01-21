@@ -3,60 +3,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/rsz_mochactivity"
-    tools:context=".Activities.RecipeDetailActivity">
+    android:background="@drawable/custob"
+    android:orientation="vertical">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="start"
+        android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="200dp"
-            android:layout_height="120dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="20dp"
-            android:background="#2d2d2d"
+
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/mochaactivity" />
+            android:src="@mipmap/mochaicon" />
 
         <TextView
-
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="start"
-            android:layout_margin="20dp"
-            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="50dp"
             android:fontFamily="@font/open_sans_light"
-            android:text="@string/activity_mocha_content"
+            android:gravity="center_horizontal"
+            android:text="@string/activity_mocha_text"
             android:textColor="@color/brown_buttons"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/mocha_popular_variants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/espressoicon"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/open_sans_light"
+            android:gravity="center"
+            android:text="@string/popular_variants"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
 
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/mocha_nutrition_facts"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:background="@drawable/card_edge"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape"
             android:backgroundTint="@color/brown_buttons"
+            android:drawableEnd="@mipmap/espressoicon"
+            android:drawablePadding="10dp"
             android:fontFamily="@font/open_sans_light"
-            android:text="@string/activity_mocha_order_btn"
-            android:textSize="20sp" />
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            android:layout_marginBottom="50dp"
-            android:background="@drawable/card_edge"
-            android:backgroundTint="@color/brown_buttons"
-            android:fontFamily="@font/open_sans_light"
-            android:text="@string/activity_mocha_nutri_btn"
-            android:textSize="20sp" />
-
+            android:gravity="center"
+            android:text="@string/nutrition_facts"
+            android:textColor="@android:color/white"
+            android:textSize="13sp" />
 
     </LinearLayout>
 

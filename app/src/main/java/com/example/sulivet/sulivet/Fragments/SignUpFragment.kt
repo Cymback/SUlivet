@@ -1,5 +1,6 @@
 package com.example.sulivet.sulivet.Fragments
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
 import android.net.Uri
@@ -17,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.signup_fragment.*
+import timber.log.Timber
 import java.util.*
 
 class SignUpFragment : Fragment() {
@@ -41,7 +43,7 @@ class SignUpFragment : Fragment() {
 
 
         btnPhotoSelect!!.setOnClickListener {
-            Log.d(TAG, "Try to show photo selector")
+            Timber.d("Try to show photo selector")
 
             val intent = Intent(Intent.ACTION_PICK)
             intent.type = "image/*"
@@ -57,7 +59,7 @@ class SignUpFragment : Fragment() {
 
         if (requestCode == 0 && resultCode == Activity.RESULT_OK && data != null) {
             // proceed and check what the selected image was....
-            Log.d(TAG, "Photo was selected")
+            Timber.d("Photo was selected")
 
             selectedPhotoUri = data.data
 
@@ -72,6 +74,7 @@ class SignUpFragment : Fragment() {
         }
     }
 
+    @SuppressLint("LogNotTimber")
     private fun performRegister() {
         val email = email_edittext_register.text.toString()
         val password = password_edittext_register.text.toString()
@@ -83,7 +86,7 @@ class SignUpFragment : Fragment() {
 
         Log.d(TAG, "Attempting to create user with email: $email")
 
-        // Firebase Authentication to create a user with email and password
+
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener {
                     if (!it.isSuccessful) return@addOnCompleteListener
@@ -99,6 +102,7 @@ class SignUpFragment : Fragment() {
                 }
     }
 
+    @SuppressLint("LogNotTimber")
     private fun uploadImageToFirebaseStorage() {
         if (selectedPhotoUri == null) return
 
@@ -120,6 +124,7 @@ class SignUpFragment : Fragment() {
                 }
     }
 
+    @SuppressLint("LogNotTimber")
     private fun saveUserToFirebaseDatabase(profileImageUrl: String) {
         val uid = FirebaseAuth.getInstance().uid ?: ""
         val ref = FirebaseDatabase.getInstance().getReference("/users/$uid")
@@ -128,7 +133,7 @@ class SignUpFragment : Fragment() {
 
         ref.setValue(user)
                 .addOnSuccessListener {
-                    Log.d(TAG, "Finally we saved the user to Firebase Database")
+                    Timber.d("Finally we saved the user to Firebase Database")
                 }
                 .addOnFailureListener {
                     Log.d(TAG, "Failed to set value to database: ${it.message}")

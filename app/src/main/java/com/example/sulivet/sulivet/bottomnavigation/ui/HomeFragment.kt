@@ -30,14 +30,14 @@ class HomeFragment : Fragment() {
         val myFragmentView = inflater.inflate(R.layout.fragment_home, container, false)
 
         // Initializing
-        textToCoffeeActivities = myFragmentView.findViewById(R.id.home_frag_coffe_txt)
+//        textToCoffeeActivities = myFragmentView.findViewById(R.id.home_frag_coffe_txt)
         textToOrderCoffee = myFragmentView.findViewById(R.id.home_frag_order_txt)
 
 
-        textToCoffeeActivities!!.setOnClickListener { it ->
-            val intent = Intent(activity, CoffeeOverview::class.java)
-            startActivity(intent)
-            // activity!!.overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
+//        textToCoffeeActivities!!.setOnClickListener { it ->
+//            val intent = Intent(activity, CoffeeOverview::class.java)
+//            startActivity(intent)
+//            // activity!!.overridePendingTransition(R.anim.slide_out_right, R.anim.slide_out_right)
 
             textToOrderCoffee!!.setOnClickListener {
                 val intent = Intent(activity, SelectDrinkActivity::class.java)
@@ -45,7 +45,7 @@ class HomeFragment : Fragment() {
                 activity!!.overridePendingTransition(R.anim.slide_in_left, R.anim.slide_out_right)
             }
 
-        }
+
 
         return myFragmentView
 

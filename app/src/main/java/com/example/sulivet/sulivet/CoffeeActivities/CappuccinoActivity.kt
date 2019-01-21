@@ -13,11 +13,11 @@ class CappuccinoActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cappuccino)
 
-        val popularRoute = findViewById<View>(R.id.activity_cappuccino_popular_variants_btn)
-        val nutriRoute = findViewById<View>(R.id.activity_cappuccino_nutrition_btn)
+        //val popularRoute = findViewById<View>(R.id.activity_cappuccino_popular_variants_btn)
+        // val nutriRoute = findViewById<View>(R.id.activity_cappuccino_nutrition_btn)
 
         // popularRoute.setOnClickListener { toPopular() }
-        nutriRoute.setOnClickListener { toNutri() }
+        //nutriRoute.setOnClickListener { toNutri() }
     }
 
     private fun toNutri() {
